@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "DosisRegular";
+	src: url("../../fonts/Dosis/DosisRegular.eot");
+	src: url("../../fonts/Dosis/DosisRegular.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/Dosis/DosisRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "DosisBold";
+	src: url("../../fonts/Dosis/DosisBold.eot");
+	src: url("../../fonts/Dosis/DosisBold.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/Dosis/DosisBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "BloggerMedium";
+	src: url("../../fonts/Blogger/BloggerMedium.eot");
+	src: url("../../fonts/Blogger/BloggerMedium.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/Blogger/BloggerMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "ComfortaaMedium";
+	src: url("../../fonts/Comfortaa/ComfortaaMedium.eot");
+	src: url("../../fonts/Comfortaa/ComfortaaMedium.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/Comfortaa/ComfortaaMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "ComfortaaMedium";
+	src: url("../../fonts/Comfortaa/ComfortaaBold.eot");
+	src: url("../../fonts/Comfortaa/ComfortaaBold.eot?#iefix") format("embedded-opentype"),
+		url("../../fonts/Comfortaa/ComfortaaBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

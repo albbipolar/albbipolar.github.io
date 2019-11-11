@@ -16,7 +16,7 @@ NOTE: This is Header style file. All Header related style included in this file.
 }
 .logo a {
   color: #222;
-  font-family: "Dosis",sans-serif;
+  font-family: 'DosisRegular', sans-serif;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -31,7 +31,7 @@ NOTE: This is Header style file. All Header related style included in this file.
 }
 .main-menu ul li a {
   color: #464646;
-  font-family: "Lato",sans-serif;
+  font-family: 'BloggerMedium', sans-serif;
   font-size: 13px;
   font-weight: 400;
   position: relative;
