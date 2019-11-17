@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/shortcode/fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -146,35 +148,38 @@
 				<h2>Мои навыки</h2>
 				<p>С 2017 года я занимаюсь web-разработкой.<br>В этом разделе перечислены основные навыки, которыми я владею.</p>
 			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="single-service white-bg text-center">
-						<i class="fab fa-html5"></i>
-						<h3>HTML</h3>
-						<p><del>Programming language</del> Стандартизированный язык разметки документов. (kappa)</p>
+			<div class="swiper-container">
+    			<div class="swiper-wrapper">
+      				<div class="swiper-slide">
+      					<div class="col-md-4 col-sm-6">
+      						<div class="single-service white-bg text-center">
+      							<i class="fab fa-html5"></i>
+      							<h3>HTML</h3>
+      						</div>
+      					</div>
+      					<div class="col-md-4 col-sm-6">
+							<div class="single-service white-bg text-center">
+								<i class="fab fa-css3-alt"></i>
+								<h3>CSS</h3>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-service white-bg text-center">
+								<i class="fab fa-js"></i>
+								<h3>JavaScript</h3>
+							</div>
+						</div>
+      				</div>
+					<div class="swiper-slide">
+      					<div class="col-md-4 col-sm-6">
+							<div class="single-service white-bg text-center">
+								<i class="fab fa-git"></i>
+								<h3>GIT</h3>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="single-service white-bg text-center">
-						<i class="fab fa-css3-alt"></i>
-						<h3>CSS</h3>
-						<p>Язык таблиц стилей, позволяющий прикреплять стиль к структурированным документам.</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="single-service white-bg text-center">
-						<i class="fab fa-js"></i>
-						<h3>JavaScript</h3>
-						<p>Кросс-платформенный, объектно-ориентированный язык, добавляющий интерактивность.</p>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="single-service white-bg text-center">
-						<i class="fab fa-git-square"></i>
-						<h3>GIT</h3>
-						<p>Система контроля версий и совместной разработки проектов с открытым исходным кодом.</p>
-					</div>
-				</div>
+				<div class="swiper-scrollbar"></div>
 			</div>
 		</div>
 	</div>
@@ -219,6 +224,17 @@
     // initialise
     headroom.init();
 	</script>
+	<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  	<script>
+  	// initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
+      },
+    });
+  	</script>
 	<script src="js/main.js"></script>
     <script src="js/rain.js"></script>
     <script src="js/scroll.js"></script>

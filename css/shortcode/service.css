@@ -14,10 +14,6 @@
   padding: 70px 40px;
   transition: all 0.6s ease 0s;
 }
-.single-service:hover {
-  box-shadow:0 25px 45px rgba(0, 0, 0, 0.15);
-  transform: translateY(-10px);
-}
 .single-service i {
   font-size: 25px;
   margin-bottom: 20px;
@@ -67,4 +63,3 @@
   position: absolute;
   width: 35px;
 }
-.analysis-box p{}
