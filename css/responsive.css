@@ -62,14 +62,7 @@
 .about-minimal {
   margin-bottom: 50px;
 }
-
-   
-    
-    
-
 }
-
- 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 .mean-container a.meanmenu-reveal {
@@ -181,11 +174,7 @@ h3.main-contact {
 .project-desc {
   margin-top: 30px;
 } 
-.meta-2{margin-top:30px;} 
- 
-    
-    
-    
+.meta-2{margin-top:30px;}
 }
 
  
@@ -445,22 +434,20 @@ h3.leave-comment-text {
 .social-icon {
   margin-top: 15px;
   text-align: center;
-}    
+}
 .about-minimal {
   margin-bottom: 40px;
 }
 .analysis-box {
   padding: 80px 30px;
-}    
+}
 .single-skill-about {
   margin-bottom: 30px;
 }
 .project-desc {
   margin-top: 40px;
-} 
-.meta-2{margin-top:30px;}    
-    
- 
+}
+.meta-2{margin-top:30px;}
 }
  
 /* Large Mobile :480px. */
@@ -488,17 +475,10 @@ h3.leave-comment-text {
  .footer-4 .social-icon a {
   float: left;
   margin: 0 17px 0 0;
-}   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
- 
+}
+ @media only screen and (max-width: 520px) {
+  canvas {
+    display: none!important;
+  }
+}

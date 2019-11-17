@@ -28,7 +28,6 @@ NOTE: This is Footer style file. All footer related style included in this file.
 }
 .copyright{}
 .copyright p {
-  letter-spacing: 1px;
   margin: 0;
   text-transform: uppercase;
 }

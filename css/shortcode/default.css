@@ -589,3 +589,6 @@ textarea:focus {
 .swiper-slide {
     cursor: move;
 }
+.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    background: #464646;
+}
