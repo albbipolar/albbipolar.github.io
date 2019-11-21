@@ -245,3 +245,9 @@ input {
 .swiper-slide {
     cursor: move;
 }
+#burger-menu {
+	display: none;
+}
+#menu {
+	display: none;
+}
