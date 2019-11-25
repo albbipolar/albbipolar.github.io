@@ -2,9 +2,7 @@
   nav {
     display: none;
   }
-  a:hover {
-    font-size: 16px;
-    border: none;
+  a {
     transition: none;
   }
   #burger-menu {
@@ -91,11 +89,16 @@
     list-style: none;
   }
   #menu a {
-    color:#fff;
-    display:block;
+    color: #fff;
+    display: block;
     font-size: 32px;
     margin-bottom: 30px;
     text-decoration: none;
+  }
+  #menu a:hover {
+    border: none;
+    transition: none;
+    color: #3f2f35;
   }
   li {
     padding: 0!important;
