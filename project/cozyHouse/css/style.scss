@@ -1,0 +1,226 @@
+$font-main: Georgia, sans-serif;
+$font-secondary: Arial, sans-serif;
+$main-color: #f1cdb3;
+$white-color: #fff;
+$link-color: #cdcdcd;
+$button-hover: #fddcc4;
+$section-color: #545454;
+$section-bg: #f6f6f6;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: $font-main;
+}
+button {
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background: $button-hover!important;
+	}
+}
+.container-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+header {
+	background: url('../img/background.jpg') no-repeat;
+	background-size: cover;
+	height: 100vh;
+	.container-flex {
+		padding-top: 60px;
+		a {
+			text-decoration: none;
+			color: $link-color;
+			padding: 0 15px;
+			font-family: $font-secondary;
+			&:hover {
+				color: $white-color;
+				border-bottom: 3px solid $main-color;
+				padding-bottom: 5px;
+			}
+		}
+	}
+	.heading {
+		h1 {
+			color: $white-color;
+			font-size: 44px;
+			letter-spacing: 3px;
+			padding-top: 250px;
+			font-weight: normal;
+			padding-bottom: 40px;
+		}
+		.underHeading {
+			color: $link-color;
+		}
+		button {
+			font-size: 17px;
+			background: $main-color;
+			border: none;
+			border-radius: 50px;
+			padding: 20px 45px;
+			cursor: pointer;
+			font-family: $font-main;
+			margin-top: 45px;
+		}
+	}
+	.logo {
+		.logotype {
+			font-size: 32px;
+			letter-spacing: 1px;
+			color: $main-color;
+		}
+		.underLogotype {
+		color: $white-color;
+		font-family: $font-secondary;
+		font-size: 13px;
+		letter-spacing: 1.3px;
+		}
+	}
+}
+section {
+	color: $section-color;
+	.img {
+		padding-top: 90px;
+		padding-right: 100px;
+	}
+	h2 {
+		font-size: 35px;
+		font-weight: normal;
+	}
+	.aboutShelter {
+		max-width: 440px;
+		margin-right: auto;
+		p {
+			font-size: 15px;
+			font-family: $font-secondary;
+			line-height: 1.5;
+			padding-top: 40px;
+		}
+	}
+}
+section.sliders {
+	background: $section-bg;
+	.container {
+		text-align: center;
+		.heading {
+			text-align: center;
+			padding: 70px 0;
+		}
+		.slider {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.item {
+				background: #fafafa;
+			}
+			button {
+				&:hover {
+					background: #f1cdb3!important;
+				}
+			}
+		}
+		#slide2, #slide3 {
+			display: none;
+		}
+		#prev, #next {
+			width: 50px;
+			height: 50px;
+			border: 3px solid $main-color;
+			border-radius: 50px;
+			cursor: pointer;
+			&:hover {
+				background: $main-color;
+			}
+		}
+		button {
+			font-size: 17px;
+			background: $main-color;
+			border: none;
+			border-radius: 50px;
+			padding: 20px 45px;
+			margin: 60px 0;
+			cursor: pointer;
+			font-family: $font-main;
+		}
+	}
+}
+section.help {
+	.container {
+		text-align: center;
+	}
+	h2 {
+		padding: 70px 0;
+	}
+	.helpItems {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 80px 0;
+	}
+	.helpItem {
+		padding: 0 60px;
+		p {
+			padding-top: 30px;
+		}
+	}
+}
+section.donation {
+	.container {
+		.aboutShelter {
+			p {
+				letter-spacing: 2px;
+				font-family: $font-main;
+				padding: 15px 0;
+			}
+			.card {
+				background: $main-color;
+				border-radius: 5px;
+				padding: 10px 10px;
+				text-align: center;
+			}
+			.information {
+				font-size: 12px;
+				color: #b2b2b2;
+				font-style: italic;
+				letter-spacing: 1px;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+section.contacts {
+	background: url('../img/footerBackground.jpg') no-repeat;
+	background-size: cover;
+	.container {
+		.heading {
+			padding: 80px 0;
+			justify-content: flex-start;
+			div {
+				&:nth-child(2) {
+					padding-left: 170px;
+				}
+			}
+			h3 {
+				font-size: 35px;
+				color: #fff;
+				font-weight: normal;
+				letter-spacing: 2px;
+			}
+			p {
+				font-size: 20px;
+				color: $main-color;
+				font-family: "Times New Roman", sans-serif; 
+				padding-top: 30px;
+			}
+		}
+	}
+}
