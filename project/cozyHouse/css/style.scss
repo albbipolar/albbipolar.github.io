@@ -1,3 +1,4 @@
+@import "grid.scss";
 $font-main: Georgia, sans-serif;
 $font-secondary: Arial, sans-serif;
 $main-color: #f1cdb3;
@@ -88,8 +89,8 @@ header {
 }
 section {
 	color: $section-color;
+	margin-top: 90px;
 	.img {
-		padding-top: 90px;
 		padding-right: 100px;
 	}
 	h2 {
@@ -197,7 +198,7 @@ section.donation {
 		}
 	}
 }
-section.contacts {
+footer.contacts {
 	background: url('../img/footerBackground.jpg') no-repeat;
 	background-size: cover;
 	.container {

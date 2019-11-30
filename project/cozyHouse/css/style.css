@@ -1,3 +1,34 @@
+@media screen and (max-width: 720px) {
+  header .navigation {
+    display: none; }
+  header .container {
+    text-align: center; }
+  header .container-flex {
+    justify-content: center; }
+  header .heading h1 {
+    padding-top: 100px !important; }
+
+  section .container.container-flex {
+    display: block;
+    text-align: center; }
+    section .container.container-flex .img {
+      padding: 0; }
+    section .container.container-flex .img img {
+      max-width: 100%; }
+    section .container.container-flex .aboutShelter {
+      margin: 0 auto; }
+
+  section.help .container .helpItems {
+    display: block;
+    padding: 0; }
+    section.help .container .helpItems .helpItem {
+      padding: 20px 0; }
+
+  footer .container .heading {
+    display: block;
+    text-align: center; }
+  footer .container div {
+    padding: 0 !important; } }
 * {
   margin: 0;
   padding: 0; }
@@ -63,9 +94,9 @@ header {
     letter-spacing: 1.3px; }
 
 section {
-  color: #545454; }
+  color: #545454;
+  margin-top: 90px; }
   section .img {
-    padding-top: 90px;
     padding-right: 100px; }
   section h2 {
     font-size: 35px;
@@ -144,20 +175,20 @@ section.donation .container .aboutShelter .information {
   letter-spacing: 1px;
   margin-top: 30px; }
 
-section.contacts {
+footer.contacts {
   background: url("../img/footerBackground.jpg") no-repeat;
   background-size: cover; }
-  section.contacts .container .heading {
+  footer.contacts .container .heading {
     padding: 80px 0;
     justify-content: flex-start; }
-    section.contacts .container .heading div:nth-child(2) {
+    footer.contacts .container .heading div:nth-child(2) {
       padding-left: 170px; }
-    section.contacts .container .heading h3 {
+    footer.contacts .container .heading h3 {
       font-size: 35px;
       color: #fff;
       font-weight: normal;
       letter-spacing: 2px; }
-    section.contacts .container .heading p {
+    footer.contacts .container .heading p {
       font-size: 20px;
       color: #f1cdb3;
       font-family: "Times New Roman", sans-serif;
