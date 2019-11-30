@@ -189,6 +189,7 @@ img {
 }
 .description {
 	padding-top: 100%;
+	text-align: center;
 }
 .description p {
 	font-size: 18px;
@@ -200,6 +201,9 @@ img {
 }
 .boots {
 	padding-top: 295px;
+}
+.prices {
+	padding-right: 30px;
 }
 form {
 	margin: 0 auto;
@@ -255,4 +259,5 @@ input {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 600;
+	cursor: pointer;
 }

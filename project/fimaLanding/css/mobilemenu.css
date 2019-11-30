@@ -51,11 +51,13 @@
     transform: rotate(-45deg);
     top: 13px;
     width: 27px;
+    background: #fff;
   }
   #burger-menu.close span:before {
     top: 0px;
     transform: rotate(90deg);
     width: 27px;
+    background: #fff;
   }
   #burger-menu.close span:after {
     top: 0px;
@@ -83,7 +85,7 @@
     visibility: visible;
     opacity: 1;
     padding-top: 100px;
-    background: rgba(0,0,0,0.5);
+    background: #333;
   }
   #menu li{
     list-style: none;
@@ -97,8 +99,6 @@
   }
   #menu a:hover {
     border: none;
-    transition: none;
-    color: #3f2f35;
   }
   li {
     padding: 0!important;

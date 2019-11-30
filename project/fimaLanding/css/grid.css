@@ -36,7 +36,7 @@
 		padding-right: 3%;
 	}
 	
-	.flex-grid {flex-flow: row wrap;}
+	.flex-grid {flex-flow: row wrap; display: block;}
 	
 	.m-col-6,
 	.m-col-12 {margin-top: 2rem;}
@@ -66,7 +66,8 @@
 		display: block;
 		border: none;
 	}
-	div {
-		text-align: left;
+	.align-container div input {
+		display: block;
+		padding-bottom: 30px;
 	}
 }
