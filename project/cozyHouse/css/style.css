@@ -83,15 +83,17 @@ header {
     cursor: pointer;
     font-family: Georgia, sans-serif;
     margin-top: 45px; }
-  header .logo .logotype {
-    font-size: 32px;
-    letter-spacing: 1px;
-    color: #f1cdb3; }
-  header .logo .underLogotype {
-    color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    letter-spacing: 1.3px; }
+  header .logo {
+    cursor: pointer; }
+    header .logo .logotype {
+      font-size: 32px;
+      letter-spacing: 1px;
+      color: #f1cdb3; }
+    header .logo .underLogotype {
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 1.3px; }
 
 section {
   color: #545454;
@@ -114,36 +116,33 @@ section.sliders {
   background: #f6f6f6; }
   section.sliders .container {
     text-align: center; }
-    section.sliders .container .heading {
-      text-align: center;
-      padding: 70px 0; }
-    section.sliders .container .slider {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      section.sliders .container .slider .item {
-        background: #fafafa; }
-      section.sliders .container .slider button:hover {
-        background: #f1cdb3 !important; }
-    section.sliders .container #slide2, section.sliders .container #slide3 {
-      display: none; }
-    section.sliders .container #prev, section.sliders .container #next {
-      width: 50px;
-      height: 50px;
-      border: 3px solid #f1cdb3;
-      border-radius: 50px;
-      cursor: pointer; }
-      section.sliders .container #prev:hover, section.sliders .container #next:hover {
-        background: #f1cdb3; }
-    section.sliders .container button {
+    section.sliders .container .heading h2 {
+      padding-bottom: 60px; }
+    section.sliders .container .carousel-cell .slider-item {
+      margin-left: 50px;
+      background: #fafafa;
+      text-align: center; }
+    section.sliders .container .flickity-prev-next-button.previous, section.sliders .container .flickity-prev-next-button {
+      background: none;
+      border: 2px solid #f1cdb3; }
+    section.sliders .container button.buttonSlider {
       font-size: 17px;
       background: #f1cdb3;
       border: none;
       border-radius: 50px;
       padding: 20px 45px;
-      margin: 60px 0;
       cursor: pointer;
-      font-family: Georgia, sans-serif; }
+      font-family: Georgia, sans-serif;
+      margin-top: 45px; }
+    section.sliders .container button.gets {
+      font-size: 17px;
+      background: #f1cdb3;
+      border: none;
+      border-radius: 50px;
+      padding: 20px 45px;
+      cursor: pointer;
+      font-family: Georgia, sans-serif;
+      margin: 60px 0; }
 
 section.help .container {
   text-align: center; }
@@ -168,6 +167,10 @@ section.donation .container .aboutShelter .card {
   border-radius: 5px;
   padding: 10px 10px;
   text-align: center; }
+  section.donation .container .aboutShelter .card label {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px; }
 section.donation .container .aboutShelter .information {
   font-size: 12px;
   color: #b2b2b2;
@@ -181,17 +184,19 @@ footer.contacts {
   footer.contacts .container .heading {
     padding: 80px 0;
     justify-content: flex-start; }
-    footer.contacts .container .heading div:nth-child(2) {
+    footer.contacts .container .heading div.suggestions:nth-child(2) {
       padding-left: 170px; }
     footer.contacts .container .heading h3 {
       font-size: 35px;
       color: #fff;
       font-weight: normal;
       letter-spacing: 2px; }
-    footer.contacts .container .heading p {
+    footer.contacts .container .heading label {
       font-size: 20px;
       color: #f1cdb3;
       font-family: "Times New Roman", sans-serif;
       padding-top: 30px; }
+    footer.contacts .container .heading .suggestions .suggestionsItem {
+      padding-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

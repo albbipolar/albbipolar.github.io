@@ -5,7 +5,7 @@
 	<title>Cozy House</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.png">
 </head>
 <body>
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	</header>
-	<section>
+	<section class="about">
 		<div class="container container-flex">
 			<div class="img">
 				<img src="img/pets.png" alt="pets">
@@ -50,26 +50,51 @@
 			<div class="heading">
 				<h2>Our friends who<br>are looking for a house</h2>
 			</div>
-			<div class="slider">
-				<div class="owl-carousel owl-theme">
-					<div class="item">
+			<div class="main-carousel">
+				<div class="carousel-cell">
+					<div class="slider-item">
 						<img src="img/cat.jpg">
 						<p>Katrine</p>
-						<button>Learn More</button>
+						<button class="buttonSlider">Learn More</button>
 					</div>
-					<div class="item">
+				</div>
+				<div class="carousel-cell">
+					<div class="slider-item">
 						<img src="img/dog.jpg">
 						<p>Jennifer</p>
-						<button>Learn More</button>
+						<button class="buttonSlider">Learn More</button>
 					</div>
-					<div class="item">
+				</div>
+				<div class="carousel-cell">
+					<div class="slider-item">
 						<img src="img/dogTwo.jpg">
 						<p>Woody</p>
-						<button>Learn More</button>
+						<button class="buttonSlider">Learn More</button>
+					</div>
+				</div>
+				<div class="carousel-cell">
+					<div class="slider-item">
+						<img src="img/cat.jpg">
+						<p>Katrine</p>
+						<button class="buttonSlider">Learn More</button>
+					</div>
+				</div>
+				<div class="carousel-cell">
+					<div class="slider-item">
+						<img src="img/dog.jpg">
+						<p>Jennifer</p>
+						<button class="buttonSlider">Learn More</button>
+					</div>
+				</div>
+				<div class="carousel-cell">
+					<div class="slider-item">
+						<img src="img/dogTwo.jpg">
+						<p>Woody</p>
+						<button class="buttonSlider">Learn More</button>
 					</div>
 				</div>
 			</div>
-			<button>Get to know the rest</button>
+			<button class="gets">Get to know the rest</button>
 		</div>
 	</section>
 	<section class="help">
@@ -129,6 +154,7 @@
 				<div><p>Name of the bank / Type of bank account</p></div>
 				<div class="card">
 					<img src="img/creditСard.png" alt="card">
+					<label class="telephone">8380 2880 8028 8791 7435</label>
 				</div>
 				<p class="information">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed<br>ac diam. Praesent ultrices maximus tortor et vulputate. Interdum<br>et malesuada fames ac ante ipsum primis in faucibus. </p>
 			</div>
@@ -137,15 +163,27 @@
 	<footer class="contacts">
 		<div class="container">
 			<div class="heading container-flex">
-				<div>
+				<div class="suggestions">
 					<h3>For questions<br>and suggestions</h3>
-					<p>email@shelter.com</p>
-					<p>+13 674 567 75 54</p>
+					<div class="suggestionsItem">
+						<img src="img/envelope.png" alt="mail">
+						<label>email@shelter.com</label>
+					</div>
+					<div class="suggestionsItem">
+						<img src="img/telephone.png" alt="telephone">
+						<label>+13 674 567 75 54</label>
+					</div>
 				</div>
-				<div>
+				<div class="suggestions">
 					<h3>We are waiting<br>for your visit</h3>
-					<p>Boston, Central Street, 1st<br>(Entrance from the store)</p>
-					<p>London, South Park, 18st</p>
+					<div class="suggestionsItem">
+						<img src="img/pin.png" alt="map marker">
+						<label>email@shelter.com</label>
+					</div>
+				<div class="suggestionsItem">
+					<img src="img/pin.png" alt="map marker">
+					<label>+13 674 567 75 54</label>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -168,7 +206,7 @@
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

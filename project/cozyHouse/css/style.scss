@@ -74,6 +74,7 @@ header {
 		}
 	}
 	.logo {
+		cursor: pointer;
 		.logotype {
 			font-size: 32px;
 			letter-spacing: 1px;
@@ -113,44 +114,38 @@ section.sliders {
 	.container {
 		text-align: center;
 		.heading {
+			h2 {
+				padding-bottom: 60px;
+			}
+		}
+		.carousel-cell .slider-item {
+			margin-left: 50px;
+			background: #fafafa;
 			text-align: center;
-			padding: 70px 0;
 		}
-		.slider {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			.item {
-				background: #fafafa;
-			}
-			button {
-				&:hover {
-					background: #f1cdb3!important;
-				}
-			}
+		.flickity-prev-next-button.previous, .flickity-prev-next-button {
+			background: none;
+			border: 2px solid $main-color;
 		}
-		#slide2, #slide3 {
-			display: none;
-		}
-		#prev, #next {
-			width: 50px;
-			height: 50px;
-			border: 3px solid $main-color;
-			border-radius: 50px;
-			cursor: pointer;
-			&:hover {
-				background: $main-color;
-			}
-		}
-		button {
+		button.buttonSlider {
 			font-size: 17px;
 			background: $main-color;
 			border: none;
 			border-radius: 50px;
 			padding: 20px 45px;
-			margin: 60px 0;
 			cursor: pointer;
 			font-family: $font-main;
+			margin-top: 45px;
+		}
+		button.gets {
+			font-size: 17px;
+			background: $main-color;
+			border: none;
+			border-radius: 50px;
+			padding: 20px 45px;
+			cursor: pointer;
+			font-family: $font-main;
+			margin: 60px 0;
 		}
 	}
 }
@@ -187,6 +182,11 @@ section.donation {
 				border-radius: 5px;
 				padding: 10px 10px;
 				text-align: center;
+				label {
+					font-family: "Times New Roman", sans-serif;
+					font-size: 20px;
+					letter-spacing: 0px;
+				}
 			}
 			.information {
 				font-size: 12px;
@@ -205,7 +205,7 @@ footer.contacts {
 		.heading {
 			padding: 80px 0;
 			justify-content: flex-start;
-			div {
+			div.suggestions {
 				&:nth-child(2) {
 					padding-left: 170px;
 				}
@@ -216,11 +216,16 @@ footer.contacts {
 				font-weight: normal;
 				letter-spacing: 2px;
 			}
-			p {
+			label {
 				font-size: 20px;
 				color: $main-color;
-				font-family: "Times New Roman", sans-serif; 
+				font-family: "Times New Roman", sans-serif;
 				padding-top: 30px;
+			}
+			.suggestions {
+				.suggestionsItem {
+					padding-top: 20px;
+				}
 			}
 		}
 	}

@@ -1,9 +1,7 @@
-$(function() {
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 3,
-    margin: 50,
-    loop: true,
-    dots: false
-  });
+$('.main-carousel').flickity({
+  // options
+  cellAlign: 'center',
+  contain: true,
+  pageDots: false,
+  wrapAround: true
 });
