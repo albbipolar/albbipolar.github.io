@@ -1,3 +1,15 @@
+@media screen and (max-width: 1440px) {
+  .container {
+    padding: 0 60px; }
+
+  .sliders .container {
+    padding: 0; }
+
+  section.help .helpItem {
+    padding: 30px 30px !important; }
+
+  section.donation .container img, section.about .container img {
+    max-width: 100%; } }
 @media screen and (max-width: 720px) {
   header .navigation {
     display: none; }
@@ -24,11 +36,20 @@
     section.help .container .helpItems .helpItem {
       padding: 20px 0; }
 
-  footer .container .heading {
+  footer .container {
     display: block;
     text-align: center; }
-  footer .container div {
-    padding: 0 !important; } }
+    footer .container .heading {
+      display: block;
+      text-align: center; }
+    footer .container div {
+      padding: 0 !important; }
+      footer .container div .container-flex {
+        justify-content: center !important; }
+        footer .container div .container-flex p {
+          padding-left: 0 !important; }
+      footer .container div img {
+        display: none; } }
 * {
   margin: 0;
   padding: 0; }
@@ -119,7 +140,7 @@ section.sliders {
     section.sliders .container .heading h2 {
       padding-bottom: 60px; }
     section.sliders .container .carousel-cell .slider-item {
-      margin-left: 50px;
+      margin: 0 25px;
       background: #fafafa;
       text-align: center; }
     section.sliders .container .flickity-prev-next-button.previous, section.sliders .container .flickity-prev-next-button {
@@ -158,6 +179,8 @@ section.help .helpItem {
   section.help .helpItem p {
     padding-top: 30px; }
 
+section.donation .container .aboutShelter h2 {
+  letter-spacing: 2px; }
 section.donation .container .aboutShelter p {
   letter-spacing: 2px;
   font-family: Georgia, sans-serif;
@@ -165,12 +188,14 @@ section.donation .container .aboutShelter p {
 section.donation .container .aboutShelter .card {
   background: #f1cdb3;
   border-radius: 5px;
-  padding: 10px 10px;
-  text-align: center; }
-  section.donation .container .aboutShelter .card label {
+  text-align: center;
+  justify-content: center; }
+  section.donation .container .aboutShelter .card p {
     font-family: "Times New Roman", sans-serif;
     font-size: 20px;
-    letter-spacing: 0px; }
+    letter-spacing: 2px; }
+  section.donation .container .aboutShelter .card img {
+    padding: 15px; }
 section.donation .container .aboutShelter .information {
   font-size: 12px;
   color: #b2b2b2;
@@ -180,23 +205,26 @@ section.donation .container .aboutShelter .information {
 
 footer.contacts {
   background: url("../img/footerBackground.jpg") no-repeat;
-  background-size: cover; }
-  footer.contacts .container .heading {
-    padding: 80px 0;
+  background-size: cover;
+  margin-top: 80px;
+  padding: 70px 0; }
+  footer.contacts .container {
     justify-content: flex-start; }
-    footer.contacts .container .heading div.suggestions:nth-child(2) {
-      padding-left: 170px; }
-    footer.contacts .container .heading h3 {
-      font-size: 35px;
-      color: #fff;
-      font-weight: normal;
+    footer.contacts .container div {
       letter-spacing: 2px; }
-    footer.contacts .container .heading label {
-      font-size: 20px;
-      color: #f1cdb3;
-      font-family: "Times New Roman", sans-serif;
-      padding-top: 30px; }
-    footer.contacts .container .heading .suggestions .suggestionsItem {
-      padding-top: 20px; }
+      footer.contacts .container div h3 {
+        font-size: 35px;
+        color: #fff;
+        font-weight: normal; }
+      footer.contacts .container div p {
+        color: #f1cdb3;
+        font-size: 20px;
+        font-family: "Times New Roman", sans-serif;
+        padding-left: 20px; }
+      footer.contacts .container div .container-flex {
+        justify-content: flex-start;
+        margin-top: 20px; }
+    footer.contacts .container .location {
+      padding-left: 90px; }
 
 /*# sourceMappingURL=style.css.map */

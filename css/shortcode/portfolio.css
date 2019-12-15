@@ -50,8 +50,8 @@
 }
 .hover-style:hover .portfolio-img{opacity: 1;}
 .portfolio-title h3 {
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 100;
   transform: translateY(-10px);
   transition: all 0.4s ease-in-out 0s;
 }
@@ -81,18 +81,20 @@
   bottom: 0;
   padding: 0 20px;
   top: inherit;
+  text-align: center;
 }
 .title-style-1 h3 {
   color: #fff;
 }
 .title-style-1 span {
   color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
 }
 .portfolio-img {
   display: block;
   position:relative
 }
-/* portfolio-style-2 */
 .portfolio-style-2{}
 .portfolio-style-2 .portfolio {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
@@ -141,10 +143,9 @@
   transform: translateY(20px);
   width: 60px;
   z-index: 99;
-  border-radius: 50%;
 }
-.hover-style .img-poppu:hover{background:#fff;}
-
+.hover-style .img-poppu:hover{background:#fff;
+}
 .portfolio:hover .img-poppu{opacity: 1;transform: translateY(0px);}
 .hover-style .img-poppu:before, .hover-style .img-poppu:after {
   background: #fff none repeat scroll 0 0;
@@ -159,7 +160,6 @@
   transition: all 0.3s ease 0s;
   width: 1px;
 }
-
 .hover-style .img-poppu:hover:before, .hover-style .img-poppu:hover:after {
   background: #000;
 }
@@ -167,7 +167,6 @@
   height: 1px;
   width: 30px;
 }
-/* portfolio-style-3 */
 .portfolio-style-3 {}
 .portfolio-style-3 .portfolio-title {
   left: 15px;
@@ -180,7 +179,6 @@
   transform: translateY(-50%);
   transition: all 0.5s ease 0s;
 }
-
 .portfolio-style-3 .portfolio :hover .portfolio-title{opacity:1;}
 .portfolio-style-3 .hover-style > a::before {
   display: none;
@@ -191,10 +189,7 @@
 .portfolio-style-3 .portfolio-title span {
   color: #000;
 }
-
 .portfolio-style-7 .portfolio{margin:0}
-/* no gutter portfolio-column-4 */
-
 .view-more.text-center.gutt-view {
   display: block;
   float: left;
@@ -204,9 +199,6 @@
   margin: 0;
   padding: 0;
 }
-
-
-/* portfolio details */
 .portfolio-meta{}
 .portfolio-meta ul{background: #f8f8f8 none repeat scroll 0 0;
 border: 1px solid #e5e5e5;
@@ -260,19 +252,6 @@ padding: 15px 0;}
 .portfolio-img > img {
   width: 100%;
 }
-.{}
-.{}
-.{}
-
-
-
-
-
-
-
-
-
-
-
-
-
+h3 {
+  margin: 0px;
+}

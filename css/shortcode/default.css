@@ -587,7 +587,7 @@ textarea:focus {
  .bg-5 { background-image: url(../../img/bg/breadcrumb.jpg);}
  .bg-6 { background-image: url(../../img/bg/breadcrumb.jpg);}
 .swiper-slide {
-    cursor: move;
+    cursor: grab;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
     background: #464646;

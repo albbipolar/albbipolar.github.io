@@ -1,5 +1,22 @@
-@media screen and (max-width: 960px) {
-
+@media screen and (max-width: 1440px) {
+	.container {
+		padding: 0 60px;
+	}
+	.sliders {
+		.container {
+			padding: 0;
+		}
+	}
+	section.help .helpItem {
+		padding: 30px 30px!important;
+	}
+	section.donation, section.about {
+		.container {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
 }
 @media screen and (max-width: 720px) {
 	header {
@@ -44,12 +61,23 @@
 	}
 	footer {
 		.container {
+			display: block;
+			text-align: center;
 			.heading {
 				display: block;
 				text-align: center;
 			}
 			div {
 				padding: 0!important;
+				.container-flex {
+					justify-content: center!important;
+					p {
+						padding-left: 0!important;
+					}
+				}
+				img {
+					display: none;
+				}
 			}
 		}
 	}
