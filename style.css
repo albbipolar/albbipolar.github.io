@@ -317,8 +317,13 @@ h3.main-contact {
 .conract-area-bottom {
   margin-top: 50px;
 }
-.info-inner {
-  font-family: 'Comfortaa', sans-serif;
+.info-inner h1 {
+  font-family: 'BloggerMedium', sans-serif;
+  font-weight: 300;
+}
+.info-inner span {
+  font-family: 'BloggerLight', sans-serif;
+  font-size: 20px;
 }
 .knob {
   font-family: inherit!important;
