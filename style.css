@@ -5,7 +5,6 @@
 .slider > img {
   width: 100%;
 }
-/*about me*/
 .single-count {
   text-align: center;
 }
@@ -13,7 +12,6 @@
 }
 .count-icon span{font-size: 35px;}
 .count-title {
-
 }
 .count-title h2 {
   color: #464646;
@@ -26,9 +24,6 @@ letter-spacing: 1px;
 margin: 0;
 text-transform: capitalize;
 }
-.{}
-.{}
-.{}
 .hover-style {
   display: block;
   position: relative;
@@ -47,9 +42,9 @@ text-transform: capitalize;
 .hover-style:hover::before {
   opacity: 0.95;
 }
-
-/*about*/
-
+.item .col-md-4.col-sm-6 {
+  width: 100%;
+}
 .about-minimal{}
 .about-minimal h2{}
 .minimal-img > img {
@@ -166,8 +161,6 @@ text-transform: capitalize;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
-
-/*----- pricing table  ------*/
 .pricing-top {
   border-bottom: 1px solid #ddd;
   display: block;
@@ -208,7 +201,6 @@ text-transform: capitalize;
   font-size: 18px;
   font-weight: normal;
 }
-
 .pricing-tex li {
   color: #333333;
   font-size: 14px;
@@ -221,7 +213,6 @@ text-transform: capitalize;
 .pricing-tex li i{
   padding-right: 10px;
 }
-
 .price-btn a {
   background-color: transparent;
   border: 1px solid #c1c1c1;
@@ -245,9 +236,6 @@ text-transform: capitalize;
   font-size: 14px;
   padding-left: 12px;
 }
-
-/*contact*/
-
 #hastech2 {
   height: 402px;
   width: 100%;

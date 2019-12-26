@@ -6,12 +6,11 @@
     <title>albbipolar - персональный сайт-портфолио</title>
     <meta name="description" content="Сайт-портфолио albbipolar: вёрстка веб-страниц с использованием HTML, CSS; программирование на JavaScript!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon / Фавиконы -->
+    <!-- Фавикон -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- css file / CSS файлы -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/meanmenu.css">
@@ -19,9 +18,26 @@
     <link rel="stylesheet" href="css/shortcode/fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script>Data = new Date();
+    Year = Data.getFullYear();
+    Month = Data.getMonth();
+    Day = Data.getDate();
+    switch (Month) {
+    	case 0: fullMonth="января"; break;
+    	case 1: fullMonth="февраля"; break;
+    	case 2: fullMonth="марта"; break;
+    	case 3: fullMonth="апреля"; break;
+    	case 4: fullMonth="мае"; break;
+    	case 5: fullMonth="июня"; break;
+    	case 6: fullMonth="июля"; break;
+    	case 7: fullMonth="августа"; break;
+    	case 8: fullMonth="сентября"; break;
+    	case 9: fullMonth="октября"; break;
+    	case 10: fullMonth="ноября"; break;
+    	case 11: fullMonth="декабря"; break;
+    }
+    </script>
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -70,7 +86,8 @@
 			<div class="slider-info-text text-center">
 				<div class="info-inner">
 					<h1>Hello, рад Вас видеть!</h1>
-					<span>I'am верстальщик & frontend-разработчик</span>
+					<span>I'am верстальщик & frontend-разработчик<br>
+						<script>document.write(Day+ " " + fullMonth + " " + Year + ': Сайт находится на стадии разработки')</script></span>
 				</div>
 			</div>
 		</div>
@@ -87,27 +104,7 @@
 			</div>
 		<div class="row">
 			<div class="grid">
-				<div class="col-md-4 col-sm-6 col-xs-12 grid-item filterOne">
-					<div class="portfolio hover-style">
-						<div class="portfolio-img">
-							<img src="img/portfolio/project/cozyHouse.jpg" alt="Проект #2">
-							<div class="portfolio-view">
-								<a class="img-poppu" href="img/portfolio/project/cozyHouseFull.jpg">
-									<span class="plus"></span>
-								</a>
-							</div>
-							<div class="portfolio-title title-style-1">
-								<h3>COZY HOUSE WEBSITE</h3>
-								<a href="project/cozyHouse/index.html">
-									<span>Перейти к проекту 
-										<i class="fa fa-search" aria-hidden="true"></i>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12 grid-item filterOne">
+				<div class="col-md-4 col-sm-6 col-xs-12 grid-item filterThree">
 					<div class="portfolio hover-style">
 						<div class="portfolio-img">
 							<img src="img/portfolio/project/musicFestival.jpg" alt="Проект #2">
@@ -117,7 +114,7 @@
 								</a>
 							</div>
 							<div class="portfolio-title title-style-1">
-								<h3>COZY HOUSE WEBSITE</h3>
+								<h3>MUSIC FESTIVAL WEBSITE</h3>
 								<a href="project/musicFestival/index.html">
 									<span>Перейти к проекту 
 										<i class="fa fa-search" aria-hidden="true"></i>
@@ -207,6 +204,26 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 grid-item filterTwo">
+					<div class="portfolio hover-style">
+						<div class="portfolio-img">
+							<img src="img/portfolio/example.jpg" alt="">
+							<div class="portfolio-view">
+								<a class="img-poppu" href="img/portfolio/example.jpg">
+									<span class="plus"></span>
+								</a>
+							</div>
+							<div class="portfolio-title title-style-1">
+								<h3>ДОБАВИТЬ ОПИСАНИЕ</h3>
+								<a href="#">
+									<span>Перейти к проекту 
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		</div>
@@ -219,61 +236,28 @@
 				<h2>Мои навыки</h2>
 				<p>С 2017 года я занимаюсь web-разработкой.<br>В этом разделе перечислены основные навыки, которыми я владею.</p>
 			</div>
-			<div class="swiper-container">
-    			<div class="swiper-wrapper">
-      				<div class="swiper-slide">
-      					<div class="col-md-4 col-sm-6">
-      						<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
+			<div class="owl-carousel owl-theme">
+				<div class="item">
+					<div class="col-md-4 col-sm-6">
+      					<div class="single-service white-bg text-center">
+      						<h3>В РАЗРАБОТКЕ</h3>
       					</div>
-      					<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
       				</div>
-					<div class="swiper-slide">
-      					<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-      					<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service white-bg text-center">
-      							<h3>В РАЗРАБОТКЕ</h3>
-      						</div>
-						</div>
-					</div>
 				</div>
-				<div class="swiper-pagination"></div>
+				<div class="item">
+					<div class="col-md-4 col-sm-6">
+      					<div class="single-service white-bg text-center">
+      						<h3>В РАЗРАБОТКЕ</h3>
+      					</div>
+      				</div>
+				</div>
+				<div class="item">
+					<div class="col-md-4 col-sm-6">
+      					<div class="single-service white-bg text-center">
+      						<h3>В РАЗРАБОТКЕ</h3>
+      					</div>
+      				</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -318,16 +302,28 @@
     // initialise
     headroom.init();
 	</script>
-	<script src="https://unpkg.com/swiper/js/swiper.js"></script>
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   	<script>
-  	// initialize Swiper
-    var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-      },
-    });
+  	$('.owl-carousel').owlCarousel({
+    	loop: true,
+    	margin: 10,
+    	nav: false,
+    	autoplay: true,
+    	autoplayHoverPause: true,
+    	responsive:{
+        0:{
+            items: 1
+        },
+        200:{
+            items: 1
+        },
+        800:{
+            items: 2
+        },
+        1000:{
+            items: 3
+        }
+    }
+});
   	</script>
 	<script src="js/main.js"></script>
     <script src="js/rain.js"></script>
