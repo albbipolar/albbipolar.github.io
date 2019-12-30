@@ -19,9 +19,7 @@
   margin-bottom: 20px;
 }
 .single-service > h3 {
-  font-size: 16px;
-  letter-spacing: 2px;
-  /*margin-bottom: 15px;*/
+  font-size: 20px;
   text-transform: uppercase;
 }
 .single-service p {

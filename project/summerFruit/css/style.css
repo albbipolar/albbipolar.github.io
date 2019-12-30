@@ -168,6 +168,12 @@ main .main-content button:hover {
 }
 /* media if width <540px */
 @media screen and (max-width: 540px) {
+	body {
+		background: url(../img/background.png);
+	}
+	.backgoundg-mousemove {
+		background: none;
+	}
 	header {
 		padding-top: 40px;
 	}
@@ -176,5 +182,6 @@ main .main-content button:hover {
 	}
 	main .main-content button {
 		font-size: 16px;
+		margin-bottom: 30px;
 	}
 }
