@@ -112,7 +112,7 @@ $('#toTop').on('click', function() {
     }, 500)
 });
 
-//LINK SCROLL
+// LINK SCROLL
 $(function(){
         $("a[href^='#']").click(function(){
                 var _href = $(this).attr("href");
