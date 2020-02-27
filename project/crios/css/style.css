@@ -196,6 +196,7 @@ main .main_boxes .box_text h4 {
 }
 main .main_boxes .box_text p {
 	color: #DBDDDF;
+	text-align: center;
 }
 .row_reverse {
 	flex-direction: row-reverse;
@@ -218,25 +219,13 @@ main .main_mobileapp .mobileapp_row {
 	justify-content: space-around;
 	padding: 200px 0;
 }
-main .main_mobileapp .image_mobileapp, .image_mobileapp_two {
+main .main_mobileapp .image_mobileapp {
 	box-shadow: 0px 5px 10px 2px rgb(218, 229, 239);
 	transition: 1s;
 }
 main .main_mobileapp .mobileapp_row .image_mobileapp:hover {
 	transform: scale(1.1);
 	box-shadow: 10px 15px 20px 20px rgb(218, 229, 239);
-}
-main .main_mobileapp .mobileapp_row .image_mobileapp_two:hover {
-	transform: scale(1.1);
-	box-shadow: 10px 15px 20px 20px rgb(218, 229, 239);
-}
-main .main_mobileapp .mobileapp_row .image_mobileapp, .image_mobileapp_two {
-	width: 360px;
-	height: 590px;
-	background: url(../img/mobileapp_one.png);
-}
-main .main_mobileapp .mobileapp_row .image_mobileapp_two {
-	background: url(../img/mobileapp_two.png);
 }
 main .main_mobileapp .mobileapp_row .text_mobileapp h4 {
 	color: #43A9FF;
@@ -301,8 +290,9 @@ footer button {
 	margin-top: 100px;
 }
 
-/*MEDIA QUERIES*/
+/* MEDIA QUERIES */
 
+/* IF WIDTH < 1140PX */
 @media screen and (max-width: 1140px) {
 	header .header_heading h1 {
 		font-size: 40px;
@@ -360,10 +350,12 @@ footer button {
     padding: 30px;
     }
     main .main_mobileapp .mobileapp_row {
-    	display: block;
     	text-align: center;
     }
-    main .main_mobileapp .mobileapp_row .image_mobileapp, .image_mobileapp_two {
+    main .main_mobileapp .mobileapp_row {
+    flex-direction: column;
+    }
+    main .main_mobileapp .mobileapp_row .image_mobileapp {
     	margin: 0 auto;
     }
     main .main_mobileapp .mobileapp_row .text_mobileapp h4 {
@@ -390,14 +382,25 @@ footer button {
     	margin: 0 60px;
     }
 }
+
+/* IF WIDTH < 540PX */
 @media screen and (max-width: 540px) {
 	h1, h2, h3, h4 {
 		font-size: 35px;
 	}
-	header .header_navbar {
+	header .header_heading {
 		margin: 0;
-		position: fixed;
-		width: 100%;
+		padding: 80px 60px;
+	}
+	header .header_heading h1 {
+		font-size: 30px;
+		padding-top: 60px;
+	}
+	header .header_heading p {
+		font-size: 16px;
+	}
+	header .header_navbar {
+		margin-bottom: 20px;
 	}
 	header .header_navbar .header_logo p {
 		padding: 40px 0;
@@ -407,13 +410,9 @@ footer button {
 		font-size: 12px;
 	}
 	header .header_background {
-		background: #F7F8FB;
-	}
-	header .header_heading {
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		height: 100%;
+		background: rgb(247,248,251);
+		background: linear-gradient(0deg, rgba(247,248,251,1) 0%, rgba(255,255,255,1) 100%);
 	}
 	main .main_offer {
 		padding-top: 80px;
@@ -421,15 +420,18 @@ footer button {
 	main .main_offer h2 {
 		font-size: 30px;
 		padding: 30px 0;
+		text-transform: uppercase;
 	}
 	main .main_offer .offer_cards {
 		margin-top: 60px;
 	}
 	main .main_boxes .box_text h4 {
 		padding: 20px 0;
+		text-transform: uppercase;
+		font-size: 30px;
 	}
-	main .main_boxes .box_text p {
-		font-size: 20px;
+	main .main_mobileapp .mobileapp_row .image_mobileapp {
+		margin: 0 30px;
     }
     main .main_mobileapp .mobileapp_row .image_mobileapp:hover {
     	transform: none;
@@ -439,7 +441,17 @@ footer button {
     	padding: 30px 0;
     }
     main .main_mobileapp .mobileapp_row .text_mobileapp p {
-    	font-size: 20px;
+    	font-size: 14px;
+    }
+    main .main_container .autor_text {
+    	padding: 0 30px;
+    }
+    main .main_container .autor_text h4 {
+    	padding: 20px 0;
+    	text-transform: uppercase;
+    }
+    footer {
+    	background-size: auto;
     }
     footer .footer_text p {
     	margin: 0;
