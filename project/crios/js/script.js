@@ -39,3 +39,22 @@ for (let anchor of anchors) {
     })
   })
 }
+
+// PRELOADER
+
+let preloader = document.getElementById("hellopreloader_preload");
+function fadeOut(event) {
+	event.style.opacity = 1;
+	let interhellopreloader = setInterval(function() {
+		event.style.opacity = event.style.opacity - 0.05;
+		if (event.style.opacity <= 0.05) {
+			clearInterval(interhellopreloader);
+			preloader.style.display = 'none';
+		}
+	}, 16);
+}
+window.onload = function() {
+	setTimeout(function() {
+		fadeOut(preloader);
+	}, 1000);
+};

@@ -40,6 +40,19 @@ h1, h2, h3, h4 {
 	margin: 0 auto;
 }
 
+/* PRELOADER */
+
+#hellopreloader_preload {
+	display: block;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #43A9FF url(../img/preloader.svg) center center no-repeat;
+	background-size: 150px;
+}
 /*HEADER SECTION*/
 
 header .header_navbar {
@@ -341,19 +354,19 @@ footer button {
     	font-size: 40px;
     }
     main .main_offer .offer_cards {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    flex-wrap: wrap;
+    	display: flex;
+    	justify-content: space-around;
+    	text-align: center;
+    	flex-wrap: wrap;
     }
     main .main_offer .offer_cards .offer_item {
-    padding: 30px;
+    	padding: 30px;
     }
     main .main_mobileapp .mobileapp_row {
     	text-align: center;
     }
     main .main_mobileapp .mobileapp_row {
-    flex-direction: column;
+    	flex-direction: column;
     }
     main .main_mobileapp .mobileapp_row .image_mobileapp {
     	margin: 0 auto;
@@ -366,17 +379,17 @@ footer button {
     	padding: 0 60px;
     }
     main .main_autor {
-	background: #F7F8FB;
+    	background: #F7F8FB;
 	}
 	main .main_autor .about_autor {
-	flex-direction: column-reverse;
+		flex-direction: column-reverse;
 	}
 	main .main_container .autor_text {
 		text-align: center;
 		margin-bottom: 60px;
 	}
     footer button {
-    margin-top: 50px;
+    	margin-top: 50px;
     }
     footer .footer_text {
     	margin: 0 60px;
@@ -461,4 +474,19 @@ footer button {
     	margin-top: 60px;
     }
 }
-
+@media (max-width: 1000px) and (orientation: landscape) {
+	header .header_navbar {
+		margin: 0;
+	}
+	header .header_background {
+		background-position: center;
+	}
+	header .header_heading h1,
+	header .header_heading p {
+		background: #fff;
+		background-clip: content-box;
+	}
+	header .header_heading {
+		margin: 0;
+	}
+}
