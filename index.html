@@ -25,11 +25,12 @@
     <p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста обновите свой браузер, чтобы просматривать эту страницу.</p>
     <![endif]-->
 <!-- header -->
+<div id="preloader"><div id="preloader_preload"></div></div>
 <header class="intelligent-header">
 	<div class="header-area">
 		<div class="container">
 			<div class="row">
-			<div class="col-md-3 col-xs-12">
+				<div class="col-md-3 col-xs-12">
 				<div class="logo">
 					<a href="index.html">ALBBIPOLAR</a>
 				</div>
@@ -59,15 +60,13 @@
 </header>
 <div class="header-space"></div>
 <!-- /header -->
-	<div class="slider border-bottom ptb-100" id="home">
-        <canvas id="canvasOne" class="canvas"></canvas>
-        <canvas id="canvasTwo" class="canvas"></canvas>
-        <canvas id="canvasThree" class="canvas"></canvas>
+	<div class="slider border-bottom" id="home">
+		<div id="particles-js"></div>
 		<div class="container">
 			<div class="slider-info-text text-center">
-				<div class="info-inner">
+				<div class="info-inner mt-150 mb-150">
 					<h1>Hello, рад Вас видеть!</h1>
-					<span>I'am верстальщик & frontend-разработчик</span>
+					<span>I'am верстальщик &amp; frontend-разработчик</span>
 				</div>
 			</div>
 		</div>
@@ -320,6 +319,7 @@
     headroom.init();
 	</script>
 	<script src="js/main.js"></script>
-	<script src="js/rain.js"></script>
+	<script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
 	</body>
 </html>

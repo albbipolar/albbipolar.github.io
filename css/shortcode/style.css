@@ -317,109 +317,23 @@ h3.main-contact {
   font-family: inherit!important;
 }
 /*preloader*/
-.preloader {
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 9999999;
-  perspective: 1600px;
-  perspective-origin: 20% 50%;
-  transition: 0.5s all;
-  opacity: 1;
+#preloader > p {
+  display: none;
 }
-.spinner {
-  width: 80px;
-  height: 80px;
-  border: 2px solid #f3f3f3;
-  border-top: 3px solid #222;
-  border-radius: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: spin 1s infinite linear;
-}
-.preloader.fade {
-  opacity: 0;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes ico {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-canvas.canvas {
-  width: 100%;
-  height: 100%;
-}
-canvas.canvas {
+#preloader_preload {
   display: block;
-  position: absolute;
+  position: fixed;
+  z-index: 9999999;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: #181818 url(../../img/preloader.svg) center center no-repeat;
+  background-size: 200px;
 }
-
-#canvasOne {
-  z-index: 5;
+/*canvas*/
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-
-#canvasTwo {
-  z-index: 10;
-}
-
-#canvasThree {
-  z-index: 100;
-}
-
-@-webkit-keyframes thunder-bg {
-  0% {
-    background-color: rgba(34, 34, 34, 0.9);
-  }
-
-  9% {
-    background-color: rgba(34, 34, 34, 0.9);
-  }
-
-  10% {
-    background-color: rgba(59, 59, 59, 0.3);
-  }
-
-  10.5% {
-    background-color: rgba(34, 34, 34, 0.9);
-  }
-
-  80% {
-    background-color: rgba(34, 34, 34, 0.9);
-  }
-
-  82% {
-    background-color: rgba(59, 59, 59, 0.3);
-  }
-
-  83% {
-    background-color: rgba(34, 34, 34, 0.9);
-  }
-
-  83.5% {
-    background-color: rgba(59, 59, 59, 0.3);
-  }
-
-  100% {
-    background-color: rgba(34, 34, 34, 0.9);
-  }

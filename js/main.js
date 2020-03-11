@@ -148,3 +148,30 @@ if(typeof($.fn.knob) != 'undefined') {
         }, {accX: 0, accY: -150});
     });
 }})(jQuery);
+
+// TEXT PARALAX
+$(window).on('scroll', function () {
+    let scrolled = $(this).scrollTop();
+    $('.info-inner').css({
+        'transform': 'translate3d(0, ' + -(scrolled * 0.20) + 'px, 0)',
+        'opacity': 1 - scrolled / 200
+    });
+});
+
+// PRELOADER
+let preloader = document.getElementById('preloader_preload');
+function fadeOut(event) {
+    event.style.opacity = 1;
+    let interhellopreloader = setInterval(function() {
+        event.style.opacity = event.style.opacity - 0.05;
+        if (event.style.opacity <= 0.05) {
+            clearInterval(interhellopreloader);
+            preloader.style.display = 'none';
+        }
+    }, 16);
+}
+window.onload = function() {
+    setTimeout(function() {
+        fadeOut(preloader);
+    }, 3000);
+};
