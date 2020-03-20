@@ -1,19 +1,19 @@
+
+/* === IMPORT FONTS === */
+
 @import url('fonts.css');
 
-body {
-	font-family: 'NightStillComes', sans-serif!important;
-}
+/* === DEFAULT STYLE === */
 
-.row {
-	margin: 0!important;
-}
+body {font-family: 'NightStillComes', sans-serif!important;}
 
-img {
-	display: block;
-	max-width: 100%;
-}
+.row {margin: 0!important;}
 
-/* HEADER SECTION */
+img {display: block; max-width: 100%;}
+
+.btn.focus, .btn:focus {box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, .25)!important;}
+
+/* === SECTION HEADER === */
 
 .header {
 	height: 100vh;
@@ -64,7 +64,7 @@ img {
   animation-name: scrollBottom;
 }
 
-/* ABOUT SECTION */
+/* === SECTION ABOUT === */
 
 .section-about {
 	height: 100vh;
@@ -74,6 +74,7 @@ img {
 	background: #EFEFEF url('../img/about-background.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
+	margin-left: 90px!important;
 }
 
 .section-about span {
@@ -96,22 +97,112 @@ img {
 	font-size: 18px;
 }
 
-@keyframes scrollBottom {
-  0% {
-    transform: translateY(-15px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-15px);
-  }
+/* === SECTION PORTFOLIO === */
 
+.section-portfolio {
+	margin-top: 120px;
+}
+
+.section-portfolio h4 {
+	font-size: 40px;
+}
+
+/* === SECTION SLIDER === */
+
+.section-slider {
+	background: #181818 url('../img/testimonial-background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-top: 130px;
+	margin-right: 90px!important;
+}
+
+.section-slider .carousel-item  {
+	padding: 130px 0;
+}
+
+.section-slider .carousel-item h5 {
+	font-size: 15px;
+	margin-top: 40px;
+}
+
+.section-slider .carousel-item h5 span {
+	font-size: 25px;
+}
+
+/* === SECTION CONTACT === */
+
+.section-contact .contact-container {
+	padding: 170px 0 130px 0;
+}
+.section-contact .contact-container h4 {
+	font-size: 40px;
+}
+.section-contact .contact-container p {
+	color: #8f8f8f;
+}
+.section-contact .contact-container input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #8f8f8f;
+}
+.section-contact .contact-container input:focus {
+	outline: none;
+}
+.section-contact .contact-container .row {
+	margin-bottom: 50px!important;
+}
+.section-contact .contact-container button {
+    font-family: 'NightStillComes', sans-serif;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-size: 18px;
+}
+.section-contact .contact-container  .contact-button {
+	margin: 0 auto;
+}
+
+/* === SECTION FOOTER === */
+
+.section-footer .social-icons i {
+	margin: 0 15px;
+	color: #000;
+}
+
+/* === ANIMATION AND MEDIA QUERIES === */
+
+@keyframes scrollBottom {
+	0% {transform: translateY(-15px);}
+	50% {transform: translateY(0);}
+	100% {transform: translateY(-15px);}
 }
 
 @media screen and (max-width: 992px) {
 	.section-about {
 		text-align: center;
 		background: #EFEFEF;
+		margin-left: 0!important;
+	}
+	.section-slider {
+		margin-right: 0px!important;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.header-titles h1 {
+		letter-spacing: normal!important;
+	}
+	.section-contact .row input {
+		margin-top: 50px;
+	}
+	.section-contact .contact-container .row {
+		margin: 0!important;
+	}
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+	.header .btn-scroll-bottom {
+		display: none;
 	}
 }
