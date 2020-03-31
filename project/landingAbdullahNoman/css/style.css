@@ -201,7 +201,7 @@ img {display: block; max-width: 100%;}
 	}
 }
 
-@media (max-width: 1000px) and (orientation: landscape) {
+@media (max-height: 500px) {
 	.header .btn-scroll-bottom {
 		display: none;
 	}
