@@ -149,17 +149,31 @@ if(typeof($.fn.knob) != 'undefined') {
     });
 }})(jQuery);
 
-// TEXT PARALAX
-$(window).on('scroll', function () {
-    let scrolled = $(this).scrollTop();
-    $('.info-inner').css({
-        'transform': 'translate3d(0, ' + -(scrolled * 0.20) + 'px, 0)',
-        'opacity': 1 - scrolled / 200
-    });
-});
+// TEXT GREETING
+let greeting;
+
+greetingDay = new Date();
+greetingHour = greetingDay.getHours();
+    if (greetingHour >= 5 && greetingHour < 12) {
+        greeting = 'Доброе утро';
+    }
+    else if (greetingHour >= 12 && greetingHour < 18) {
+        greeting = 'Добрый день';
+    }
+    else if (greetingHour >= 18 && greetingHour < 24) {
+        greeting = 'Добрый вечер';
+    }
+    else if (greetingHour >= 0 && greetingHour < 5) {
+        greeting = 'Доброй ночи';
+    }
+document.getElementById('greeting-text').innerHTML = greeting;
 
 // PRELOADER
 let preloader = document.getElementById('preloader_preload');
+let body = document.getElementsByTagName('body')[0];
+
+body.style = 'overflow-y: hidden';
+
 function fadeOut(event) {
     event.style.opacity = 1;
     let interhellopreloader = setInterval(function() {
@@ -167,6 +181,7 @@ function fadeOut(event) {
         if (event.style.opacity <= 0.05) {
             clearInterval(interhellopreloader);
             preloader.style.display = 'none';
+            body.style = 'overflow-y: scroll';
         }
     }, 16);
 }
