@@ -5,7 +5,6 @@
   margin-bottom: 30px;
   position: relative;
 }
-.portfolio-menu{}
 .portfolio-menu button {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 0 none;
@@ -14,20 +13,18 @@
   position: relative;
   text-transform: uppercase;
 }
-.portfolio-left-menu{}
 .portfolio-left-menu button:first-child{margin-left:0}
-.btn.active {
-  
+.portfolio-menu button:hover:before,.portfolio-menu button.active:before {
+  transform: scaleX(1);
 }
-.portfolio-menu button:hover:before,.portfolio-menu button.active:before{transform: scaleX(1);}
 .portfolio-title {
   left: 0;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index:2;
-  opacity:0;
+  z-index: 2;
+  opacity: 0;
   transition: all 0.3s ease-in-out 0s;
 }
 .hover-style > .portfolio-img:before {
@@ -41,7 +38,9 @@
   top: 15px;
   transition: all 0.4s ease-in-out 0s;
 }
-.hover-style:hover .portfolio-img{opacity: 1;}
+.hover-style:hover .portfolio-img {
+  opacity: 1;
+}
 .portfolio-title h3 {
   font-size: 17px;
   font-weight: 100;
@@ -56,11 +55,12 @@
   transform: translateY(10px);
   transition: all 0.4s ease-in-out 0s;
 }
-.portfolio:hover .portfolio-title{opacity:1}
+.portfolio:hover .portfolio-title {
+  opacity: 1;
+}
 .portfolio:hover .portfolio-title h3,.portfolio:hover .portfolio-title span {
   transform: translateY(0px);
 }
-.view-more{}
 .view-more a {
   border: 1px solid #ddd;
   display: inline-block;
@@ -69,7 +69,11 @@
   padding: 8px 25px;
   font-family: 'Comfortaa', sans-serif;
 }
-.view-more a:hover{background:#444;color:#fff;border-color:#444}
+.view-more a:hover {
+  background: #444;
+  color: #fff;
+  border-color: #444;
+}
 .title-style-1 {
   bottom: 0;
   padding: 0 20px;
@@ -78,6 +82,7 @@
 }
 .title-style-1 h3 {
   color: #fff;
+  margin: 0px;
 }
 .title-style-1 span {
   color: #fff;
@@ -86,9 +91,8 @@
 }
 .portfolio-img {
   display: block;
-  position:relative
+  position: relative
 }
-.portfolio-style-2{}
 .portfolio-style-2 .portfolio {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
@@ -124,8 +128,6 @@
   transform: translateY(-50%);
 }
  .hover-style .img-poppu {
-  border: 1px solid #fff;
-  color: #fff;
   display: inline-block;
   height: 60px;
   opacity: 0;
@@ -136,22 +138,11 @@
   transform: translateY(20px);
   width: 60px;
   z-index: 99;
+  background: url("../../img/zoom.svg") no-repeat center center;
 }
-.hover-style .img-poppu:hover{background:#fff;
-}
-.portfolio:hover .img-poppu{opacity: 1;transform: translateY(0px);}
-.hover-style .img-poppu:before, .hover-style .img-poppu:after {
-  background: #fff none repeat scroll 0 0;
-  bottom: 0;
-  content: "";
-  height: 30px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all 0.3s ease 0s;
-  width: 1px;
+.portfolio:hover .img-poppu {
+  opacity: 1;
+  transform: translateY(0px);
 }
 .hover-style .img-poppu:hover:before, .hover-style .img-poppu:hover:after {
   background: #000;
@@ -172,7 +163,9 @@
   transform: translateY(-50%);
   transition: all 0.5s ease 0s;
 }
-.portfolio-style-3 .portfolio :hover .portfolio-title{opacity:1;}
+.portfolio-style-3 .portfolio :hover .portfolio-title {
+  opacity: 1;
+}
 .portfolio-style-3 .hover-style > a::before {
   display: none;
 }
@@ -192,14 +185,18 @@
   margin: 0;
   padding: 0;
 }
-.portfolio-meta{}
-.portfolio-meta ul{background: #f8f8f8 none repeat scroll 0 0;
-border: 1px solid #e5e5e5;
-margin: 0;
-padding: 0 20px;}
-.portfolio-meta ul li{border-bottom: 1px solid #e5e5e5;
-color: #666;
-padding: 15px 0;}
+.portfolio-meta {}
+.portfolio-meta ul {
+  background: #f8f8f8 none repeat scroll 0 0;
+  border: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 0 20px;
+}
+.portfolio-meta ul li {
+  border-bottom: 1px solid #e5e5e5;
+  color: #666;
+  padding: 15px 0;
+}
 .portfolio-meta ul li:last-child {
   border-bottom: 0 none;
 }
@@ -214,7 +211,7 @@ padding: 15px 0;}
   font-weight: bold;
   margin-right: 5px;
 }
-.portfolio-meta ul li{}
+.portfolio-meta ul li {}
 .project-desc {
   margin-bottom: 30px;
 }
@@ -244,7 +241,4 @@ padding: 15px 0;}
 }
 .portfolio-img > img {
   width: 100%;
-}
-h3 {
-  margin: 0px;
 }
