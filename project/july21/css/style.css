@@ -93,18 +93,7 @@ body {
   -webkit-animation-duration: 0.7s;
   animation-duration: 0.7s;
 }
-@-webkit-keyframes scroll {
-  0%, 20% {
-    -webkit-transform: translateY(0) scaleY(1);
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(1.2em) scaleY(1.5);
-    opacity: 0.01;
-  }
-}
+
 @keyframes scroll {
   0%, 20% {
     transform: translateY(0) scaleY(1);
@@ -124,6 +113,7 @@ body {
   background-image: url("https://s.cdpn.io/15514/clouds_2.png");
   animation: clouds-loop-1 20s infinite linear;
 }
+
 @keyframes clouds-loop-2 {
   to {
     background-position: -1000px 0;
@@ -171,7 +161,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  background-color: #181818;
+  background: #181818;
 }
 .timeline {
   width: 80%;
@@ -186,7 +176,7 @@ body {
 }
 .timeline ul li {
   padding: 20px;
-  background-color: #1e1f22;
+  background: #1e1f22;
   color: white;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -211,6 +201,134 @@ body {
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
+.new-content {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.new-content span {
+  font-size: 0.5em;
+  font-weight: normal;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.new-content span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.new-content span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.blocked-content {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.blocked-content span {
+  font-size: 0.5em;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#F70505 0%, #8F0808 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.blocked-content span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #8F0808;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8F0808;
+}
+.blocked-content span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #8F0808;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8F0808;
+}
+
+/* PRELOADER */
+
+#preloader > p {
+  display: none;
+}
+#preloader_preload {
+  display: block;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #181818 center center no-repeat;
+  background-size: 200px;
+}
+#preloader_preload h4 {
+  color: #fff;
+  font-size: 2em;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+#preloader_preload h4:after {
+  content: 'Loading';
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    content: 'Проверка обновлений';
+  }
+  33% {
+    content: 'Проверка обновлений.';
+  }
+  67% {
+    content: 'Проверка обновлений..';
+  }
+  100% {
+    content: 'Проверка обновлений...';
+  }
+}
 
 /* MEDIA QUERIES */
 /* IF WIDHT > 768PX */
@@ -224,7 +342,7 @@ body {
     transform: translateX(-50%);
     width: 2px;
     height: 100%;
-    background-color: gray;
+    background: gray;
   }
   .timeline ul li {
     width: 50%;
@@ -249,7 +367,7 @@ body {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: gray;
+    background: gray;
     top: 0px;
   }
   .timeline ul li:nth-child(odd)::before {
@@ -269,10 +387,22 @@ body {
 /* IF WIDHT < 768PX */
 
 @media screen and (max-width: 768px) {
+  .counter li {
+    font-size: 1em;
+  }
+  .counter li span {
+    font-size: 2.5em;
+  }
   .scroll-down {
     bottom: 0;
   }
   .timeline ul li {
     width: 100%;
+  }
+  .new-content, .blocked-content {
+    display: none;
+  }
+  #preloader_preload h4{
+    padding: 0 10%;
   }
 }
