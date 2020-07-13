@@ -64,3 +64,17 @@ window.onload = function() {
         fadeOut(preloader);
     }, 4000);
 };
+
+// TOGGLE TEXT
+function toggle() {
+  let toggleText = document.getElementById('toggleText');
+  let linkText = document.getElementById('linkText');
+
+  if (toggleText.style.display == 'block') {
+    toggleText.style.display = 'none';
+    linkText.innerHTML = 'Показать';
+  } else {
+    toggleText.style.display = 'block';
+    linkText.innerHTML = 'Скрыть';
+  }
+};
