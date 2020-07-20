@@ -10,13 +10,13 @@
 </head>
 <body>
 	<div id="preloader">
-		<div id="preloader_preload">
+		<div id="preloader-preload">
 			<h4 class="container-center"></h4>
 		</div>
 	</div>
 	<div class="container container-full">
 		<div class="container-center counter">
-			<h1>До начала праздника осталось:</h1>
+			<h1 id="afterHoliday">До начала праздника осталось:</h1>
 			<ul>
 				<li><span id="Days"></span>Дней</li>
 				<li><span id="Hours"></span>Часов</li>
@@ -102,40 +102,33 @@
 						<p>Начата работа под названием &laquo;Держать планку&raquo;, которая была написана в стол. Параллельно с ней был создан проект, получивший название &laquo;the main reference&raquo;.</p>
 					</div>
 				</li>
-				<li>
+				<!-- REMOVE CLASS AFTER 21 JULY -->
+				<li class="pulse">
 					<div class="timeline-content">
 						<h3 class="timeline-date">&laquo;Реализовать нереализуемое&raquo; 21 июля, 2020</h3>
 						<h1>&laquo;Собирая коллекцию&raquo;</h1>
 						<p>Небольшой отрывок, выстроенный в хронологическом порядке. Исходный пункт действий, начавшийся 28-го декабря 2019 года.</p>
+						<p style="color: #79A70A; display: none;" id="fragmentBlocked">Всё реализовано! Можно начинать
+							<a href="https://youtu.be/U4jVlWrhi3U" style="color: #79A70A;" target="_blank">просмотр</a>
+						</p>
 					</div>
 				</li>
-				<li>
+				<!-- REMOVE CLASS AFTER 21 JULY -->
+				<li class="pulse">
 					<div class="timeline-content">
-						<div class="new-content">
-							<span>Обновлено</span>
-						</div>
 						<h3 class="timeline-date">&laquo;Пламенный привет&raquo; 21 июля, 2020</h3>
 						<h1>&laquo;Праздничный салют&raquo;</h1>
 						<p>Автор понимает, что километраж не позволяет реализовать его желание, но это не повод оставлять праздничный день без фейерверка.</p>
+						<p style="color: #79A70A; display: none;" id="fireworkBlocked">Заряды фейерверка готовы. Можно
+							<a href="firework/firework.html" style="color: #79A70A;" target="_blank">запускать</a>
+						</p>
 					</div>
 				</li>
 				<li>
 					<div class="timeline-content">
-						<div class="new-content">
-							<span>Обновлено</span>
-						</div>
 						<h3 class="timeline-date">&laquo;Последний эпизод?&raquo; 21 июля, 2020</h3>
 						<h1>&laquo;Выражая благодарность&raquo;</h1>
-						<p>Автор выражает огромную благодарность человеку, который научил его чертить грань между плохим и хорошим. Искренне желает, чтобы все дороги для него были открыты в независимости от жизненного эпизода.<br>Напоминание о предстоящих событиях:
-							<a href="javascript:toggle();" id="linkText" style="color: #fff;">Показать</a>
-							<div id="toggleText" style="display: none;">
-								<p style="color: #79A70A;">
-									- &laquo;Собирая коллекцию&raquo;, с 21.07 по 22.07.
-									<br>
-									- &laquo;Праздничный салют&raquo;, с 21.07 по 22.07.
-								</p>
-							</div>
-						</p>
+						<p>Автор выражает огромную благодарность человеку, который научил его чертить грань между плохим и хорошим. Искренне желает, чтобы все дороги для него были открыты в независимости от жизненного эпизода.</p>
 					</div>
 				</li>
 			</ul>

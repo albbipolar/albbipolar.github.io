@@ -1,6 +1,4 @@
-.portfolio img {
-  width: 100%;
-}
+.portfolio img {width: 100%;}
 .portfolio {
   margin-bottom: 30px;
   position: relative;
@@ -13,10 +11,8 @@
   position: relative;
   text-transform: uppercase;
 }
-.portfolio-left-menu button:first-child{margin-left:0}
-.portfolio-menu button:hover:before,.portfolio-menu button.active:before {
-  transform: scaleX(1);
-}
+.portfolio-left-menu button:first-child{margin-left: 0;}
+.portfolio-menu button:hover:before,.portfolio-menu button.active:before {transform: scaleX(1);}
 .portfolio-title {
   left: 0;
   position: absolute;
@@ -38,9 +34,7 @@
   top: 15px;
   transition: all 0.4s ease-in-out 0s;
 }
-.hover-style:hover .portfolio-img {
-  opacity: 1;
-}
+.hover-style:hover .portfolio-img {opacity: 1;}
 .portfolio-title h3 {
   font-size: 17px;
   font-weight: 100;
@@ -55,25 +49,8 @@
   transform: translateY(10px);
   transition: all 0.4s ease-in-out 0s;
 }
-.portfolio:hover .portfolio-title {
-  opacity: 1;
-}
-.portfolio:hover .portfolio-title h3,.portfolio:hover .portfolio-title span {
-  transform: translateY(0px);
-}
-.view-more a {
-  border: 1px solid #ddd;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 8px 25px;
-  font-family: 'Comfortaa', sans-serif;
-}
-.view-more a:hover {
-  background: #444;
-  color: #fff;
-  border-color: #444;
-}
+.portfolio:hover .portfolio-title {opacity: 1;}
+.portfolio:hover .portfolio-title h3,.portfolio:hover .portfolio-title span {transform: translateY(0px);}
 .title-style-1 {
   bottom: 0;
   padding: 0 20px;
@@ -93,21 +70,15 @@
   display: block;
   position: relative
 }
-.portfolio-style-2 .portfolio {
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-}
+.portfolio-style-2 .portfolio {box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);}
 .portfolio-style-2 .portfolio-title {
   opacity: 1;
   padding: 25px 18px;
   position: static;
   transform: translateY(0%);
 }
-.portfolio-style-2 .portfolio-title h3,.portfolio-style-3 .portfolio-title h3 {
-  transform: translateY(0px);
-}
-.portfolio-style-2 .portfolio-title span,.portfolio-style-3 .portfolio-title span {
-  transform: translateY(0px);
-}
+.portfolio-style-2 .portfolio-title h3,.portfolio-style-3 .portfolio-title h3 {transform: translateY(0px);}
+.portfolio-style-2 .portfolio-title span,.portfolio-style-3 .portfolio-title span {transform: translateY(0px);}
  .hover-style .portfolio-img::before {
   background: #000 none repeat scroll 0 0;
   bottom: 0;
@@ -116,9 +87,7 @@
   right: 0;
   top: 0;
 }
-.hover-style:hover .portfolio-img:before {
-  opacity: 0.8;
-}
+.hover-style:hover .portfolio-img:before {opacity: 0.8;}
 .portfolio-view {
   left: 0;
   position: absolute;
@@ -144,101 +113,9 @@
   opacity: 1;
   transform: translateY(0px);
 }
-.hover-style .img-poppu:hover:before, .hover-style .img-poppu:hover:after {
-  background: #000;
-}
+.hover-style .img-poppu:hover:before, .hover-style .img-poppu:hover:after {background: #000;}
 .hover-style .img-poppu:after {
   height: 1px;
   width: 30px;
 }
-.portfolio-style-3 {}
-.portfolio-style-3 .portfolio-title {
-  left: 15px;
-  opacity: 0;
-  padding: 35px 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.5s ease 0s;
-}
-.portfolio-style-3 .portfolio :hover .portfolio-title {
-  opacity: 1;
-}
-.portfolio-style-3 .hover-style > a::before {
-  display: none;
-}
-.portfolio-style-3 .portfolio-title h3 {
-  color: #000;
-}
-.portfolio-style-3 .portfolio-title span {
-  color: #000;
-}
-.portfolio-style-7 .portfolio{margin:0}
-.view-more.text-center.gutt-view {
-  display: block;
-  float: left;
-  width: 100%;
-}
-.no-gutte .portfolio,.no-gutte .grid-item {
-  margin: 0;
-  padding: 0;
-}
-.portfolio-meta {}
-.portfolio-meta ul {
-  background: #f8f8f8 none repeat scroll 0 0;
-  border: 1px solid #e5e5e5;
-  margin: 0;
-  padding: 0 20px;
-}
-.portfolio-meta ul li {
-  border-bottom: 1px solid #e5e5e5;
-  color: #666;
-  padding: 15px 0;
-}
-.portfolio-meta ul li:last-child {
-  border-bottom: 0 none;
-}
-.portfolio-meta ul > li i {
-  color: #444;
-  font-size: 16px;
-  line-height: normal;
-  margin-right: 20px;
-}
-.portfolio-meta ul li span {
-  color: #444;
-  font-weight: bold;
-  margin-right: 5px;
-}
-.portfolio-meta ul li {}
-.project-desc {
-  margin-bottom: 30px;
-}
-.project-desc h3 {
-  border-bottom: 1px solid #e5e5e5;
-  color: #444;
-  font-size: 24px;
-  letter-spacing: 2px;
-  line-height: 22px;
-  margin: 0 0 20px;
-  padding-bottom: 20px;
-  text-transform: uppercase;
-}
-.post-share ul {
-  border-bottom: 1px solid #e5e5e5;
-  border-top: 1px solid #e5e5e5;
-  overflow: hidden;
-  padding: 10px 0;
-}
-.post-share li {
-  float: left;
-  margin-right: 18px;
-}
-.post-share li a {
-  display: block;
-  font-size: 16px;
-}
-.portfolio-img > img {
-  width: 100%;
-}
+.portfolio-img > img {width: 100%;}

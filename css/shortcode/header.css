@@ -4,10 +4,7 @@
   width: 100%;
   z-index: 9;
 }
-.header-area{}
-.logo {
-  margin-top: 24px;
-}
+.logo {margin-top: 24px;}
 .logo a {
   color: #222;
   font-family: 'DosisRegular', sans-serif;
@@ -15,8 +12,6 @@
   font-weight: 600;
   letter-spacing: 1px;
 }
-.main-menu{}
-.main-menu ul{}
 .main-menu ul li {
   display: inline-block;
   margin-left: 30px;
@@ -31,7 +26,7 @@
   position: relative;
   text-transform: uppercase;
 }
-.main-menu ul li:hover > a{color:#999}
+.main-menu ul li:hover > a {color: #999;}
 .main-menu ul li ul {
   background: #fff none repeat scroll 0 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
@@ -45,8 +40,10 @@
   width: 190px;
   z-index: 999;
 }
-.main-menu ul li:hover > ul{opacity:1;visibility:visible;}
-.main-menu ul li ul li a{}
+.main-menu ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
 .main-menu ul li ul li {
   display: block;
   margin: 0;
@@ -54,19 +51,15 @@
   border-top: 1px solid rgba(0, 0, 0, 0.03);
   transition: all .3s ease 0s;
 }
-.main-menu ul li ul li:hover {
-  background: #f5f5f5;
-}
+.main-menu ul li ul li:hover {background: #f5f5f5;}
 .main-menu ul li ul li a {
   display: block;
   padding: 10px 15px;
   text-transform: capitalize;
 }
-.main-menu ul li ul li:first-child {
-    border-top: none;
-}
-.main-menu ul li ul li:hover > a{padding-left:15px}
-.main-menu ul li ul li a:before{display:none}
+.main-menu ul li ul li:first-child {border-top: none;}
+.main-menu ul li ul li:hover > a {padding-left: 15px;}
+.main-menu ul li ul li a:before {display: none;}
 .main-menu ul li ul li > ul {
   left: 100%;
   margin-top: -1px;
@@ -75,12 +68,8 @@
   top: 45%;
   visibility: hidden;
 }
-.main-menu ul li ul li:hover > ul {
-  top: 0;
-}
-.main-menu.text-right span {
-  float: right;
-}
+.main-menu ul li ul li:hover > ul {top: 0;}
+.main-menu.text-right span {float: right;}
 .mean-container .mean-bar {
   background: transparent none repeat scroll 0 0;
   min-height: 0;
@@ -93,12 +82,8 @@
   padding: 4px 5px;
   position: absolute;
 }
-.mean-container a.meanmenu-reveal span {
-  background-color: #333;
-}
-.mean-container .mean-nav {
-  margin-top: 15px;
-}
+.mean-container a.meanmenu-reveal span {background-color: #333;}
+.mean-container .mean-nav {margin-top: 15px;}
 .header-sticky.sticky {
   animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
   background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
@@ -113,12 +98,8 @@
   will-change: transform;
   transition: transform 200ms linear;
 }
-.headroom--pinned {
-  transform: translateY(0%);
-}
-.headroom--unpinned {
-  transform: translateY(-100%);
-}
+.headroom--pinned {transform: translateY(0%);}
+.headroom--unpinned {transform: translateY(-100%);}
 .intelligent-header {
   background-color: #fff;
   left: 0;
@@ -126,15 +107,9 @@
   width: 100%;
   z-index: 999999;
 }
-.header-space {
-  height: 80px;
-}
-.intelligent-header.headroom--pinned {
-  transition: all 0.3s ease 0s;
-}
-.intelligent-header.headroom--not-top {
-  box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
-}
+.header-space {height: 80px;}
+.intelligent-header.headroom--pinned {transition: all 0.3s ease 0s;}
+.intelligent-header.headroom--not-top {box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);}
 .menu-toggle {
   box-sizing: border-box;
   float: right;
@@ -143,9 +118,7 @@
   margin-top: 31px;
   padding: 0;
 }
-.stick .menu-toggle {
-  margin-top: 25px;
-}
+.stick .menu-toggle {margin-top: 25px;}
 .hamburger-box {
   height: 19px;
   width: 30px;
@@ -156,16 +129,9 @@
   width: 30px;
   transition: none!important;
 }
-.hamburger-inner::before {
-  top: -8px;
-}
-.hamburger-inner::after {
-  bottom: -8px;
-}
-.main-menu {
-  padding: 0;
-}
-.menu-style-toggle{}
+.hamburger-inner::before {top: -8px;}
+.hamburger-inner::after {bottom: -8px;}
+.main-menu {padding: 0;}
 .menu-style-toggle nav {
   opacity: 0;
   margin-right: -30px;
@@ -180,13 +146,4 @@
   float: left;
   transition: all 0.3s ease 0s;
 }
-.main-menu.mean-menu.menu-style-toggle.text-right {
-  float: right;
-}
-.waraper .header-sticky.sticky {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-.waraper {
-  padding: 0 100px;
-}
+.main-menu.mean-menu.menu-style-toggle.text-right {float: right;}
