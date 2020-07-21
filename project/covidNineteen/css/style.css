@@ -3,3 +3,44 @@
 	padding: 0;
 	margin: 0;
 }
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+a, li {
+	text-decoration: none;
+	list-style: none;
+}
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+header {
+	height: 100vh;
+	background: url('../img/background-image.png') no-repeat;
+	background-size: cover;
+}
+header nav {
+	padding-top: 100px;
+}
+header nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+header nav a {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 30px;
+	padding: 0 15px;
+}
+header .information {
+	color: #fff;
+	margin-top: 300px;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	text-align: right;
+}
+header h1 {
+	font-size: 110px;
+}
