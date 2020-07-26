@@ -6,25 +6,156 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<!-- header -->
-	<header>
-		<div class="container">
-			<nav>
-				<a href="#">Home</a>
-				<a href="#">Symptoms</a>
-				<a href="#">Protection</a>
-				<a href="#">Contacts</a>
-			</nav>
-			<div class="information">
-				<h1>Careful,<br>coronavirus</h1>
-				<p>At the end of 2019, a new type of coronavirus started spreading in<br> China. This type of coronavirus is often called 2019-nCoV, novel<br>coronavirus, or COVID-19.</p>
+	<div id="header-preloader">
+		<div class="header-preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<header id="scrollToHome">
+		<div class="header-image">
+			<div class="container">
+				<div class="header-padding" style="padding-top: 100px;"></div>
+				<!-- MOBILE MENU -->
+				<div class="header-menu">
+					<button class="nav-toggle" type="button" aria-label="toggle menu">
+					<span aria-hidden="true"></span></button>
+					<nav class="mobile-navigation">
+						<ul id="toggleMenu" class="toggle-menu">
+							<li><a href="#scrollToHome">Home</a></li>
+							<li><a href="#scrollToSymptoms">Symptoms</a></li>
+							<li><a href="#scrollToProtection">Protection</a></li>
+							<li><a href="#scrollToContacts">Contacts</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- / MOBILE MENU -->
+				<nav id="navigation">
+					<a href="#scrollToHome">Home</a>
+					<a href="#scrollToSymptoms">Symptoms</a>
+					<a href="#scrollToProtection">Protection</a>
+					<a href="#scrollToContacts">Contacts</a>
+				</nav>
+				<div class="header-text">
+					<h1>Careful,<br>coronavirus</h1>
+					<p>At the end of 2019, a new type of coronavirus started spreading in<br>China. This type of coronavirus is often called 2019-nCoV, novel<br>coronavirus, or COVID-19.</p>
+				</div>
 			</div>
 		</div>
-		<div class="header-image"></div>
 	</header>
 	<!-- / header -->
+
+	<!-- main -->
+	<main>
+		<div class="main-symptoms" id="scrollToSymptoms">
+			<div class="container">
+				<div class="main-text">
+					<h2>Symptoms</h2>
+					<p>These symptoms may be signs of developing pneumonia <br>
+					and should alert you. Be sure to seek medical help.</p>
+				</div>
+				<div class="main-card">
+					<!-- card one -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/symptoms/symptomsCardOne.svg" alt="Symptoms">
+						<h3>High temperature</h3>
+						<p>One of the first symptoms that occurs in those infected with coronavirus is fever.</p>
+					</div>
+					<!-- card two -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/symptoms/symptomsCardTwo.svg" alt="Symptoms">
+						<h3>Sore <br> throat</h3>
+						<p>Most people infected with the COVID-19 virus experience moderate respiratory illnesses.</p>
+					</div>
+					<!-- card three -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/symptoms/symptomsCardThree.svg" alt="Symptoms">
+						<h3>Difficulty breathing</h3>
+						<p>Shortness of breath is one of the leading symptoms of coronavirus infection.</p>
+					</div>
+					<!-- card four -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/symptoms/symptomsCardFour.svg" alt="Symptoms">
+						<h3>Headache or dizziness</h3>
+						<p>Patients with coronavirus may suffer from neurological problems such as vertigo.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-protection" id="scrollToProtection">
+			<div class="container">
+				<div class="main-text">
+					<h2>Protection</h2>
+					<p>Here are the main preventive measures <br>
+					that everyone should follow to ensure safety.</p>
+				</div>
+				<div class="main-card">
+					<!-- card one -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/protection/protectionCardOne.svg" alt="Protection">
+						<h3>Wear <br> a mask</h3>
+						<p>The mask should fit snugly to the face. You need to change the mask every 2-3 hours, and you can't reuse it.</p>
+					</div>
+					<!-- card two -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/protection/protectionCardTwo.svg" alt="Protection">
+						<h3>Don't touch face</h3>
+						<p>Scientists have calculated that an average person touches their face with their hands 25 times per hour.</p>
+					</div>
+					<!-- card three -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/protection/protectionCardThree.svg" alt="Protection">
+						<h3>Wash their hands</h3>
+						<p>Hands should be washed as often as possible, and this should be done within 40-60 seconds.</p>
+					</div>
+					<!-- card four -->
+					<div data-aos="fade-up" class="card-item">
+						<img src="img/svg/protection/protectionCardFour.svg" alt="Protection">
+						<h3>Take temperature</h3>
+						<p>Temperature is an important symptom, a signal that somewhere in the body inflammation has started.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- / main -->
+
+	<!-- footer -->
+	<footer id="scrollToContacts">
+		<div class="container">
+			<div class="footer-text">
+				<h2>Contact</h2>
+				<p>Get the latest information about <br>
+				coronavirus infection in your inbox.</p>
+			</div>
+			<div class="footer-form">
+				<input type="text" class="footer-input" placeholder="Your email">
+				<button class="footer-button">Get</button>
+			</div>
+			<div class="footer-icons">
+				<img src="img/svg/icons/facebook.svg" alt="Facebook">
+				<img src="img/svg/icons/twitter.svg" alt="Twitter">
+				<img src="img/svg/icons/instagram.svg" alt="Instagram">
+				<img src="img/svg/icons/vimeo.svg" alt="Vimeo">
+			</div>
+			<div class="footer-create">
+				<p>The site design was created by <a href="https://albbipolar.github.io/" target="_blank">albbipolar</a></p>
+			</div>
+		</div>
+	</footer>
+	<!-- / footer -->
+
+	<script src="js/script.js"></script>
+	<script src="js/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>
