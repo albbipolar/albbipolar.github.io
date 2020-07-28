@@ -2,38 +2,53 @@
 
 // STICKY NAVBAR
 
-const navbar = document.getElementById('navigation');
-const sticky = navbar.offsetTop;
+const navigationBar = document.getElementById('navigation');
+const stickyBar = navigationBar.offsetTop;
 
-window.onscroll = function() {
-
+window.onscroll = () => {
 	stickyNavbar();
 }
 
-function stickyNavbar() {
+const stickyNavbar = () => {
 
-	if (window.pageYOffset > sticky) {
-		navbar.classList.add('sticky-navbar');
+	if (window.pageYOffset > stickyBar) {
+		navigationBar.classList.add('sticky-navbar');
 	} else {
-		navbar.classList.remove('sticky-navbar');
+		navigationBar.classList.remove('sticky-navbar');
 	}
 }
 
 // TOGGLE MOBILE MENU
 
-const menu = document.querySelector('.header-menu');
-const btn = menu.querySelector('.nav-toggle');
+const headerMenu = document.querySelector('.header-menu');
+const buttonMenu = headerMenu.querySelector('.nav-toggle');
+const toggleMenu = document.getElementById('toggle-menu');
 
-btn.addEventListener('click', evt => {
-	menu.classList.toggle('active');
+buttonMenu.addEventListener('click', evt => {
+	headerMenu.classList.toggle('active');
 
-	const toggleMenu = document.getElementById('toggleMenu');
-	if(menu.classList.contains('active')) {
+	if (headerMenu.classList.contains('active')) {
 		toggleMenu.style.display = 'flex';
 	} else {
 		toggleMenu.style.display = 'none';
 	}
 });
+
+// NAVIGATION IF SCROLL TO UP
+
+let previousScroll = 0;
+
+window.onscroll = () => {
+	const heightTop = window.pageYOffset;
+
+	if (heightTop > previousScroll) {
+		navigationBar.classList.add('sticky-navbar')
+	} else {
+		navigationBar.classList.remove('sticky-navbar')
+	}
+
+	previousScroll = heightTop;
+}
 
 // SMOOTH SCROLL
 
