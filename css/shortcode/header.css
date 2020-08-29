@@ -105,7 +105,7 @@
   left: 0;
   position: fixed;
   width: 100%;
-  z-index: 999999;
+  z-index: 999998;
 }
 .header-space {height: 80px;}
 .intelligent-header.headroom--pinned {transition: all 0.3s ease 0s;}

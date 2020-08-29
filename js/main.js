@@ -117,7 +117,7 @@ $(function(){
         $("a[href^='#']").click(function(){
                 var _href = $(this).attr("href");
                 $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-                return false;
+                // return false;
         });
 });
 
@@ -170,9 +170,9 @@ document.getElementById('greeting-text').innerHTML = greeting;
 
 // PRELOADER
 let preloader = document.getElementById('preloader_preload');
-let body = document.getElementsByTagName('body')[0];
+let documentBody = document.getElementsByTagName('body')[0];
 
-body.style = 'overflow-y: hidden';
+documentBody.style = 'overflow-y: hidden';
 
 function fadeOut(event) {
     event.style.opacity = 1;
@@ -181,7 +181,7 @@ function fadeOut(event) {
         if (event.style.opacity <= 0.05) {
             clearInterval(interhellopreloader);
             preloader.style.display = 'none';
-            body.style = 'overflow-y: scroll';
+            documentBody.style = '';
         }
     }, 16);
 }
