@@ -1,21 +1,21 @@
+.header-area {
+  padding: 30px 0;
+}
 .header-position {
   left: 0;
   position: absolute;
   width: 100%;
   z-index: 9;
 }
-.logo {margin-top: 24px;}
 .logo a {
-  color: #222;
-  font-family: 'DosisRegular', sans-serif;
+  color: #464646;
+  font-family: 'BloggerMedium', sans-serif;
   font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  pointer-events: none;
 }
 .main-menu ul li {
   display: inline-block;
   margin-left: 30px;
-  padding: 30px 0;
   position: relative;
 }
 .main-menu ul li a {
@@ -76,11 +76,7 @@
   padding: 0;
 }
 .mean-container a.meanmenu-reveal {
-  border: 1px solid #464646;
   color: #464646;
-  margin-top: -22px;
-  padding: 4px 5px;
-  position: absolute;
 }
 .mean-container a.meanmenu-reveal span {background-color: #333;}
 .mean-container .mean-nav {margin-top: 15px;}
@@ -115,7 +111,7 @@
   float: right;
   height: 19px;
   margin-left: 30px;
-  margin-top: 31px;
+  margin-top: 5px;
   padding: 0;
 }
 .stick .menu-toggle {margin-top: 25px;}
@@ -124,7 +120,7 @@
   width: 30px;
 }
 .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
-  background-color: #000;
+  background-color: #181818;
   height: 2px;
   width: 30px;
   transition: none!important;

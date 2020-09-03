@@ -31,8 +31,6 @@
   background-repeat: repeat-x;
   background-position: bottom;
 }
-.text-muted {color: #777;}
-.text-primary {color: #1ee2e7;}
 #portfolio p.large {font-size: 16px;}
 #portfolio a {color: #181818;}
 #portfolio .portfolio-item {
@@ -86,10 +84,12 @@
   font-style: italic;
 }
 .modal-open .modal {z-index: 999999;}
+.modal-open .modal img {pointer-events: none;}
 @media(min-width:767px) {
     #portfolio .portfolio-item {margin: 0 0 30px;}
 }
 .portfolio-modal .modal-content {
+  font-family: 'MontserratRegular', sans-serif;
   padding: 100px 0;
   min-height: 100%;
   border: 0;
@@ -98,6 +98,7 @@
   background-clip: border-box;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background: #fff;
 }
 .portfolio-modal .modal-content h2 {
   margin-bottom: 15px;
@@ -108,9 +109,9 @@
   margin-bottom: 30px;
 }
 .portfolio-modal .modal-content p.item-intro {
+  font-family: 'MontserratItalic', sans-serif;
   margin: 20px 0 30px;
   font-size: 16px;
-  font-style: italic;
 }
 .portfolio-modal .modal-content ul.list-inline {
   font-size: 14px;
@@ -127,19 +128,110 @@
   background-color: transparent;
   cursor: pointer;
 }
-.portfolio-modal .close-modal:hover {opacity: .3;}
-.portfolio-modal .close-modal .lr {
+.portfolio-modal .close-modal:hover {opacity: .8;}
+.portfolio-modal .close-modal .left-line {
   z-index: 1051;
   width: 1px;
   height: 75px;
   margin-left: 35px;
-  background-color: #222;
+  background-color: #181818;
   transform: rotate(45deg);
 }
-.portfolio-modal .close-modal .lr .rl {
+.portfolio-modal .close-modal .left-line .right-line {
   z-index: 1052;
   width: 1px;
   height: 75px;
-  background-color: #222;
+  background-color: #181818;
   transform: rotate(90deg);
+}
+.portfolio-modal .dark-mode {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  cursor: pointer;
+}
+#switch {
+  visibility: hidden;
+  position: absolute;
+}
+.switch-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #CCC;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.switch-label .toggle {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #464646;
+  position: absolute;
+  left: 3px;
+  transition: 0.5s all ease;
+}
+#switch:checked ~ .switch-label {
+  transition: 0.5s all ease;
+  background: #464646;
+  border: none;
+}
+#switch:checked ~ .switch-label .toggle {
+  transform: translateX(43px);
+  transition: 0.7s all ease;
+  background: #fff;
+}
+.glitch {
+  position: relative;
+  transform: scale3d(1, 1, 1);
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: #fff;
+  clip: rect(0, 900px, 0, 0);
+}
+.glitch::before {
+  left: 7px;
+  text-shadow: 1px 0 green;
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+.glitch::after {
+  left: 3px;
+  text-shadow: -1px 0 red;
+  animation: glitch-effect 2s infinite linear alternate-reverse;
+}
+@keyframes glitch-effect {
+  0% {clip: rect(36px, 9999px, 8px, 0);}
+  5% {clip: rect(71px, 9999px, 8px, 0);}
+  10% {clip: rect(59px, 9999px, 52px, 0);}
+  15% {clip: rect(42px, 9999px, 66px, 0);}
+  20% {clip: rect(46px, 9999px, 87px, 0);}
+  25% {clip: rect(47px, 9999px, 100px, 0);}
+  30% {clip: rect(60px, 9999px, 32px, 0);}
+  35% {clip: rect(57px, 9999px, 70px, 0);}
+  40% {clip: rect(51px, 9999px, 17px, 0);}
+  45% {clip: rect(90px, 9999px, 48px, 0);}
+  50% {clip: rect(61px, 9999px, 16px, 0);}
+  55% {clip: rect(65px, 9999px, 39px, 0);}
+  60% {clip: rect(23px, 9999px, 88px, 0);}
+  65% {clip: rect(15px, 9999px, 99px, 0);}
+  70% {clip: rect(61px, 9999px, 93px, 0);}
+  75% {clip: rect(98px, 9999px, 16px, 0);}
+  80% {clip: rect(70px, 9999px, 100px, 0);}
+  85% {clip: rect(87px, 9999px, 6px, 0);}
+  90% {clip: rect(18px, 9999px, 91px, 0);}
+  95% {clip: rect(90px, 9999px, 16px, 0);}
+  100% {clip: rect(86px, 9999px, 51px, 0);}
 }

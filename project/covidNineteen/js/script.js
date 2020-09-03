@@ -24,7 +24,7 @@ const headerMenu = document.querySelector('.header-menu');
 const buttonMenu = headerMenu.querySelector('.nav-toggle');
 const toggleMenu = document.getElementById('toggle-menu');
 
-buttonMenu.addEventListener('click', evt => {
+buttonMenu.addEventListener('click', event => {
 	headerMenu.classList.toggle('active');
 
 	if (headerMenu.classList.contains('active')) {
@@ -32,6 +32,15 @@ buttonMenu.addEventListener('click', evt => {
 	} else {
 		toggleMenu.style.display = 'none';
 	}
+});
+
+const linkList = document.getElementById('toggle-menu').getElementsByTagName('a');
+
+[].forEach.call(linkList, function(event) {
+    event.addEventListener('click', function () {
+        headerMenu.classList.remove('active');
+        toggleMenu.style.display = 'none';
+    });
 });
 
 // NAVIGATION IF SCROLL TO UP

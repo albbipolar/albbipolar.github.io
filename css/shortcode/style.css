@@ -29,7 +29,7 @@
   width: 100%;
 }
 .hover-style:hover::before {opacity: 0.95;}
-.item .col-md-4.col-sm-6 {width: 100%;}
+.carousel-item .col-md-4.col-sm-6 {width: 100%;}
 .minimal-img > img {width: 100%;}
 .about-minimal ul li {
   border-top: 1px solid #f6f6f6;

@@ -259,6 +259,7 @@ footer .footer-form {
 footer .footer-form input {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 24px;
+	color: #370047;
 	font-style: italic;
 	background: none;
 	border: none;
@@ -267,12 +268,10 @@ footer .footer-form input {
 }
 footer .footer-form input::placeholder {color: #8312A5;}
 footer .footer-form input:focus {outline: none;}
-footer .footer-form button {
-	background: linear-gradient(to left, #743AD5, #D53A9D);
+footer .footer-form .form-button {
 	border: none;
 	border-radius: 50px;
 	cursor: pointer;
-	color: #fff;
 	font-size: 18px;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -280,8 +279,28 @@ footer .footer-form button {
 	padding: 20px 50px;
 	margin: 0 10px;
 }
-footer .footer-form button:hover {background: linear-gradient(to left, #D53A9D, #743AD5);}
-footer .footer-form button:focus {outline: none;}
+footer .footer-form .form-button a {color: #fff;}
+footer .footer-form .form-button {
+  position: relative;
+  background-image: linear-gradient(to left, #743AD5, #D53A9D);
+  z-index: 1;
+}
+
+footer .footer-form .form-button::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to left, #D53A9D, #743AD5);
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  border-radius: 50px;
+  opacity: 0;
+}
+footer .footer-form .form-button:hover::before {opacity: 1;}
+footer .footer-form .form-button:focus {outline: none;}
 footer .footer-icons {margin-top: 160px;}
 footer .footer-icons img {
 	width: 25px;
@@ -441,16 +460,26 @@ footer .footer-create a {
 	footer .footer-form {
 		display: block;
 		width: 90%;
+
+		padding: 5% 0;
 	}
 	footer .footer-form input {
 		width: 100%;
 
 		padding: 25px 25px;
 	}
-	footer .footer-form button {
+	footer .footer-form .form-button {
 		width: 80%;
 
-		margin: 25px 0;
+		margin: 10px auto;
 	}
 	footer .footer-form input::placeholder {text-align: center;}
+}
+/* IF WIDTH < 300PX */
+
+@media screen and (max-width: 576px) {
+	header .header-text h1 {font-size: 32px;}
+	footer .footer-text p {
+		padding: 0 5%;
+	}
 }
