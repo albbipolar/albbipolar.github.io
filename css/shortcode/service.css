@@ -153,6 +153,14 @@
   background-color: transparent;
   cursor: pointer;
 }
+.dark-mode-active {
+  display: block!important;
+  width: 75px;
+  z-index: 9999999;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
 #switch {
   visibility: hidden;
   position: absolute;
@@ -180,8 +188,7 @@
 }
 #switch:checked ~ .switch-label {
   transition: 0.5s all ease;
-  background: #464646;
-  border: none;
+  background: #181818;
 }
 #switch:checked ~ .switch-label .toggle {
   transform: translateX(43px);
@@ -202,6 +209,7 @@
   background: #fff;
   clip: rect(0, 900px, 0, 0);
 }
+.modal-content.switch-checked .glitch::before, .modal-content.switch-checked .glitch::after {background: #181818;}
 .glitch::before {
   left: 7px;
   text-shadow: 1px 0 green;
@@ -234,4 +242,24 @@
   90% {clip: rect(18px, 9999px, 91px, 0);}
   95% {clip: rect(90px, 9999px, 16px, 0);}
   100% {clip: rect(86px, 9999px, 51px, 0);}
+}
+.modal-content.switch-checked {
+  background: #181818;
+}
+.modal-content.switch-checked h2,
+.modal-content.switch-checked p,
+.modal-content.switch-checked a,
+.modal-content.switch-checked li,
+.modal-content.switch-checked span {
+  color: #fff!important;
+}
+.modal-content.switch-checked a {
+  border-bottom: 1px solid #fff!important;
+}
+.modal-content.switch-checked .left-line,
+.modal-content.switch-checked .right-line {
+  background-color: #fff!important;
+}
+.modal-content.switch-checked .text-highlight {
+  background-image: none!important;
 }

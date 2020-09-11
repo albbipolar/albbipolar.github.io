@@ -207,51 +207,27 @@ window.onload = function() {
 };
 
 // DARK MODE
-// const modalBackground = $('.modal-content');
-// const modalElements = $(`.modal-content h2,
-//     .modal-content p,
-//     .modal-content a,
-//     .modal-content li`);
-// const modalClose = $('.modal-content .lr, .modal-content .rl');
-// const modalTextBackground = $('.modal-content .text-highlight');
-
-// $('#switch').on('click', function() {
-
-
-//     if ($('#switch').is(':checked')){
-
-//         modalBackground.css('background', '#181818');
-//         modalElements.css('color', '#fff');
-//         modalClose.css('background-color', '#fff');
-//         modalTextBackground.css('background-image', 'none');
-//     } else {
-//         modalBackground.css('background', '#fff');
-//         modalElements.css('color', '#181818');
-//         modalClose.css('background-color', '#181818');
-//         modalTextBackground.css('background-image', 'url(img/bg-highlight.png)');
-//     }
-// });
-
 $('.portfolio-link').on('click', function() {
 
     $(this).addClass('portfolio-active');
 
-    if($(this).hasClass('portfolio-active')) {
+    if ($(this).hasClass('portfolio-active')) {
 
-        $('.dark-mode').css({
-            'display': 'block',
-            'width': '75px',
-            'z-index': '9999999',
-            'position': 'fixed',
-            'top': '10px',
-            'left': '10px'
-        });
+        $('.dark-mode').addClass('dark-mode-active');
     }
 });
 $('.close-modal').on('click', function() {
 
-    $('.dark-mode').css('display', 'none');
+    $('.portfolio-link').removeClass('portfolio-active');
+    $('.dark-mode').removeClass('dark-mode-active');
 });
+
 $('#switch').on('click', function() {
-    alert('Функция ночной темы находится в разработке');
+
+    if ($('#switch').is(':checked')) {
+
+        $('.modal-content').addClass('switch-checked');
+    } else {
+        $('.modal-content').removeClass('switch-checked');
+    }
 });
