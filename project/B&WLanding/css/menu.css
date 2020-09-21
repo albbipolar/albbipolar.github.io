@@ -1,0 +1,156 @@
+.toggle-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+}
+.toggle-button span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 8%;
+    background-color: #fff;
+    font-size: 0px;
+    user-select: none;
+}
+.toggle-button span:before {transform: translateY(350%);}
+.toggle-button span:after {transform: translateY(-350%);}
+.toggle-button span:before, .toggle-button span:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    content: '';
+}
+.toggle-button.clicked span:before, .toggle-button.clicked span:after {background-color: #fff;}
+.toggle-button:hover {cursor: pointer;}
+.toggle-navigation {
+    background-color: #2a2a2a;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: 500px;
+    width: 100%;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    padding: 100px 40px 60px 40px;
+}
+.toggle-navigation.overlay-show {transform: translateX(0px);}
+.toggle-navigation.overlay-show ul.toggle-main li {
+    transform: translateX(0px);
+    opacity: 1;
+}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(1) {transition-delay: 0.15s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(2) {transition-delay: 0.3s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(3) {transition-delay: 0.45s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(4) {transition-delay: 0.6s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(5) {transition-delay: 0.75s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(6) {transition-delay: 0.9s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(7) {transition-delay: 1.05s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(8) {transition-delay: 1.2s;}
+.toggle-navigation.overlay-show ul.toggle-main li:nth-child(9) {transition-delay: 1.35s;}
+.toggle-navigation.overlay-show .toggle-about,
+.toggle-navigation.overlay-show .toggle-copyright {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-delay: 0.85s;
+}
+@media (min-width: 667px) {
+    .toggle-navigation {
+        padding: 120px 90px 70px 90px;
+    }
+}
+.toggle-navigation ul.toggle-main {list-style-type: none;}
+.toggle-navigation ul.toggle-main li {
+    transform: translateX(40px);
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    margin-bottom: 20px;
+}
+.toggle-navigation ul.toggle-main li:last-of-type {margin-bottom: 0px;}
+.toggle-navigation ul.toggle-main li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    display: block;
+    letter-spacing: 5px;
+    transition: all 0.3s ease;
+
+    padding: 10px 0;
+}
+.toggle-navigation ul.toggle-main li a span {color: #777;}
+.toggle-navigation ul.toggle-main li a:hover {color: #777;}
+.toggle-navigation .toggle-about {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    
+    margin-top: 40px;
+}
+.toggle-navigation .toggle-about p {
+    color: #fff;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    line-height: 170%;
+}
+.toggle-navigation ul.toggle-copyright {
+    list-style-type: none;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.4s ease;
+
+    margin-top: 40px;
+}
+.toggle-navigation ul.toggle-copyright li {
+    color: #fff;
+
+    margin-bottom: 10px;
+}
+.toggle-navigation ul.toggle-copyright li:last-of-type {margin-bottom: 0px;}
+.toggle-navigation ul.toggle-copyright li a {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #fff;
+}
+.toggle-navigation ul.toggle-copyright li a:hover {color: #777;}
+.toggle-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    background: #1d1d1d;
+    opacity: 0;
+    visibility: hidden;
+}
+.toggle-overlay.overlay-show {
+    opacity: 0.8;
+    visibility: visible;
+}
+.button-dark span,
+.button-dark span::before,
+.button-dark span::after {background: #1d1d1d;}
+.button-active {transform: rotate(45deg);}
+.button-active span,
+.button-active span::before,
+.button-active span::after {
+    background: #fff!important;
+    transform: rotate(90deg);
+}

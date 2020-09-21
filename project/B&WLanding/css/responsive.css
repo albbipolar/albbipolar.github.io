@@ -1,0 +1,287 @@
+
+/* RESPONSIVE STYLE */
+
+/* IF WIDTH < 720px */
+
+@media screen and (max-width: 720px) {
+
+    /* SECTION HEADER */
+    .header-navigation {display: none;}
+    .toggle-button {display: block!important;}
+    .toggle-button span,
+    .toggle-button span:before,
+    .toggle-button span:after {background: #1d1d1d;}
+
+    /* SECTION ABOUT */
+    .section-about .about-entries .about-entry .about-title:before,
+    .section-about:before {display: none;}
+    .section-about .about-entries {
+        height: 100vh;
+        position: static;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: 0 auto;
+    }
+    .section-about .about-entries .about-entry:first-child {margin: 0;}
+    .section-about .about-entries .about-entry:nth-child(2n),
+    .section-about .about-entries .about-entry {
+        width: 100%;
+        text-align: center;
+    }
+    .section-about .parallax-image img {display: none;}
+
+    /* SECTION TEAM */
+    .section-team::before {display: none;}
+    .section-team .team-persons {
+        flex-direction: column;
+        
+        margin-top: 40px;
+    }
+    .section-team .team-persons .team-person:nth-child(2),
+    .section-team .team-persons .team-person {
+        width: 100%;
+
+        margin: 20px 0;
+    }
+    .section-team .team-persons .team-person h3 {margin-top: 10px;}
+    .section-team .team-persons .team-person .team-social {margin: 0;}
+
+    /* SECTION SERVICES */
+    .section-services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .section-services .services-title {padding: 0;}
+    .section-services .services-service {
+        max-width: 800px;
+        width: calc(100% - 80px);
+        flex-direction: column;
+
+        margin: 40px auto 0 auto;
+    }
+    .section-services .services-service .service-item {margin: 20px 0;}
+    .section-services .services-service .service-item img {width: 20%;}
+    .section-services .services-service .service-item h3 {margin: 5px 0;}
+    .section-services .services-service .service-item p {padding: 0 20px;}
+
+    /* SECTION BLOG */
+    .section-blog {
+        background: #1d1d1d;
+
+        padding: 0 40px;
+    }
+    .section-blog::before {display: none;}
+    .section-blog .blog-header h3 {
+        color: #fff;
+        font-weight: normal;
+        font-size: 34px;
+
+        margin-bottom: 80px;
+    }
+    .section-blog .blog-posts {
+        display: block!important;
+
+        margin: 20px 0;
+    }
+    .section-blog .blog-post h4 {
+        color: #fff;
+        font-weight: normal;
+        font-size: 24px;
+
+        margin: 10px 0;
+    }
+    .section-blog .blog-post p {
+        color: #777;
+        font-size: 16px;
+    }
+    .section-blog .blog-button {margin-top: 80px;}
+
+    /* SECTION CONTACT */
+    .section-contact {padding: 0 40px;}
+    .section-contact .contact-form input,
+    .section-contact .contact-form textarea,
+    .section-contact .contact-form button {width: 75%;}
+
+    /* TOGGLE NEAVIGATION */
+    .fp-viewing-about .toggle-button span,
+    .fp-viewing-about .toggle-button span:before,
+    .fp-viewing-about .toggle-button span:after,
+    .fp-viewing-services .toggle-button span,
+    .fp-viewing-services .toggle-button span:before,
+    .fp-viewing-services .toggle-button span:after,
+    .fp-viewing-blog .toggle-button span,
+    .fp-viewing-blog .toggle-button span:before,
+    .fp-viewing-blog .toggle-button span:after {background: #fff;}
+}
+
+/* IF WIDTH < 540PX */
+
+@media screen and (max-width: 540px) {
+
+    /* SECTION HEADER */
+    header {padding: 0 40px;}
+    header .header-title {margin: 0;}
+    header .header-title h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    header .header-title p {
+        text-align: center;
+
+        margin-top: 10px;
+    }
+
+    /* MOBILE MENU */
+    .toggle-navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding: 0;
+    }
+    .toggle-navigation.overlay-show ul.toggle-main li {width: 100%;}
+    .toggle-navigation .toggle-main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .toggle-navigation .toggle-about,
+    .toggle-navigation .toggle-copyright {display: none;}
+
+    /* SECTION ABOUT */
+    .section-about {padding: 0 40px;}
+    .section-about .about-entries {
+        max-width: none;
+        width: 100%;
+    }
+    .section-about .about-entries .about-entry {padding: 0;}
+    .section-about .about-entries .about-entry .about-title {margin: 0;}
+    .section-about .about-entries .about-entry:nth-child(2n),
+    .section-about .about-entries .about-entry {margin-top: 20px;}
+
+    /* SECTION TEAM */
+    .section-team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .section-team .team-title {
+        padding: 0;
+        margin: 0 40px;
+    }
+    .section-team .team-persons {display: none!important;}
+    .section-team .owl-carousel .item h3 {
+        font-size: 24px;
+        font-weight: normal;
+        
+        margin-top: 30px;
+    }
+    .section-team .owl-carousel {display: block!important;}
+    .section-team .owl-carousel .owl-item {display: flex;}
+    .section-team .owl-carousel .item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .section-team .owl-carousel {margin-top: 40px;}
+    .section-team .owl-carousel .team-social {
+        display: flex;
+        justify-content: center;
+    }
+    .section-team .owl-carousel .team-social a {margin: 10px 5px;}
+
+    /* SECTION SERVICES */
+    .section-services .services-service {display: none;}
+    .section-services .services-title {
+        text-align: center;
+
+        margin: 0 40px;
+    }
+    .section-services .owl-carousel {display: block!important;}
+    .section-services .owl-carousel {margin-top: 40px;}
+    .section-services .owl-carousel .service-item {
+        display: block;
+        text-align: center;
+    }
+    .section-services .owl-carousel .owl-dots button.owl-dot.active {background: #fff!important;}
+    .section-services .owl-carousel .item h3 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: normal;
+        
+        margin-top: 30px;
+    }
+    .section-services .owl-carousel .item p {
+        color: #b3b3b3;
+
+        margin: 0 40px;
+    }
+
+    /* SECTION BLOG */
+    .section-blog .blog-posts {display: none!important;}
+    .section-blog .owl-carousel {display: block!important;}
+    .section-blog .owl-carousel .owl-dots button.owl-dot.active {background: #fff;}
+
+    /* SECTION CONTACT */
+    .section-contact .contact-elements {display: none;}
+    .section-contact .owl-carousel {
+        display: block!important;
+
+        margin-top: 40px;
+    }
+    .owl-carousel .contact-element {text-align: center;}
+    .section-contact .contact-form {margin-top: 20px;}
+    .section-contact .contact-form input {
+        margin-bottom: 10px;
+        padding: 10px 0;
+    }
+    .section-contact .contact-form textarea {display: none;}
+    .section-contact .contact-form button {
+        margin: 0;
+        padding: 10px 0;
+    }
+    .section-contact .contact-copyright {
+        font-size: 13px;
+
+        margin: 20px 0;
+    }
+}
+
+/* MODAL WINDOW */
+
+@media screen and (min-width: 0px) {
+    .modal-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        backface-visibility: hidden;
+        transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+   }
+    .modal-overlay.active {
+        visibility: visible;
+        opacity: 1;
+   }
+}
