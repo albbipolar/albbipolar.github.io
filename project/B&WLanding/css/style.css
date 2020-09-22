@@ -23,7 +23,7 @@ input, textarea, button {outline: none;}
 
 .preloader {
     background: #1d1d1d;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -208,7 +208,7 @@ header .header-scroll span:nth-child(3) {animation-delay: 1.5s;}
     top: 50%;
     transform: translateY(-50%);
     right: -73px;
-    z-index: 1000;
+    z-index: 100;
 }
 .section-about .about-entries .about-entry .about-title.title-big:before {
     width: 24px;
@@ -465,7 +465,6 @@ header .header-scroll span:nth-child(3) {animation-delay: 1.5s;}
 
     padding: 20px 0 100px 0;
 }
-.section-contact .contact-form textarea::placeholder {padding-left: 20px;}
 .section-contact .contact-form button {
     font-family: 'HelveticaNeueLTProLt', sans-serif;
     color: #fff;

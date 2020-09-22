@@ -50,7 +50,8 @@
   <div class="toggle-overlay"></div>
   <!-- / toggle navigation -->
   <div id="fullpage">
-    <div class="section" data-anchor="section-home">
+
+    <div id="mobile-home" class="section" data-anchor="section-home">
     <!-- header -->
     <header>
         <div class="container">
@@ -86,10 +87,46 @@
     <!-- / header -->
     </div>
 
-    <div class="section" data-anchor="section-about">
+    <div id="mobile-about" class="section" data-anchor="section-about">
     <!-- about us -->
     <div class="section-about">
         <div class="container">
+          <!-- slider for mobile -->
+          <div class="owl-carousel owl-theme" style="display: none;">
+            <div class="item">
+              <div class="about-entry">
+                <div class="about-title">2018</div>
+                <div class="about-body">
+                  <p>This year was our starting point. We thank those who started this journey with us. As well as those who remain with us until now.</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="about-entry">
+                <div class="about-title">2019</div>
+                <div class="about-body">
+                  <p>This year our company was founded. A year ago, we could not even think that we could reach such heights in this difficult task.</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="about-entry">
+                <div class="about-title title-big">2020</div>
+                <div class="about-body">
+                  <p>Our friendly team of developers and designers is glad that You do not forget about us in this difficult year!</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="about-entry">
+                <div class="about-title">2021</div>
+                <div class="about-body">
+                  <p>But this is not the end, we will continue to keep the bar, and also grow in our competencies no matter what. Thank you for being with us.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / slider for mobile -->
             <div class="about-entries">
                 <div class="about-entry">
                   <div class="about-title">2018</div>
@@ -104,17 +141,17 @@
                   </div>
                 </div>
                 <div class="about-entry">
-                    <div class="about-title title-big">2020</div>
-                    <div class="about-body">
-                      <p>Our friendly team of developers and designers is glad that You do not forget about us in this difficult year!</p>
-                    </div>
+                  <div class="about-title title-big">2020</div>
+                  <div class="about-body">
+                    <p>Our friendly team of developers and designers is glad that You do not forget about us in this difficult year!</p>
                   </div>
-                  <div class="about-entry">
-                    <div class="about-title">2021</div>
-                    <div class="about-body">
-                      <p>But this is not the end, we will continue to keep the bar, and also grow in our competencies no matter what. Thank you for being with us.</p>
-                    </div>
+                </div>
+                <div class="about-entry">
+                  <div class="about-title">2021</div>
+                  <div class="about-body">
+                    <p>But this is not the end, we will continue to keep the bar, and also grow in our competencies no matter what. Thank you for being with us.</p>
                   </div>
+                </div>
             </div>
         </div>
         <div id="scene" class="scene">
@@ -129,7 +166,7 @@
     <!-- / about us -->
     </div>
 
-    <div class="section" data-anchor="section-team">
+    <div id="mobile-team" class="section" data-anchor="section-team">
     <!-- team -->
       <div class="section-team">
         <div class="container">
@@ -232,7 +269,7 @@
     <!-- / team -->
     </div>
 
-    <div class="section" data-anchor="section-services">
+    <div id="mobile-services" class="section" data-anchor="section-services">
     <!-- services -->
       <div class="section-services">
         <div class="container">
@@ -287,7 +324,7 @@
     <!-- / services -->
     </div>
 
-    <div class="section" data-anchor="section-blog">
+    <div id="mobile-blog" class="section" data-anchor="section-blog">
     <!-- blog -->
       <div class="section-blog">
         <div class="container">
@@ -354,7 +391,7 @@
     <!-- / blog -->
     </div>
 
-    <div class="section" data-anchor="section-contact">
+    <div id="mobile-contact" class="section" data-anchor="section-contact">
       <!-- contact -->
         <div class="section-contact">
           <div class="container">
@@ -402,7 +439,7 @@
               <input type="text" placeholder="Full Name">
               <input type="text" placeholder="Email">
               <input type="text" placeholder="Number">
-              <textarea placeholder="Write your Message here..."></textarea>
+              <textarea placeholder="Write your message here..."></textarea>
               <button>Submit</button>
             </div>
             <div class="contact-copyright">

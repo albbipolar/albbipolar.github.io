@@ -3,26 +3,68 @@
 // STICKY NAVIGATION
 
 $(document).ready(function() {
-    $('#fullpage').fullpage({
-        anchors: ['home', 'about', 'team', 'services', 'blog', 'contact'],
-        css3: true,
-        scrollingSpeed: 1000,
-        afterLoad: function(anchorLink, index) {
-            if (index === 1) {
-                $('.toggle-button').hide();
+    
+    if (window.innerWidth > 540) {
+
+        $('#fullpage').fullpage({
+            anchors: ['home', 'about', 'team', 'services', 'blog', 'contact'],
+            css3: true,
+            scrollingSpeed: 1000,
+            afterLoad: function(anchorLink, index) {
+                if (index === 1) {
+                    $('.toggle-button').hide();
+                }
+                else if (index === 2 || index === 4 || index === 5) {
+                    $('.toggle-button').css({'display': 'block'});
+                    $('.toggle-button').removeClass('button-dark')
+                }
+                else if (index === 3 || index === 6) {
+                    $('.toggle-button').css({'display': 'block'});
+                    $('.toggle-button').addClass('button-dark');
+                } else {
+                    $('.toggle-button').show();
+                }
             }
-            else if (index === 2 || index === 4 || index === 5) {
-                $('.toggle-button').css({'display': 'block'});
-                $('.toggle-button').removeClass('button-dark')
-            }
-            else if (index === 3 || index === 6) {
-                $('.toggle-button').css({'display': 'block'});
-                $('.toggle-button').addClass('button-dark');
-            } else {
-                $('.toggle-button').show();
-            }
-        }
-    });
+        });
+    } else {
+
+        // CHANGE LINKS
+        
+        $('.toggle-main').html(
+            `<li><a href="#mobile-home">Home</a></li>
+            <li><a href="#mobile-about">About Us</a></li>
+            <li><a href="#mobile-team">Team</a></li>
+            <li><a href="#mobile-services">Services</a></li>
+            <li><a href="#mobile-blog">Blog</a></li>
+            <li><a href="#mobile-contact">Contact Us</a></li>`
+        );
+
+        $('.header-title a').attr('href', '#mobile-services');
+
+        $('.header-scroll').html(
+            `<a href="#mobile-about">
+            <span></span>
+            <span></span>
+            <span></span>
+            </a>`
+        );
+
+        // LINK SCROLL
+        
+        $(`a[href^='#']`).click(function() {
+
+            let href = $(this).attr('href');
+            
+            $('html, body').animate({scrollTop: $(href).offset().top + 'px'});
+
+            // CLOSE MENU
+            $('.toggle-button').removeClass('button-active');
+            $('.toggle-navigation').removeClass('overlay-show');
+            $('.toggle-overlay').removeClass('overlay-show');
+
+            return false;
+        });
+    }
 });
 
 $('.toggle-button, .toggle-overlay').click(function() {
@@ -37,7 +79,7 @@ const linkList = document.getElementById('toggle-navigation').getElementsByTagNa
 [].forEach.call(linkList, function(event) {
 
     event.addEventListener('click', function () {
-
+        // CLOSE MENU
         $('.toggle-button').removeClass('button-active');
         $('.toggle-navigation').removeClass('overlay-show');
         $('.toggle-overlay').removeClass('overlay-show');
@@ -85,10 +127,10 @@ $(window).load(function() {
 
 // UNSUPPORTING HORIZONTAL ORIENTATION
 
-window.addEventListener('orientationchange', function() {
+$(window).resize(function() {
 
     if (window.orientation === 90) {
-
+    
         document.write(`<div style="
         display: flex;
         justify-content: center;
@@ -107,7 +149,8 @@ window.addEventListener('orientationchange', function() {
         </div>`);
     }
 
-}, false);
+});
+
 
 // MODAL WINDOW
 
