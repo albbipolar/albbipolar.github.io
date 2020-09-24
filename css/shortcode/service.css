@@ -85,6 +85,7 @@
 }
 .modal-open .modal {z-index: 999999;}
 .modal-open .modal img {pointer-events: none;}
+.modal-open .modal img::selection {background: none;}
 @media(min-width:767px) {
     #portfolio .portfolio-item {margin: 0 0 30px;}
 }
@@ -99,6 +100,7 @@
   -webkit-box-shadow: none;
   box-shadow: none;
   background: #fff;
+  transition: .5s;
 }
 .portfolio-modal .modal-content h2 {
   margin-bottom: 15px;
@@ -144,15 +146,6 @@
   background-color: #181818;
   transform: rotate(90deg);
 }
-.portfolio-modal .dark-mode {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  width: 75px;
-  height: 75px;
-  background-color: transparent;
-  cursor: pointer;
-}
 .dark-mode-active {
   display: block!important;
   width: 75px;
@@ -160,40 +153,6 @@
   position: fixed;
   top: 30px;
   left: 30px;
-}
-#switch {
-  visibility: hidden;
-  position: absolute;
-}
-.switch-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 30px;
-  border: 1px solid #CCC;
-  border-radius: 50px;
-  position: relative;
-  cursor: pointer;
-  transition: 0.5s all ease;
-}
-.switch-label .toggle {
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
-  background-color: #464646;
-  position: absolute;
-  left: 3px;
-  transition: 0.5s all ease;
-}
-#switch:checked ~ .switch-label {
-  transition: 0.5s all ease;
-  background: #181818;
-}
-#switch:checked ~ .switch-label .toggle {
-  transform: translateX(43px);
-  transition: 0.7s all ease;
-  background: #fff;
 }
 .glitch {
   position: relative;
@@ -209,18 +168,18 @@
   background: #fff;
   clip: rect(0, 900px, 0, 0);
 }
-.modal-content.switch-checked .glitch::before, .modal-content.switch-checked .glitch::after {background: #181818;}
+.modal-content.dark-mode-enabled .glitch::before, .modal-content.dark-mode-enabled .glitch::after {background: #181818;}
 .glitch::before {
   left: 7px;
   text-shadow: 1px 0 green;
-  animation: glitch-effect 3s infinite linear alternate-reverse;
+  animation: glitch-animation 3s infinite linear alternate-reverse;
 }
 .glitch::after {
   left: 3px;
   text-shadow: -1px 0 red;
-  animation: glitch-effect 2s infinite linear alternate-reverse;
+  animation: glitch-animation 2s infinite linear alternate-reverse;
 }
-@keyframes glitch-effect {
+@keyframes glitch-animation {
   0% {clip: rect(36px, 9999px, 8px, 0);}
   5% {clip: rect(71px, 9999px, 8px, 0);}
   10% {clip: rect(59px, 9999px, 52px, 0);}
@@ -243,23 +202,62 @@
   95% {clip: rect(90px, 9999px, 16px, 0);}
   100% {clip: rect(86px, 9999px, 51px, 0);}
 }
-.modal-content.switch-checked {
+.modal-content.dark-mode-enabled {background: #181818;}
+.modal-content.dark-mode-enabled h2,
+.modal-content.dark-mode-enabled p,
+.modal-content.dark-mode-enabled a,
+.modal-content.dark-mode-enabled li,
+.modal-content.dark-mode-enabled span {color: #fff!important;}
+.modal-content.dark-mode-enabled a {border-bottom: 1px solid #fff!important;}
+.modal-content.dark-mode-enabled .left-line,
+.modal-content.dark-mode-enabled .right-line {background-color: #fff!important;}
+.modal-content.dark-mode-enabled .text-highlight {background-image: none!important;}
+.modal-content .modal-swipe {
   background: #181818;
+  position: absolute;
+  top: 95%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  cursor: grab;
+
+  padding: 0 15px;
 }
-.modal-content.switch-checked h2,
-.modal-content.switch-checked p,
-.modal-content.switch-checked a,
-.modal-content.switch-checked li,
-.modal-content.switch-checked span {
-  color: #fff!important;
+.modal-content .modal-swipe:hover {top: 90%;}
+.modal-content .swipe-active {background: #fff;}
+.modal-content .modal-swipe p {
+  color: #fff;
+
+  margin: 0;
 }
-.modal-content.switch-checked a {
-  border-bottom: 1px solid #fff!important;
+.modal-content .modal-swipe.swipe-active p {color: #181818!important;}
+.modal-content .modal-swipe .swipe-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.modal-content.switch-checked .left-line,
-.modal-content.switch-checked .right-line {
-  background-color: #fff!important;
+.modal-content .modal-swipe .swipe-item img {
+  width: 50px;
+  height: 50px;
+  filter: invert();
+  animation: swipe-animation 5s infinite;
+  display: none;
+
+  margin: 0;
 }
-.modal-content.switch-checked .text-highlight {
-  background-image: none!important;
+.modal-content .modal-swipe .swipe-item img.item-active {filter: none;}
+
+@keyframes swipe-animation {
+  0% {transform: translateX(0);}
+  25% {transform: translateX(-100%);}
+  50% {transform: translateX(0);}
+  75% {transform: translateX(100%);}
+  100% {transform: translateX(0);}
 }

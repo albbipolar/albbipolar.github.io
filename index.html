@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>albbipolar - персональный сайт-портфолио</title>
-	<meta name="description" content="Сайт-портфолио albbipolar. Вёрстка web-страниц. Программирование на JavaScript!">
+	<title>albbipolar — персональный сайт-портфолио</title>
+	<meta name="description" content="Сайт-портфолио albbipolar. Вёрстка и программирование web-страниц.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- FAVICON -->
+	<!-- favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-	<!-- CSS -->
+	<!-- css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/meanmenu.css">
@@ -23,52 +23,53 @@
 	<!--[if lt IE 8]>
 	<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста обновите свой браузер, чтобы просматривать эту страницу.</p>
 	<![endif]-->
-<!-- header -->
-<!-- preloader -->
-<div id="preloader">
-	<div id="preloader_preload">
-		<div class="spinner-box">
-			<div class="circle-border">
-				<div class="circle-core"></div>
+	
+	<!-- preloader -->
+	<div id="preloader">
+		<div id="preloader_preload">
+			<div class="spinner-box">
+				<div class="circle-border">
+					<div class="circle-core"></div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- / preloader -->
-<header class="intelligent-header">
-	<div class="header-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-xs-12">
-					<div class="logo">
-						<a href="index.html">ALBBIPOLAR</a>
-					</div>
-				</div>
-			<div class="col-md-9 col-xs-12">
-				<div class="main-menu text-right">
-					 <div class="main-menu mean-menu menu-style-toggle text-right">
-						<nav style="display: block;">
-							<ul class="menu">
-								<li><a href="#home" class="btn">Главная</a></li>
-								<li><a href="#portfolio" class="btn">Портфолио</a></li>
-								<li><a href="#service" class="btn">Навыки</a></li>
-							</ul>
-						</nav>
-						<div class="menu-toggle hamburger hamburger--squeeze hidden-sm hidden-xs">
-							<div class="hamburger-box">
-								<div class="hamburger-inner"></div>
-							</div>
+	<!-- / preloader -->
+	
+	<!-- header -->
+	<header class="intelligent-header">
+		<div class="header-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-xs-12">
+						<div class="logo">
+							<a href="index.html">ALBBIPOLAR</a>
 						</div>
 					</div>
+					<div class="col-md-9 col-xs-12">
+						<div class="main-menu text-right">
+							<div class="main-menu mean-menu menu-style-toggle text-right">
+								<nav style="display: block;">
+									<ul class="menu">
+										<li><a href="#home" class="btn">Главная</a></li>
+										<li><a href="#portfolio" class="btn">Портфолио</a></li>
+										<li><a href="#service" class="btn">Навыки</a></li>
+									</ul>
+								</nav>
+								<div class="menu-toggle hamburger hamburger--squeeze hidden-sm hidden-xs">
+									<div class="hamburger-box">
+										<div class="hamburger-inner"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mobile-menu"></div>
+					</div>
 				</div>
-				<div class="mobile-menu"></div>
-			</div>
 			</div>
 		</div>
-	</div>
-</header>
-<div class="header-space"></div>
-<!-- /header -->
+	</header>
+	<div class="header-space"></div>	
 	<div class="slider border-bottom" id="home">
 		<div id="particles-js"></div>
 		<div class="container">
@@ -80,13 +81,9 @@
 			</div>
 		</div>
 	</div>
-<!-- portfolio -->
-	<div class="dark-mode" style="display: none;">
-		<input type="checkbox" id="switch">
-		<label for="switch" class="switch-label">
-			<div class="toggle"></div>
-		</label>
-	</div>
+	<!-- /header -->
+	
+	<!-- portfolio -->
 	<div class="portfolio-area ptb-90" id="portfolio">
 		<div class="container">
 			<div class="section-title text-center mb-70">
@@ -108,7 +105,7 @@
 								<img src="img/portfolio/project/B&WLanding/B&WLanding.jpg" class="img-responsive">
 							</a>
 							<div class="portfolio-caption">
-								<h4>B&W LANDING PAGE</h4>
+								<h4 data-tilt>B&W LANDING PAGE</h4>
 								<p class="text-muted">website</p>
 							</div>
 						</div>
@@ -217,7 +214,9 @@
 								<div class="modal-body">
 									<h2>B&W LANDING PAGE</h2>
 									<p class="item-intro text-muted">WEBSITE</p>
-									<img class="img-responsive" src="img/portfolio/project/B&WLanding/B&WLandingFull.jpg">
+									<div data-tilt data-tilt-axis="x">
+										<img class="img-responsive" src="img/portfolio/project/B&WLanding/B&WLandingFull.jpg">
+									</div>
 									<p>
 										<strong>Вы можете перейти к проекту, </strong>
 										<a href="project/B&WLanding/index.html" target="_blank" class="text-highlight">нажав здесь</a>, либо вернуться <a href="index.html" class="text-highlight">назад</a>.
@@ -227,6 +226,12 @@
 										<span>|</span>
 										<li>Категория: website</li>
 									</ul>
+								</div>
+							</div>
+							<div class="modal-swipe">
+								<div class="swipe-item">
+									<p>Сменить цветовую гамму</p>
+									<img src="img/swipe.svg">
 								</div>
 							</div>
 						</div>
@@ -249,7 +254,9 @@
 								<div class="modal-body">
 									<h2>A DIFFICULT CHOICE</h2>
 									<p class="item-intro text-muted">DESIGN</p>
-									<img class="img-responsive" src="img/portfolio/project/difficultСhoice/difficultСhoiceFull.jpg">
+									<div data-tilt data-tilt-axis="x">
+										<img class="img-responsive" src="img/portfolio/project/difficultСhoice/difficultСhoiceFull.jpg">
+									</div>
 									<p>Сентябрь — это замечательное время, чтобы привести свои мысли в порядок. Видишь декабрь? Он не за горами. Как видишь, назад пути нет. Думаю, оступлюсь. А может поднимусь на ступеньку выше. Ты со мной?</p>
 									<p>
 										<strong>Вы можете перейти к проекту, </strong>
@@ -260,6 +267,12 @@
 										<span>|</span>
 										<li>Категория: design</li>
 									</ul>
+								</div>
+							</div>
+							<div class="modal-swipe">
+								<div class="swipe-item">
+									<p>Сменить цветовую гамму</p>
+									<img src="img/swipe.svg">
 								</div>
 							</div>
 						</div>
@@ -282,7 +295,9 @@
 								<div class="modal-body">
 									<h2>COVID NINETEEN</h2>
 									<p class="item-intro text-muted">WEBSITE</p>
-									<img class="img-responsive" src="img/portfolio/project/covidNineteen/covidNineteenFull.jpg">
+									<div data-tilt data-tilt-axis="x">
+										<img class="img-responsive" src="img/portfolio/project/covidNineteen/covidNineteenFull.jpg">
+									</div>
 									<p>
 										<strong>Вы можете перейти к проекту, </strong>
 										<a href="project/covidNineteen/index.html" target="_blank" class="text-highlight">нажав здесь</a>, либо вернуться <a href="index.html" class="text-highlight">назад</a>.
@@ -292,6 +307,12 @@
 										<span>|</span>
 										<li>Категория: website</li>
 									</ul>
+								</div>
+							</div>
+							<div class="modal-swipe">
+								<div class="swipe-item">
+									<p>Сменить цветовую гамму</p>
+									<img src="img/swipe.svg">
 								</div>
 							</div>
 						</div>
@@ -314,7 +335,9 @@
 								<div class="modal-body">
 									<h2>ABDULLAH NOMAN</h2>
 									<p class="item-intro text-muted">WEBSITE</p>
-									<img class="img-responsive" src="img/portfolio/project/abdullahNoman/abdullahNomanFull.jpg">
+									<div data-tilt data-tilt-axis="x">
+										<img class="img-responsive" src="img/portfolio/project/abdullahNoman/abdullahNomanFull.jpg">
+									</div>
 									<p>
 										<strong>Вы можете перейти к проекту, </strong>
 										<a href="project/abdullahNoman/index.html" target="_blank" class="text-highlight">нажав здесь</a>, либо вернуться <a href="index.html" class="text-highlight">назад</a>.
@@ -324,6 +347,12 @@
 										<span>|</span>
 										<li>Категория: website</li>
 									</ul>
+								</div>
+							</div>
+							<div class="modal-swipe">
+								<div class="swipe-item">
+									<p>Сменить цветовую гамму</p>
+									<img src="img/swipe.svg">
 								</div>
 							</div>
 						</div>
@@ -346,7 +375,9 @@
 								<div class="modal-body">
 									<h2 class="glitch" data-text="GLITCH">GLITCH</h2>
 									<p class="item-intro text-muted">DESIGN</p>
-									<img class="img-responsive" src="img/portfolio/project/glitch/glitchFull.jpg">
+									<div data-tilt data-tilt-axis="x">
+										<img class="img-responsive" src="img/portfolio/project/glitch/glitchFull.jpg">
+									</div>
 									<p>На улице господствовал мороз. Где-то ещё слышались остатки праздничного салюта. Ветер и множество снежинок переплетались в объятиях. А кто-то видел этот мир по-другому.</p>
 									<p>
 										<strong>Вы можете перейти к проекту, </strong>
@@ -357,6 +388,12 @@
 										<span>|</span>
 										<li>Категория: design</li>
 									</ul>
+								</div>
+							</div>
+							<div class="modal-swipe">
+								<div class="swipe-item">
+									<p>Сменить цветовую гамму</p>
+									<img src="img/swipe.svg">
 								</div>
 							</div>
 						</div>
@@ -379,7 +416,9 @@
 								<div class="modal-body">
 									<h2>WIND OF CHANGE</h2>
 									<p class="item-intro text-muted">DESIGN</p>
-									<img class="img-responsive" src="img/portfolio/project/windOfChange/windOfChangeFull.jpg">
+									<div data-tilt data-tilt-axis="x">
+										<img class="img-responsive" src="img/portfolio/project/windOfChange/windOfChangeFull.jpg">
+									</div>
 									<p>Декабрь 2019. Это был переломный момент. Это было трехдневное испытание. Я помню время, когда подул ветер перемен. Так пусть этот кусочек памяти останется здесь навсегда.</p>
 									<p>
 										<strong>Вы можете перейти к проекту, </strong>
@@ -392,6 +431,12 @@
 									</ul>
 								</div>
 							</div>
+							<div class="modal-swipe">
+								<div class="swipe-item">
+									<p>Сменить цветовую гамму</p>
+									<img src="img/swipe.svg">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -400,8 +445,9 @@
 			
 		</div>
 	</div>
-<!-- /portfolio -->
-<!-- service -->
+	<!-- /portfolio -->
+	
+	<!-- service -->
 	<div class="service-area gray-bg border-top pt-90 pb-60" id="service">
 		<div class="container">
 			<div class="section-title text-center mb-70">
@@ -454,29 +500,32 @@
 			</div>
 		</div>
 	</div>
-<!-- /service -->
-<!-- footer -->
-<footer class="footer-bg bg-opacity footer-border ptb-90">
-	<div class="footer-area">
-		<div class="container">
-			<div class="footer-info text-center">
-				<div class="logo footer-logo">
-					<a href="index.html">ALBBIPOLAR</a>
-				</div>
-				<div class="copyright text-center">
-					<p>© 2019-2020, albbipolar. All rights reserved</p>
+	<!-- /service -->
+	
+	<!-- footer -->
+	<footer class="footer-bg bg-opacity footer-border ptb-90">
+		<div class="footer-area">
+			<div class="container">
+				<div class="footer-info text-center">
+					<div class="logo footer-logo">
+						<a href="index.html">ALBBIPOLAR</a>
+					</div>
+					<div class="copyright text-center">
+						<p>© 2019-2020, albbipolar. All rights reserved</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-<!-- /footer -->
-<!-- up button -->
+	</footer>
+	<!-- /footer -->
+	
+	<!-- up button -->
 	<div id="toTop">
 		<i class="fa fa-chevron-up"></i>
 	</div>
-<!-- /up button -->
-<!-- all js here -->
+	<!-- /up button -->
+	
+	<!-- js -->
 	<script src="js/vendor/jquery-1.12.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/isotope.pkgd.min.js"></script>
@@ -497,5 +546,8 @@
 	<script src="js/main.js"></script>
 	<script src="js/particles.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/tilt.jquery.js"></script>
+	<!-- / js -->
 	</body>
 </html>

@@ -129,7 +129,7 @@ $(window).load(function() {
 
 $(window).resize(function() {
 
-    if (window.orientation === 90) {
+    if (window.orientation === 90 || window.orientation === -90) {
     
         document.write(`<div style="
         display: flex;
