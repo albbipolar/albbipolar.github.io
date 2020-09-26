@@ -48,14 +48,12 @@ $('.portfolio-menu button').on('click', function(event) {
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
-    navContainerClass: 'container-owl',
-    navClass: true,
-    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+    nav: false,
+    dots: true,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
-    responsive:{
+    responsive: {
     0:{
         items: 1
     },
@@ -69,6 +67,8 @@ $('.owl-carousel').owlCarousel({
         items: 3
     }
 }});
+
+const modalDarkMode = $('.modal-content');$('.dissolution').mousedown(function(event) {if (event.button === 1 && modalDarkMode.hasClass('dark-mode-enabled')) {$('.modal-overlay').html('<div class="modal-window"><div class="close-modal"><span></span></div><div class="modal-window-content"><h3>Вау, это сработало!</h3><p>1. Ночь — смена цветовой гаммы. Колесо — колёсико от мышки. Сложно было догадаться? Первый этап пройден. Начало положено.<hr>2. Предупреждение! Давайте мы не будем играть в "хакеров" — не будем лезть в чужой код. Я за честный квест. Играем честно, а иначе какой от этого смысл? ;)<hr>3. Чтобы активировать второй этап, я должен знать, что Вы прошли первый. Я должен увидеть фразу "c3eef2eee221" где-нибудь. Удачи!</p></div></div>');const elements = $('.modal-overlay, .modal-window');elements.addClass('active');$('.close-modal').on('click', function() {elements.removeClass('active');});}});
 
 // MAGNIFIC POPUP
 $('.img-poppu').magnificPopup({
@@ -250,3 +250,6 @@ $('.modal-swipe').hover(function() {
     $('.swipe-item p').show();
     $('.swipe-item img').hide();
 });
+
+// ЕСЛИ ВЫ ЗДЕСЬ, ЧТОБЫ НАЙТИ РАЗГАДКУ К КВЕСТУ, ТО ЭТО ВАШЕ ДЕЛО.
+// Я СЧИТАЮ, ЧТО ИГРАТЬ НУЖНО ЧЕСТНО, А ИНАЧЕ КАКОЙ ОТ ЭТОГО СМЫСЛ?
