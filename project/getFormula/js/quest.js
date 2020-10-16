@@ -3232,7 +3232,7 @@ $(`.processing-statistics`).on(`click`, function() {
     `);
     $(`.processing-statistics`).hide();
 });
-
+// ЗАПРЕТ ПРОСМОТРА ИСХОДНОГО КОДА
 document.onkeydown = function(event) {
 
     if (event.keyCode === 123) {
@@ -3255,11 +3255,9 @@ document.onkeydown = function(event) {
         return false;
     }
 }
-// $(document).on({
-//     `contextmenu`: function(event) {
-
-//         alert(`Давай мы будем проходить квест честно?`);
-
-//         event.preventDefault();
-//     }
-// });
+$(document).on(`contextmenu`, function(event) {
+    
+    alert(`Хорошая попытка, но давай проходить квест честно?`);
+    
+    event.preventDefault();
+});
