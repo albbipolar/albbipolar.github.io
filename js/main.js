@@ -251,3 +251,40 @@ $('.modal-swipe').hover(function() {
 
 // ЕСЛИ ВЫ ЗДЕСЬ, ЧТОБЫ НАЙТИ РАЗГАДКУ К КВЕСТУ, ТО ЭТО ВАШЕ ДЕЛО.
 // Я СЧИТАЮ, ЧТО ИГРАТЬ НУЖНО ЧЕСТНО, А ИНАЧЕ КАКОЙ ОТ ЭТОГО СМЫСЛ?
+
+let dissolutionCount = 0;
+
+$('.third-stage').on('click', function() {
+
+    dissolutionCount++;
+});
+
+$('.third-stage').mousedown(function(event) {
+    
+    if (event.button === 2) {
+        
+        if (dissolutionCount === 10) {
+
+            const dissolutionMethod = prompt('Так, хорошо. Это, допустим, сработало. Маленький вопрос. Напиши мой ник (слитно, без лишних символов), когда мы с тобой познакомились. Я на 99% уверен, что ты его не помнишь. Придётся писать автору ;)');
+
+            if (dissolutionMethod === 'NoMercy') {
+                
+                const dissolutionQuestion = prompt('Так, ладно. Ещё один вопрос. Ник, который ты использовал(а) с 2018 по 2019 год. Зима. Здесь, я надеюсь, ты сам(а) справишься?');
+                
+                if (dissolutionQuestion === '.Destroyer') {
+                    
+                    $('.third-stage').html('Мне очень нравится, что ты разгадываешь любые мои отсылки. Замечательного дня тебе. На этом квест окончен, но ты не расслабляйся. Декабрь — сильный мороз... И этот мороз будет не только на улице, но ещё в душе. Теплые вещи-то у тебя есть?');
+                } else {
+                    
+                    $('.third-stage').html('Не-а. Ещё разок?');
+                    dissolutionCount = 0;
+                }
+            } else {
+                $('.third-stage').html('Упс, ошибка! Ещё разок?');
+                dissolutionCount = 0;
+            }
+        } else {
+            dissolutionCount = 0;
+        }
+    }
+});
