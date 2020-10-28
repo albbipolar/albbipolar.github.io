@@ -1,6 +1,4 @@
-.header-area {
-  padding: 30px 0;
-}
+.header-area {padding: 30px 0;}
 .header-position {
   left: 0;
   position: absolute;
@@ -75,9 +73,7 @@
   min-height: 0;
   padding: 0;
 }
-.mean-container a.meanmenu-reveal {
-  color: #464646;
-}
+.mean-container a.meanmenu-reveal {color: #464646;}
 .mean-container a.meanmenu-reveal span {background-color: #333;}
 .mean-container .mean-nav {margin-top: 15px;}
 .header-sticky.sticky {

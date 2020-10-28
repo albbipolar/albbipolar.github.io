@@ -76,8 +76,6 @@ $('.img-poppu').magnificPopup({
     }
 });
 
-let verificationClickCount = 0;$('.third-stage').on('click', function() {verificationClickCount++;});$('.third-stage').mousedown(function(event) {if (event.button === 2) {if (verificationClickCount === 10) {const verificationFurmula = prompt('Метод подбора ещё никто не отменял. Напиши, пожалуйста, формулу, в которую ты подставил(а) данные. Я помог тебе, сделав образец. Подставь свои значения.', '(oldNickname + newNickname) - veryLongNickname = 10');if (verificationFurmula === '(Yasherka + NoLimits) - python = 10') {const verificationOldNickname = prompt('Математически корректная формула. Проверим ещё кое-что? Напиши мне свой nickname, когда мы познакомились (слитно, без пробелов).');if (verificationOldNickname === 'Yasherka') {const verificationNewNickname = prompt('Хммм, отлично, а напиши-ка мне свой nickname, который у тебя сейчас (слитно, без пробелов). Я чисто хочу убедиться...');if (verificationNewNickname === 'NoLimits') {const verificationYearNickname = prompt('Ты хорошо справляешься с моими вопросами. Дальше — сложнее. Nickname, который ты использовал(а) с 2018 по 2019 год (слитно, без пробелов). Зима. Здесь, я надеюсь, ты сам(а) справишься?');if (verificationYearNickname === '.Destroyer') {const verificationMyNowNickname = prompt('Так, я понял, что свои nicknam\'ы ты знаешь хорошо. Теперь проверим, как знаешь мои. Какой nickname у меня сейчас (слитно, без пробелов, nickname не менялся)?');if (verificationMyNowNickname === 'python') {const verificationMyOldNickname = prompt('Устал(а)? Задаю тебе последний вопрос. Напиши мой ник (слитно, без пробелов, без лишних символов), когда мы с тобой познакомились. Я искренне верю, что ты его не помнишь. Придётся писать автору...');if (verificationMyOldNickname === 'NoMercy') {$('.third-stage').html('создание космоса. Мне очень нравится, что ты разгадываешь любые мои отсылки. На этом квест окончен, но ты не расслабляйся. Декабрь — сильный мороз. И этот мороз будет не только на улице, но ещё в душе... Тёплые вещи-то у тебя есть? Чтобы узнать главный ответ, нужно написать автору данный код: "eef2e2e5f2".');} else {$('.third-stage').html('создание космоса. Нет, ' + verificationMyOldNickname + ' —  это не то. У меня был другой nickname, когда мы познакомились. Пишем автору?');verificationClickCount = 0;}} else {$('.third-stage').html('Нет, ' + verificationMyNowNickname + ' — это не мой nickname, который я использую в данный момент, увы.');verificationClickCount = 0;}} else {$('.third-stage').html('создание космоса. ' + verificationYearNickname + ' — это явно не тот nickname, который ты использовал(а) с 2018 по 2019 год. Зима.');verificationClickCount = 0;}} else {$('.third-stage').html('создание космоса. Упс, ' + verificationNewNickname + ' — это не твой nickname, который ты используешь сейчас.');verificationClickCount = 0;}} else {$('.third-stage').html('создание космоса. ' + verificationOldNickname + ' — это не то. У тебя был другой nickname, когда мы познакомились. Где-то ошибка.');verificationClickCount = 0;}} else {$('.third-stage').html('создание космоса. ' + verificationFurmula + ' — ошибка, причинами которой могут быть: неидентифицированная формула, некорректный ответ.');verificationClickCount = 0;}} else {verificationClickCount = 0;}}});$('.third-stage').on('contextmenu',function(event){event.preventDefault();});
-
 // MENU-TOGGLE
 $('.menu-toggle').on('click', function(){
     if( $('.menu-toggle').hasClass('is-active') ){
@@ -184,38 +182,23 @@ const greetingHour = greetingDay.getHours();
 document.getElementById('greeting-text').innerHTML = greeting;
 
 // PRELOADER
-let preloader = document.getElementById('preloader-preload');
-let documentBody = document.getElementsByTagName('body')[0];
+$(window).load(function() {
 
-documentBody.style = 'overflow-y: hidden';
-
-function fadeOut(event) {
-    event.style.opacity = 1;
-    let interhellopreloader = setInterval(function() {
-        event.style.opacity = event.style.opacity - 0.05;
-        if (event.style.opacity <= 0.05) {
-            clearInterval(interhellopreloader);
-            preloader.style.display = 'none';
-            documentBody.style = '';
-        }
-    }, 16);
-}
-window.onload = function() {
+    // HIDE PRELOADER
     setTimeout(function() {
-        fadeOut(preloader);
+
+        $('.preloader-load').fadeOut();
+    }, 2000);
+
+    setTimeout(function() {
+
+        $('body').addClass('show-scroll');
+
+        $('.preloader').fadeOut();
     }, 3000);
-};
+});
 
 // DARK MODE
-$('.portfolio-link').on('click', function() {
-
-    $(this).addClass('portfolio-active');
-});
-$('.close-modal').on('click', function() {
-
-    $('.portfolio-link').removeClass('portfolio-active');
-});
-
 $(function() {
     
     $('.modal-swipe').swipe( {
@@ -250,9 +233,54 @@ $('.modal-swipe').hover(function() {
 // BUTTON SHOW MORE
 $('.btn-show-more').on('click', function() {
 
-    alert('Данная функция находится на стадии разработки.');
+    // SHOW PRELOADER
+    $('body').removeClass('show-scroll');
+    $('.preloader, .preloader-load').fadeIn();
+
+    // HIDE PRELOADER
+    setTimeout(function() {
+
+        $('.horizontal-container').show();
+
+        $('.btn-show-more').hide();
+
+        $('.preloader-load').fadeOut();
+    }, 3000);
+
+    setTimeout(function() {
+
+        $('body').addClass('show-scroll');
+
+        $('.preloader').fadeOut();
+    }, 4000);
 });
 
+// HORIZONTAL SCROLL
+function percentChange() {
+    
+    let horizontalPosition = document.getElementById('horizontal-scroll').scrollLeft,
+    horizontalWidth = document.getElementById('horizontal-scroll').scrollWidth,
+    horizontalVisWidth = $('div.horizontal-scroll').outerWidth();
 
-// ЕСЛИ ВЫ ЗДЕСЬ, ЧТОБЫ НАЙТИ РАЗГАДКУ К КВЕСТУ, ТО ЭТО ВАШЕ ДЕЛО.
-// Я СЧИТАЮ, ЧТО ИГРАТЬ НУЖНО ЧЕСТНО, А ИНАЧЕ КАКОЙ ОТ ЭТОГО СМЫСЛ?
+    let horizontalPercent = (horizontalPosition / (horizontalWidth - horizontalVisWidth)) * 100;
+    
+    $('.horizontal-percent').css('width', horizontalPercent + '%');
+}
+
+$('div.horizontal-scroll').bind('mousewheel', function(event) {
+    
+    event.preventDefault();
+    
+    if (event.originalEvent.wheelDelta >= 0) {
+        
+        $('div.horizontal-scroll').animate({scrollLeft: '-=15'}, 1);
+
+        percentChange();
+    } else {
+        $('div.horizontal-scroll').animate({scrollLeft: '+=15'}, 1);
+
+        percentChange();
+    }
+});
+
+percentChange();

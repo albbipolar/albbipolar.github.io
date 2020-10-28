@@ -1,7 +1,5 @@
-.border-top{border-top: 1px solid #F6F6F6;}
-.section-title {
-  margin: auto auto 70px;
-}
+.border-top{border-top: 1px solid #f6f6f6;}
+.section-title {margin: auto auto 70px;}
 .section-title h2 {
   font-weight: 500;
   margin-bottom: 15px;
@@ -86,9 +84,7 @@
 .modal-open .modal {z-index: 999999;}
 .modal-open .modal img {pointer-events: none;}
 .modal-open .modal img::selection {background: none;}
-@media(min-width:767px) {
-    #portfolio .portfolio-item {margin: 0 0 30px;}
-}
+@media(min-width:767px) {#portfolio .portfolio-item {margin: 0 0 30px;}}
 .portfolio-modal .modal-content {
   font-family: 'MontserratRegular', sans-serif;
   padding: 100px 0;
@@ -158,7 +154,8 @@
   position: relative;
   transform: scale3d(1, 1, 1);
 }
-.glitch::before, .glitch::after {
+.glitch::before,
+.glitch::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -168,7 +165,8 @@
   background: #fff;
   clip: rect(0, 900px, 0, 0);
 }
-.modal-content.dark-mode-enabled .glitch::before, .modal-content.dark-mode-enabled .glitch::after {background: #181818;}
+.modal-content.dark-mode-enabled .glitch::before,
+.modal-content.dark-mode-enabled .glitch::after {background: #181818;}
 .glitch::before {
   left: 7px;
   text-shadow: 1px 0 green;
@@ -253,33 +251,6 @@
   margin: 0;
 }
 .modal-content .modal-swipe .swipe-item img.item-active {filter: none;}
-
-@keyframes swipe-animation {
-  0% {transform: translateX(0);}
-  25% {transform: translateX(-100%);}
-  50% {transform: translateX(0);}
-  75% {transform: translateX(100%);}
-  100% {transform: translateX(0);}
-}
-
-/* THIRD STAGE  */
-.portfolio-modal .modal-content p .third-stage {
-  border-bottom: 1px dashed #464646;
-  cursor: pointer;
-}
-.modal-content.dark-mode-enabled .third-stage {
-  border-bottom: 1px dashed #fff!important;
-}
-.portfolio-modal .modal-content p.sub-third-stage::selection,
-.portfolio-modal .modal-content p.sub-third-stage span::selection {
-  color: #464646;
-  background: none;
-}
-.portfolio-modal .modal-content.dark-mode-enabled p.sub-third-stage::selection,
-.portfolio-modal .modal-content.dark-mode-enabled p.sub-third-stage span::selection {
-  color: #fff;
-  background: none;
-}
 .portfolio-area button.btn-show-more {
   display: block;
   background: #fff;
@@ -289,4 +260,58 @@
 
   margin: 40px auto 70px auto;
   padding: 20px 40px;
+}
+
+@keyframes swipe-animation {
+  0% {transform: translateX(0);}
+  25% {transform: translateX(-100%);}
+  50% {transform: translateX(0);}
+  75% {transform: translateX(100%);}
+  100% {transform: translateX(0);}
+}
+
+
+div.horizontal-scroll {
+  background-color:#181818;
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+  white-space: nowrap;
+}
+div.horizontal-scroll::-webkit-scrollbar { 
+  display: none; 
+}
+div.horizontal-scroll-item {
+  list-style-type:none;
+  background-color:#222;
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+
+  margin: 10px;
+}
+div.horizontal-scroll-item .text-scroll-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 100%;
+}
+div.horizontal-scroll-item .text-scroll-item span {
+  font-size: 12px;
+}
+.horizontal-progress-bar {
+  height: 2px;
+  background:#181818;
+  margin: 15px 0 80px 0;
+}
+.horizontal-percent {
+  max-width: 100%;
+  height: 100%;
+  width: 70%;
+  background:red;
 }

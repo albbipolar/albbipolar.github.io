@@ -25,8 +25,8 @@
 	<![endif]-->
 	
 	<!-- preloader -->
-	<div id="preloader">
-		<div id="preloader-preload">
+	<div class="preloader">
+		<div class="preloader-load">
 			<img src="img/snowflake.svg">
 		</div>
 	</div>
@@ -71,7 +71,7 @@
 		<div class="container">
 			<div class="slider-info-text text-center">
 				<div class="info-inner mt-150 mb-150">
-					<h1><span id="greeting-text">Hello</span>, рад Вас видеть!</h1>
+					<h1><span id="greeting-text"></span>, рад Вас видеть!</h1>
 					<span>I'm a верстальщик &amp; frontend-разработчик</span>
 				</div>
 			</div>
@@ -89,6 +89,7 @@
 			<div id="portfolio" class="bg-light-gray">
 				<div class="container">
 					<div class="row">
+					<!-- portfolio latest project -->
 
 						<!-- portfolio item 1 -->
 						<div class="col-md-4 col-sm-6 portfolio-item">
@@ -191,257 +192,298 @@
 							</div>
 						</div>
 						<!-- / portfolio item 6 -->
-
+					
+					<!-- / portfolio latest project -->
 					</div>
+
+					<!-- horizontal scroll project -->
+					<div class="horizontal-container" style="display: none;">
+						<div id="horizontal-scroll" class="horizontal-scroll">
+							<div class="horizontal-scroll-item">
+								<div class="text-scroll-item">В разработке
+									<span>Используйте скролл,<br>чтобы листать проекты.</span>
+								</div>
+							</div>
+							<div class="horizontal-scroll-item">
+								<div class="text-scroll-item">В разработке
+									<span>Используйте скролл,<br>чтобы листать проекты.</span>
+								</div>
+							</div>
+							<div class="horizontal-scroll-item">
+								<div class="text-scroll-item">В разработке
+									<span>Используйте скролл,<br>чтобы листать проекты.</span>
+								</div>
+							</div>
+							<div class="horizontal-scroll-item">
+								<div class="text-scroll-item">В разработке
+									<span>Используйте скролл,<br>чтобы листать проекты.</span>
+								</div>
+							</div>
+							<div class="horizontal-scroll-item">
+								<div class="text-scroll-item">В разработке
+									<span>Используйте скролл,<br>чтобы листать проекты.</span>
+								</div>
+							</div>
+							<div class="horizontal-scroll-item">
+								<div class="text-scroll-item">В разработке
+									<span>Используйте скролл,<br>чтобы листать проекты.</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-progress-bar">
+							<div class="horizontal-percent" style="width: 0%;"></div>
+						</div>
+					</div>
+					<!-- / horizontal scroll project -->
 				</div>
 			</div>
-
-			<!-- portfolio modal 1 -->
-			<div class="portfolio-modal modal fade" id="portfolio-modal-1" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="left-line">
-							<div class="right-line"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<div class="modal-body">
-									<h2>THE SPACE VICTORY</h2>
-									<p class="item-intro text-muted">DESIGN</p>
-									<div data-tilt data-tilt-axis="x">
-										<img class="img-responsive" src="img/portfolio/project/spaceVictory/spaceVictoryFull.jpg">
-									</div>
-									<p class="sub-third-stage">Искренняя радость — радость от победы. Эти минуты — результат многолетних усилий. Человек не может быть победителем во всех отраслях, но иногда ему хватает успехов близкого для него человека, чтобы разделить с ним вкус победы. Твои победы — моя мотивация на <!-- Залезть в исходный код? Как банально! Давайте играть честно? --><span class="third-stage" title="Хмм, кажись, это третий этап квеста...">создание космоса.</span></p>
-									<p>
-										<strong>Вы можете перейти к проекту, </strong>
-										<a href="project/spaceVictory/spaceVictory.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="index.html" class="text-highlight">назад.</a>
-									</p>
-									<ul class="list-inline">
-										<li>Дата: октябрь 2020</li>
-										<span>|</span>
-										<li>Категория: design</li>
-									</ul>
-								</div>
-							</div>
-							<div class="modal-swipe">
-								<div class="swipe-item">
-									<p>Сменить цветовую гамму</p>
-									<img src="img/swipe.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- / portfolio modal 1 -->
-
-			<!-- portfolio modal 2 -->
-			<div class="portfolio-modal modal fade" id="portfolio-modal-2" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="left-line">
-							<div class="right-line"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<div class="modal-body">
-									<h2>B&W LANDING PAGE</h2>
-									<p class="item-intro text-muted">WEBSITE</p>
-									<div data-tilt data-tilt-axis="x">
-										<img class="img-responsive" src="img/portfolio/project/B&WLanding/B&WLandingFull.jpg">
-									</div>
-									<p>
-										<strong>Вы можете перейти к проекту, </strong>
-										<a href="project/B&WLanding/index.html" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="index.html" class="text-highlight">назад.</a>
-									</p>
-									<ul class="list-inline">
-										<li>Дата: сентябрь 2020</li>
-										<span>|</span>
-										<li>Категория: website</li>
-									</ul>
-								</div>
-							</div>
-							<div class="modal-swipe">
-								<div class="swipe-item">
-									<p>Сменить цветовую гамму</p>
-									<img src="img/swipe.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- / portfolio modal 2 -->
-
-			<!-- portfolio modal 3 -->
-			<div class="portfolio-modal modal fade" id="portfolio-modal-3" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="left-line">
-							<div class="right-line"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<div class="modal-body">
-									<h2>A DIFFICULT CHOICE</h2>
-									<p class="item-intro text-muted">DESIGN</p>
-									<div data-tilt data-tilt-axis="x">
-										<img class="img-responsive" src="img/portfolio/project/difficultСhoice/difficultСhoiceFull.jpg">
-									</div>
-									<p>Сентябрь — это замечательное время, чтобы привести свои мысли в порядок. Видишь декабрь? Он не за горами. Как видишь, назад пути нет. Думаю, оступлюсь, а может поднимусь на ступеньку выше.</p>
-									<p>
-										<strong>Вы можете перейти к проекту, </strong>
-										<a href="project/difficultСhoice/difficultСhoice.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="index.html" class="text-highlight">назад.</a>
-									</p>
-									<ul class="list-inline">
-										<li>Дата: сентябрь 2020</li>
-										<span>|</span>
-										<li>Категория: design</li>
-									</ul>
-								</div>
-							</div>
-							<div class="modal-swipe">
-								<div class="swipe-item">
-									<p>Сменить цветовую гамму</p>
-									<img src="img/swipe.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- / portfolio modal 3 -->
-
-			<!-- portfolio modal 4 -->
-			<div class="portfolio-modal modal fade" id="portfolio-modal-4" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="left-line">
-							<div class="right-line"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<div class="modal-body">
-									<h2>COVID NINETEEN</h2>
-									<p class="item-intro text-muted">WEBSITE</p>
-									<div data-tilt data-tilt-axis="x">
-										<img class="img-responsive" src="img/portfolio/project/covidNineteen/covidNineteenFull.jpg">
-									</div>
-									<p>
-										<strong>Вы можете перейти к проекту, </strong>
-										<a href="project/covidNineteen/index.html" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="index.html" class="text-highlight">назад.</a>
-									</p>
-									<ul class="list-inline">
-										<li>Дата: июль 2020</li>
-										<span>|</span>
-										<li>Категория: website</li>
-									</ul>
-								</div>
-							</div>
-							<div class="modal-swipe">
-								<div class="swipe-item">
-									<p>Сменить цветовую гамму</p>
-									<img src="img/swipe.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- / portfolio modal 4 -->
-
-			<!-- portfolio modal 5 -->
-			<div class="portfolio-modal modal fade" id="portfolio-modal-5" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="left-line">
-							<div class="right-line"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<div class="modal-body">
-									<h2 class="glitch" data-text="GLITCH">GLITCH</h2>
-									<p class="item-intro text-muted">DESIGN</p>
-									<div data-tilt data-tilt-axis="x">
-										<img class="img-responsive" src="img/portfolio/project/glitch/glitchFull.jpg">
-									</div>
-									<p>На улице господствовал мороз. Где-то ещё слышались остатки праздничного салюта. Ветер и множество снежинок переплетались в объятиях. А кто-то видел этот мир по-другому.</p>
-									<p>
-										<strong>Вы можете перейти к проекту, </strong>
-										<a href="project/glitch/glitch.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="index.html" class="text-highlight">назад.</a>
-									</p>
-									<ul class="list-inline">
-										<li>Дата: январь 2020</li>
-										<span>|</span>
-										<li>Категория: design</li>
-									</ul>
-								</div>
-							</div>
-							<div class="modal-swipe">
-								<div class="swipe-item">
-									<p>Сменить цветовую гамму</p>
-									<img src="img/swipe.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- / portfolio modal 5 -->
-
-			<!-- portfolio modal 6 -->
-			<div class="portfolio-modal modal fade" id="portfolio-modal-6" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="left-line">
-							<div class="right-line"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<div class="modal-body">
-									<h2>WIND OF CHANGE</h2>
-									<p class="item-intro text-muted">DESIGN</p>
-									<div data-tilt data-tilt-axis="x">
-										<img class="img-responsive" src="img/portfolio/project/windOfChange/windOfChangeFull.jpg">
-									</div>
-									<p>Декабрь 2019. Это был переломный момент. Это было трехдневное испытание. Я помню время, когда подул ветер перемен. Так пусть этот кусочек памяти останется здесь навсегда.</p>
-									<p>
-										<strong>Вы можете перейти к проекту, </strong>
-										<a href="project/windOfChange/windOfChange.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="index.html" class="text-highlight">назад.</a>
-									</p>
-									<ul class="list-inline">
-										<li>Дата: декабрь 2019</li>
-										<span>|</span>
-										<li>Категория: design</li>
-									</ul>
-								</div>
-							</div>
-							<div class="modal-swipe">
-								<div class="swipe-item">
-									<p>Сменить цветовую гамму</p>
-									<img src="img/swipe.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- / portfolio modal 6 -->
-			
-			<button class="btn btn-show-more">Показать больше</button>
 		</div>
+		
+		<!-- portfolio modal 1 -->
+		<div class="portfolio-modal modal fade" id="portfolio-modal-1" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="left-line">
+						<div class="right-line"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<h2>THE SPACE VICTORY</h2>
+								<p class="item-intro text-muted">DESIGN</p>
+								<div data-tilt data-tilt-axis="x">
+									<img class="img-responsive" src="img/portfolio/project/spaceVictory/spaceVictoryFull.jpg">
+								</div>
+								<p>Искренняя радость — радость от победы. Эти минуты — результат многолетних усилий. Человек не может быть победителем во всех отраслях, но иногда ему хватает успехов близкого для него человека, чтобы разделить с ним вкус победы. Твои победы — моя мотивация на создание космоса.</p>
+								<p>
+									<strong>Вы можете перейти к проекту, </strong>
+									<a href="project/spaceVictory/spaceVictory.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" class="text-highlight" data-dismiss="modal">назад.</a>
+								</p>
+								<ul class="list-inline">
+									<li>Дата: октябрь 2020</li>
+									<span>|</span>
+									<li>Категория: design</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-swipe">
+							<div class="swipe-item">
+								<p>Сменить цветовую гамму</p>
+								<img src="img/swipe.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / portfolio modal 1 -->
+		
+		<!-- portfolio modal 2 -->
+		<div class="portfolio-modal modal fade" id="portfolio-modal-2" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="left-line">
+						<div class="right-line"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<h2>B&W LANDING PAGE</h2>
+								<p class="item-intro text-muted">WEBSITE</p>
+								<div data-tilt data-tilt-axis="x">
+									<img class="img-responsive" src="img/portfolio/project/B&WLanding/B&WLandingFull.jpg">
+								</div>
+								<p>
+									<strong>Вы можете перейти к проекту, </strong>
+									<a href="project/B&WLanding/index.html" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" data-dismiss="modal" class="text-highlight">назад.</a>
+								</p>
+								<ul class="list-inline">
+									<li>Дата: сентябрь 2020</li>
+									<span>|</span>
+									<li>Категория: website</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-swipe">
+							<div class="swipe-item">
+								<p>Сменить цветовую гамму</p>
+								<img src="img/swipe.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / portfolio modal 2 -->
+		
+		<!-- portfolio modal 3 -->
+		<div class="portfolio-modal modal fade" id="portfolio-modal-3" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="left-line">
+						<div class="right-line"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<h2>A DIFFICULT CHOICE</h2>
+								<p class="item-intro text-muted">DESIGN</p>
+								<div data-tilt data-tilt-axis="x">
+									<img class="img-responsive" src="img/portfolio/project/difficultСhoice/difficultСhoiceFull.jpg">
+								</div>
+								<p>Сентябрь — это замечательное время, чтобы привести свои мысли в порядок. Видишь декабрь? Он не за горами. Как видишь, назад пути нет. Думаю, оступлюсь, а может поднимусь на ступеньку выше.</p>
+								<p>
+									<strong>Вы можете перейти к проекту, </strong>
+									<a href="project/difficultСhoice/difficultСhoice.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" data-dismiss="modal" class="text-highlight">назад.</a>
+								</p>
+								<ul class="list-inline">
+									<li>Дата: сентябрь 2020</li>
+									<span>|</span>
+									<li>Категория: design</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-swipe">
+							<div class="swipe-item">
+								<p>Сменить цветовую гамму</p>
+								<img src="img/swipe.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / portfolio modal 3 -->
+		
+		<!-- portfolio modal 4 -->
+		<div class="portfolio-modal modal fade" id="portfolio-modal-4" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="left-line">
+						<div class="right-line"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<h2>COVID NINETEEN</h2>
+								<p class="item-intro text-muted">WEBSITE</p>
+								<div data-tilt data-tilt-axis="x">
+									<img class="img-responsive" src="img/portfolio/project/covidNineteen/covidNineteenFull.jpg">
+								</div>
+								<p>
+									<strong>Вы можете перейти к проекту, </strong>
+									<a href="project/covidNineteen/index.html" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" data-dismiss="modal" class="text-highlight">назад.</a>
+								</p>
+								<ul class="list-inline">
+									<li>Дата: июль 2020</li>
+									<span>|</span>
+									<li>Категория: website</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-swipe">
+							<div class="swipe-item">
+								<p>Сменить цветовую гамму</p>
+								<img src="img/swipe.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / portfolio modal 4 -->
+		
+		<!-- portfolio modal 5 -->
+		<div class="portfolio-modal modal fade" id="portfolio-modal-5" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="left-line">
+						<div class="right-line"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<h2 class="glitch" data-text="GLITCH">GLITCH</h2>
+								<p class="item-intro text-muted">DESIGN</p>
+								<div data-tilt data-tilt-axis="x">
+									<img class="img-responsive" src="img/portfolio/project/glitch/glitchFull.jpg">
+								</div>
+								<p>На улице господствовал мороз. Где-то ещё слышались остатки праздничного салюта. Ветер и множество снежинок переплетались в объятиях. А кто-то видел этот мир по-другому.</p>
+								<p>
+									<strong>Вы можете перейти к проекту, </strong>
+									<a href="project/glitch/glitch.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" data-dismiss="modal" class="text-highlight">назад.</a>
+								</p>
+								<ul class="list-inline">
+									<li>Дата: январь 2020</li>
+									<span>|</span>
+									<li>Категория: design</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-swipe">
+							<div class="swipe-item">
+								<p>Сменить цветовую гамму</p>
+								<img src="img/swipe.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / portfolio modal 5 -->
+		
+		<!-- portfolio modal 6 -->
+		<div class="portfolio-modal modal fade" id="portfolio-modal-6" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal">
+					<div class="left-line">
+						<div class="right-line"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<h2>WIND OF CHANGE</h2>
+								<p class="item-intro text-muted">DESIGN</p>
+								<div data-tilt data-tilt-axis="x">
+									<img class="img-responsive" src="img/portfolio/project/windOfChange/windOfChangeFull.jpg">
+								</div>
+								<p>Декабрь 2019. Это был переломный момент. Это было трехдневное испытание. Я помню время, когда подул ветер перемен. Так пусть этот кусочек памяти останется здесь навсегда.</p>
+								<p>
+									<strong>Вы можете перейти к проекту, </strong>
+									<a href="project/windOfChange/windOfChange.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" data-dismiss="modal" class="text-highlight">назад.</a>
+								</p>
+								<ul class="list-inline">
+									<li>Дата: декабрь 2019</li>
+									<span>|</span>
+									<li>Категория: design</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-swipe">
+							<div class="swipe-item">
+								<p>Сменить цветовую гамму</p>
+								<img src="img/swipe.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / portfolio modal 6 -->
+		
+		<button class="btn btn-show-more">Показать больше</button>
 	</div>
 	<!-- /portfolio -->
 	
@@ -506,7 +548,7 @@
 			<div class="container">
 				<div class="footer-info text-center">
 					<div class="logo footer-logo">
-						<a href="index.html">ALBBIPOLAR</a>
+						<a href="#">ALBBIPOLAR</a>
 					</div>
 					<div class="copyright text-center">
 						<p>© 2019-2020, albbipolar. All rights reserved</p>
@@ -535,9 +577,9 @@
 	<script src="js/plugins.js"></script>
 	<script type="text/javascript">
 	// grab an element
-	var myElement = document.querySelector(".intelligent-header");
+	let intelligentHeader = document.querySelector(".intelligent-header");
 	// construct an instance of Headroom, passing the element
-	var headroom  = new Headroom(myElement);
+	let headroom  = new Headroom(intelligentHeader);
 	// initialise
 	headroom.init();
 	</script>

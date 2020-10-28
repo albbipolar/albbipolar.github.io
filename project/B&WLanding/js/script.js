@@ -1,7 +1,6 @@
 'use strict';
 
 // STICKY NAVIGATION
-
 $(document).ready(function() {
     
     if (window.innerWidth > 540) {
@@ -29,7 +28,6 @@ $(document).ready(function() {
     } else {
 
         // CHANGE LINKS
-        
         $('.toggle-main').html(
             `<li><a href="#mobile-home">Home</a></li>
             <li><a href="#mobile-about">About Us</a></li>
@@ -50,7 +48,6 @@ $(document).ready(function() {
         );
 
         // LINK SCROLL
-        
         $(`a[href^='#']`).click(function() {
 
             let href = $(this).attr('href');
@@ -87,12 +84,10 @@ const linkList = document.getElementById('toggle-navigation').getElementsByTagNa
 });
 
 // PARALLAX
-
 const scene = document.getElementById('scene');
 const parallaxInstance = new Parallax(scene);
 
 // PRELOADER
-
 $(window).load(function() {
 
     let counter = 0;
@@ -126,7 +121,6 @@ $(window).load(function() {
 });
 
 // UNSUPPORTING HORIZONTAL ORIENTATION
-
 $(window).resize(function() {
 
     if (window.orientation === 90 || window.orientation === -90) {
@@ -153,7 +147,6 @@ $(window).resize(function() {
 
 
 // MODAL WINDOW
-
 const elements = $('.modal-overlay, .modal-window');
 
 $('.modal-button').on('click', function() {

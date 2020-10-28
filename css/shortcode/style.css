@@ -1,25 +1,11 @@
 .slider > img {width: 100%;}
-.single-count {text-align: center;}
-.count-icon span{font-size: 35px;}
-.count-title h2 {
-  color: #464646;
-  font-size: 40px;
-  font-weight: 300;
-  margin: 15px 0;
-}
-.count-title span {
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin: 0;
-  text-transform: capitalize;
-}
 .hover-style {
   display: block;
   position: relative;
 }
 .hover-style::before {
   background: #fff none repeat scroll 0 0;
-  content: "";
+  content: '';
   height: 100%;
   left: 0;
   opacity: 0;
@@ -29,145 +15,7 @@
   width: 100%;
 }
 .hover-style:hover::before {opacity: 0.95;}
-.carousel-item .col-md-4.col-sm-6 {width: 100%;}
-.minimal-img > img {width: 100%;}
-.about-minimal ul li {
-  border-top: 1px solid #f6f6f6;
-  display: block;
-  line-height: 1.3em;
-  list-style-type: none;
-  margin: 0;
-  padding: 15px 0;
-  position: relative;
-}
-.about-minimal ul li:last-child {border-bottom: 1px solid #eceaeb;}
-.about-minimal ul li::before {
-  color: #444;
-  content: "";
-  font-family: FontAwesome;
-  font-size: 13px;
-  line-height: 12px;
-  margin-left: 0;
-  margin-right: 10px;
-  position: relative;
-  top: 1px;
-}
-.about-minimal a {
-  border: 1px solid #ddd;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 16px;
-  margin-bottom: 5px;
-  padding: 12px 25px;
-  text-transform: uppercase;
-}
-.about-minimal a:hover{
-  background: #464646;
-  color: #fff;
-  border-color: #464646;
-}
-.single-skill-about {text-align: center;}
-.progress-h4 {
-  font-size: 22px;
-  font-weight: 400;
-}
-.about-us-text > p {color: #666;}
-.team-wrapper {border: 1px solid #e7e7e7;}
-.team-member {position: relative;}
-.team-member > img {
-  filter: grayscale(100%);
-  width: 100%;
-}
-.team-member::before {
-  background: transparent none repeat scroll 0 0;
-  content: " ";
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
-  width: 100%;
-  z-index: 1;
-}
-.team-wrapper:hover .team-member::before {background: rgba(33, 40, 45, 0.55);}
-.team-info {padding: 15px 0;}
-.team-icon {
-  left: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 99;
-}
-.team-icon > a {
-  border: 1px solid transparent;
-  color: #fff;
-  display: inline-block;
-  font-size: 18px;
-  height: 40px;
-  line-height: 36px;
-  margin: 0 15px;
-  opacity: 0;
-  text-align: center;
-  visibility: hidden;
-  width: 40px;
-  border-radius:50%;
-}
-.team-icon > a:hover {
-  background: #fff;
-  color: #666;
-}
-.team-wrapper:hover .team-icon > a {
-  opacity:1;
-  visibility: visible;
-  margin: 0 5px;
-}
-.team-info h3 {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-.team-info span {
-  color: #666;
-  text-transform: uppercase;
-}
-.team-member > img {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-}
-h3.main-contact {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 32px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.main-input input {
-  background-color: transparent;
-  border: 1px solid #ddd;
-  color: #666;
-  font-family: "Lato",sans-serif;
-  font-size: 14px;
-  height: 45px;
-  padding-left: 20px;
-}
-.text-leave2 textarea {
-  background: transparent none repeat scroll 0 0;
-  border: 1px solid #ddd;
-  color: #666;
-  font-family: "Lato",sans-serif;
-  height: 150px;
-  margin-bottom: 40px;
-  padding: 14px 20px;
-}
-.leave-form input:focus, .main-input input:focus, .text-leave textarea:focus, .text-leave2 textarea:focus {
-  background: transparent none repeat scroll 0 0;
-  border: 1px solid #f6f6f6;
-}
-.mfp-wrap {z-index: 99999999;}
-.mfp-bg {z-index: 9999999;}
+/* BUTTON TO TOP */
 #toTop {
   text-align: center;
   bottom: 35px;
@@ -178,7 +26,7 @@ h3.main-contact {
   z-index: 9999;
 }
 #toTop i {
-  background-color: #464646;
+  background: #464646;
   height: 40px;
   width: 40px;
   color: #fff;
@@ -186,45 +34,77 @@ h3.main-contact {
   border-radius: 50%;
 }
 #toTop i:hover {
-  background-color: #666;
+  background: #666;
   color: #fff;
 }
-.conract-area-bottom {margin-top: 50px;}
 .info-inner h1  {
   font-family: 'BloggerMedium', sans-serif;
   font-weight: 300;
 }
-.info-inner h1+span {
+.info-inner h1 + span {
   font-family: 'BloggerLight', sans-serif;
   font-size: 20px;
 }
-.knob {font-family: inherit!important;}
-#preloader-preload {
+/* PRELOADER */
+.preloader {
   display: block;
   position: fixed;
-  z-index: 9999999;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: #181818;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #181818;
+  z-index: 9999999;
 }
-#preloader-preload img {
+.preloader-load img {
   width: 150px;
   height: 150px;
   animation: preloader-animation 3s infinite linear;
   filter: invert();
   pointer-events: none;
 }
-@keyframes preloader-animation {
-  0% {transform: rotate(0);}
-  100% {transform: rotate(360deg);}
-}
+.preloader-load img::selection {background: none;}
+.preloader-right-easing {animation: preloader-animation-backgound .7s ease-in-out both;}
+/* PARTICLES */
 #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+/* BODY SCROLLBAR */
+body::-webkit-scrollbar {
+  width: 5px;
+  background: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background: #181818;
+}
+body.show-scroll::-webkit-scrollbar-thumb {
+  background: rgba(24, 24, 24, 0.5);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {background: #181818;}
+body.show-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+/* PORTFOLIO SCROLLBAR */
+.portfolio-modal::-webkit-scrollbar {
+  width: 5px;
+  background: #fff;
+}
+.portfolio-modal::-webkit-scrollbar-thumb {
+  background: rgba(24, 24, 24, 0.5);
+  border-radius: 10px;
+}
+.portfolio-modal::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+@keyframes preloader-animation {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
 }

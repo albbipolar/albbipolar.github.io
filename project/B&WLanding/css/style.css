@@ -489,18 +489,6 @@ header .header-scroll span:nth-child(3) {animation-delay: 1.5s;}
     border-bottom: 1px solid #3b3b3b;
 }
 
-/* ANIMATIONS */
-
-@keyframes preloader-animation { 
-	from {}
-    to {transform: translateX(100%);}
-}
-@keyframes scroll-animation {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 /* MODAL WINDOW */
 
 .modal-window {
@@ -576,3 +564,15 @@ header .header-scroll span:nth-child(3) {animation-delay: 1.5s;}
 }
 .modal-window.active .close-modal span:before,
 .modal-window.active .close-modal span:after {transform: rotate(90deg);}
+
+/* ANIMATIONS */
+
+@keyframes preloader-animation { 
+	from {}
+    to {transform: translateX(100%);}
+}
+@keyframes scroll-animation {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}

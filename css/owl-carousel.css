@@ -10,14 +10,6 @@
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
-@-webkit-keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
-}
-@keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
-}
 .owl-height {
   -webkit-transition: height 500ms ease-in-out;
   -moz-transition: height 500ms ease-in-out;
@@ -38,7 +30,7 @@
   -ms-touch-action: pan-Y;
 }
 .owl-carousel .owl-stage:after {
-  content: ".";
+  content: '.';
   display: block;
   clear: both;
   visibility: hidden;
@@ -122,6 +114,13 @@
   background: #ccc;
   margin: 0 3px;
 }
-.owl-carousel .owl-dot.active {
-  background: rgba(29, 29, 29, 0.7);
+.owl-carousel .owl-dot.active {background: rgba(29, 29, 29, 0.7);}
+.carousel-item .col-md-4.col-sm-6 {width: 100%;}
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
 }
