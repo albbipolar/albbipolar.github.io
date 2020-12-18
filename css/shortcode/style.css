@@ -79,13 +79,8 @@ body::-webkit-scrollbar {
   width: 5px;
   background: #fff;
 }
-body::-webkit-scrollbar-thumb {
-  background: #181818;
-}
-body.show-scroll::-webkit-scrollbar-thumb {
-  background: rgba(24, 24, 24, 0.5);
-  border-radius: 10px;
-}
+body::-webkit-scrollbar-thumb {background: #181818;}
+body.show-scroll::-webkit-scrollbar-thumb {background: rgba(24, 24, 24, 0.5);}
 body::-webkit-scrollbar-track {background: #181818;}
 body.show-scroll::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
@@ -96,14 +91,8 @@ body.show-scroll::-webkit-scrollbar-track {
   width: 5px;
   background: #fff;
 }
-.portfolio-modal::-webkit-scrollbar-thumb {
-  background: rgba(24, 24, 24, 0.5);
-  border-radius: 10px;
-}
-.portfolio-modal::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
+.portfolio-modal::-webkit-scrollbar-thumb {background: rgba(24, 24, 24, 0.5);}
+.portfolio-modal::-webkit-scrollbar-track {background: rgba(0, 0, 0, 0.2);}
 @keyframes preloader-animation {
   0% {transform: rotate(0);}
   100% {transform: rotate(360deg);}

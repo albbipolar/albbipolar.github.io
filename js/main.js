@@ -47,34 +47,28 @@ $('.portfolio-menu button').on('click', function(event) {
 // SLIDER
 $('.owl-carousel').owlCarousel({
     loop: true,
-    margin: 10,
+    center: true,
     nav: false,
+    navText: ['<div class="arrow-left"></div>', '<div class="arrow-right"></div>'],
     dots: true,
     autoplay: true,
-    autoplayTimeout: 3000,
     autoplayHoverPause: true,
+    margin: 10,
+    autoplayTimeout: 3000,
     responsive: {
-    0:{
+    0: {
         items: 1
     },
-    200:{
+    200: {
         items: 1
     },
-    800:{
+    800: {
         items: 2
     },
-    1000:{
+    1000: {
         items: 3
     }
 }});
-
-// MAGNIFIC POPUP
-$('.img-poppu').magnificPopup({
-    type: 'image',
-    gallery: {
-        enabled:true
-    }
-});
 
 // MENU-TOGGLE
 $('.menu-toggle').on('click', function(){
@@ -254,6 +248,8 @@ $('.btn-show-more').on('click', function() {
         $('.preloader').fadeOut();
     }, 4000);
 });
+
+// BUTTON HOVER EFFECT
 
 // HORIZONTAL SCROLL
 function percentChange() {
