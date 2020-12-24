@@ -116,16 +116,28 @@ h1 {
   transition: 1s all;
   z-index: 2;
 }
-.section .section-reference-third {
-  width: 5px;
-  height: 5px;
+.section .section-reference-second {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #fff;
   position: absolute;
+  z-index: 1;
+}
+.section .section-reference-third {
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  outline: none;
+
+  padding: 10px 30px;
+  margin-top: 20px;
 }
 .section .section-reference-first::selection {background: none;}
 .section .section-reference-first:hover {color: #fff;}
-.section .section-reference-response {
+.section .section-first-response,
+.section .section-third-response {
   color: #fff;
   display: flex;
   justify-content: center;
@@ -136,7 +148,20 @@ h1 {
   background: #2b222e;
   z-index: 1;
 }
-.section .section-reference-response button {
+.section .section-second-response {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #875077;
+  z-index: 1;
+}
+.section .section-first-response button,
+.section .section-second-response button,
+.section .section-third-response button {
   color: #fff;
   background: none;
   border: 1px solid #fff;
@@ -146,15 +171,17 @@ h1 {
   padding: 10px 30px;
   margin-top: 20px;
 }
-.section .section-reference-text {
-  font-size: 1.2rem;
-}
-.section .section-reference-text h3 {
+.section .section-first-text,
+.section .section-second-text,
+.section .section-third-text {font-size: 1.2rem;}
+.section .section-first-text h3,
+.section .section-second-text h3,
+.section .section-third-text h3 {
   font-size: 1.5rem;
   font-weight: normal;
   font-style: italic;
 }
-.section .section-reference-text a {
+.section .section-first-text a {
   color: #fff;
   text-decoration: none;
   border-bottom: 2px dotted #fff;
@@ -194,6 +221,58 @@ h1 {
 
 /* THIRD SECTION */
 
+
+
+
+
+
+
+
+
+.section-statistics-table-reference {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 20px;
+  max-width: 1200px;
+  justify-content: center;
+  text-align: initial;
+
+  margin: 30px 0;
+}
+.section-periodic-reference {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  
+  padding: 4px;
+}
+.section-periodic-reference .periodic-element-inner {
+  background: #202e38;
+  width: calc(100% - 30px);
+  height: calc(100% - 20px);
+  transition: inherit;
+  
+  padding: 10px 15px;
+}
+.section-periodic-reference .periodic-element-title {
+  font-size: 2rem;
+  font-weight: 700;
+  transition: 0.8s ease 600ms;
+  
+  margin: 3px 0 0;
+}
+.section-periodic-reference .periodic-element-description {
+  font-size: 0.75em;
+  
+  margin-top: -3px;
+}
+.section-periodic-reference:hover {
+  transform: scale(1.12);
+  z-index: 10;
+}
+.reference-media {background: linear-gradient(to bottom right, #fff 0%, #888 100%);}
+
 /* SECTION PERIODIC TABLE */
 .section-statistics-table {
   display: grid;
@@ -220,14 +299,14 @@ h1 {
   
   padding: 10px 15px;
 }
-.section-periodic-element .title {
+.section-periodic-element .periodic-element-title {
   font-size: 2rem;
   font-weight: 700;
   transition: 0.8s ease 600ms;
   
   margin: 3px 0 0;
 }
-.section-periodic-element .description {
+.section-periodic-element .periodic-element-description {
   font-size: 0.75em;
   
   margin-top: -3px;
@@ -255,31 +334,31 @@ h1 {
   z-index: 10;
 }
 .section-periodic-element:hover .periodic-element-inner {background: transparent;}
-.section-periodic-element:hover .title, .section-periodic-element:hover .description {-webkit-text-fill-color: #222;}
+.section-periodic-element:hover .periodic-element-title, .section-periodic-element:hover .periodic-element-description {-webkit-text-fill-color: #222;}
 .section-periodic-element:hover:after {
   top: 105%;
   opacity: 1;
 }
 .social-media {background: linear-gradient(to bottom right, #f3f9a6 0%, #cbc634 100%);}
-.social-media .title, .social-media .description {
+.social-media .periodic-element-title, .social-media .periodic-element-description {
   background: -webkit-linear-gradient(#f3f9a6, #cbc634);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .fun-stuff {background: linear-gradient(to bottom right, #ff616d 0%, #ffc171 100%);}
-.fun-stuff .title, .fun-stuff .description {
+.fun-stuff .periodic-element-title, .fun-stuff .periodic-element-description {
   background: -webkit-linear-gradient(#ff616d, #ffc171);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .just-trying {background: linear-gradient(to bottom right, #37cfdc 0%, #5a88e5 100%);}
-.just-trying .title, .just-trying .description {
+.just-trying .periodic-element-title, .just-trying .periodic-element-description {
   background: -webkit-linear-gradient(#37cfdc, #5a88e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .intense-work {background: linear-gradient(to bottom right, #58ac30 0%, #a7df62 100%);}
-.intense-work .title, .intense-work .description {
+.intense-work .periodic-element-title, .intense-work .periodic-element-description {
   background: -webkit-linear-gradient(#58ac30, #a7df62);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
