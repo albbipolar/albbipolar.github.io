@@ -65,7 +65,7 @@ firstEvent = setInterval(function() {
 }, second);
 
 // SECOND DOWNCOUNTER
-let countSecondDown = new Date('Dec 23, 2020 23:59:59').getTime(),
+let countSecondDown = new Date('Dec 25, 2020 23:59:59').getTime(),
 
 secondEvent = setInterval(function() {
 
@@ -415,14 +415,14 @@ letterSpan.forEach(event => {
   });
 });
 
-// document.onkeydown = function(event) {
+document.onkeydown = function(event) {
 
-//   if (event.keyCode === 123) {return false;}
-//   if (event.ctrlKey && event.shiftKey && event.keyCode == `I`.charCodeAt(0)) {return false;}
-//   if (event.ctrlKey && event.shiftKey && event.keyCode == `J`.charCodeAt(0)) {return false;}
-//   if (event.ctrlKey && event.keyCode == `U`.charCodeAt(0)) {return false;}
-// }
-// $(document).on(`contextmenu`, function(event) {
+  if (event.keyCode === 123) {return false;}
+  if (event.ctrlKey && event.shiftKey && event.keyCode == `I`.charCodeAt(0)) {return false;}
+  if (event.ctrlKey && event.shiftKey && event.keyCode == `J`.charCodeAt(0)) {return false;}
+  if (event.ctrlKey && event.keyCode == `U`.charCodeAt(0)) {return false;}
+}
+$(document).on(`contextmenu`, function(event) {
   
-//   event.preventDefault();
-// });
+  event.preventDefault();
+});
