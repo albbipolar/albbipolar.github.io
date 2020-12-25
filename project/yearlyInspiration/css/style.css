@@ -120,7 +120,7 @@ h1 {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #fff;
+  background: none;
   position: absolute;
   z-index: 1;
 }
@@ -232,7 +232,7 @@ h1 {
 .section-statistics-table-reference {
   display: grid;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(2, 100px);
+  grid-template-rows: repeat(3, 100px);
   grid-gap: 20px;
   max-width: 1200px;
   justify-content: center;
@@ -267,9 +267,31 @@ h1 {
   
   margin-top: -3px;
 }
+.section-periodic-reference:after {
+  content: attr(data-description);
+  background: #f9f8f7;
+  color: #181818;
+  text-align: center;
+  position: absolute;
+  width: 180px;
+  height: auto;
+  top: 80%;
+  opacity: 0;
+  font-size: 0.75em;
+  line-height: 1.4;
+  border-radius: 6px;
+  z-index: 10;
+  
+  margin: 0 0 0 -50px;
+  padding: 10px;
+}
 .section-periodic-reference:hover {
   transform: scale(1.12);
   z-index: 10;
+}
+.section-periodic-reference:hover:after {
+  top: 105%;
+  opacity: 1;
 }
 .reference-media {background: linear-gradient(to bottom right, #fff 0%, #888 100%);}
 

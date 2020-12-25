@@ -1,5 +1,8 @@
 'use strict';
 
+// АУДИО
+let sound = new Audio();
+
 // PRELOADER
 $(window).on('load', function() {
 
@@ -62,9 +65,8 @@ firstEvent = setInterval(function() {
 }, second);
 
 // SECOND DOWNCOUNTER
-const textSecondSection = document.getElementById('text-second-section');
+let countSecondDown = new Date('Dec 23, 2020 23:59:59').getTime(),
 
-let countSecondDown = new Date('Dec 25, 2020 23:59:59').getTime(),
 secondEvent = setInterval(function() {
 
   let now = new Date().getTime(),
@@ -83,9 +85,13 @@ secondEvent = setInterval(function() {
     document.getElementById('second-section-hours').innerText = 0,
     document.getElementById('second-section-minutes').innerText = 0,
     document.getElementById('second-section-seconds').innerText = 0;
-    
-    // ОТСЛЕДИТЬ ПЕРЕМОТКУ ВРЕМЕНИ
-    textSecondSection.innerText = 'Пожалуйста, не пытайтесь опередить временные рамки';
+
+    $('.downcounter-section-second').fadeOut(1500);
+
+    setTimeout(function() {
+
+      $('.content-section-second').fadeIn(3000);
+    }, 3000);
   }
 }, second);
 
@@ -166,8 +172,7 @@ $('.section-first-button').on('click', function() {
 $('.section-reference-second').on('click', function() {
 
   $('.section-second-response').slideDown();
-  // $('.section-second-text').html('<h3>Соглашусь, это было непросто, но вторая загадка отгадана, мои поздраления!</h3><br><p>Образовательная минутка: если персонаж не пишет сообщение, значит он пишет статус. Если не пишет статус, значит пишет сообщение. В некоторых случаях это правило работает строго наоборот.</p>');
-  $('.section-second-text').html('<h3>Демонстрационный вариант второго задания</h3><br><p>Данный вариант является примером, который показывает, как будет выглядеть задание второй секции. Прошу заметить, при наведении на этот круг, состояние курсора меняется. Обращаю внимание, что данный круг генерируется в разных местах экрана, когда прогружается страница. Обновите страницу, чтобы проверить. Если разгадать загадку третьей секции, то можно найти подсказку, чтобы облегчить эту задачу. Окончательный вариант задания будет доступен по открытию секции. Желаю удачи, надеясь, что задача не будет решена.</p>');
+  $('.section-second-text').html('<h3>Соглашусь, это было непросто, но вторая загадка отгадана, мои поздраления!</h3><br><p>Образовательная минутка: если персонаж не пишет сообщение, значит он пишет статус. Если не пишет статус, значит пишет сообщение. В некоторых случаях это правило работает строго наоборот.</p>');
 });
 
 $('.section-second-button').on('click', function() {
@@ -191,7 +196,7 @@ $('.section-statistics-table-reference .section-periodic-reference').on('click',
 
   $(this).toggleClass('intense-work');
 
-  if ($('.reference-first').hasClass('intense-work') && $('.reference-second').hasClass('intense-work') && $('.reference-sixth').hasClass('intense-work') && $('.reference-seventh').hasClass('intense-work') && $('.reference-eighth').hasClass('intense-work') && !$('.reference-null').hasClass('intense-work')) {
+  if ($('.reference-first').hasClass('intense-work') && $('.reference-third').hasClass('intense-work') && $('.reference-sixth').hasClass('intense-work') && $('.reference-seventh').hasClass('intense-work') && $('.reference-eighth').hasClass('intense-work') && $('.reference-twelve').hasClass('intense-work') && !$('.reference-null').hasClass('intense-work')) {
 
     console.log(true);
   }
@@ -410,14 +415,14 @@ letterSpan.forEach(event => {
   });
 });
 
-document.onkeydown = function(event) {
+// document.onkeydown = function(event) {
 
-  if (event.keyCode === 123) {return false;}
-  if (event.ctrlKey && event.shiftKey && event.keyCode == `I`.charCodeAt(0)) {return false;}
-  if (event.ctrlKey && event.shiftKey && event.keyCode == `J`.charCodeAt(0)) {return false;}
-  if (event.ctrlKey && event.keyCode == `U`.charCodeAt(0)) {return false;}
-}
-$(document).on(`contextmenu`, function(event) {
+//   if (event.keyCode === 123) {return false;}
+//   if (event.ctrlKey && event.shiftKey && event.keyCode == `I`.charCodeAt(0)) {return false;}
+//   if (event.ctrlKey && event.shiftKey && event.keyCode == `J`.charCodeAt(0)) {return false;}
+//   if (event.ctrlKey && event.keyCode == `U`.charCodeAt(0)) {return false;}
+// }
+// $(document).on(`contextmenu`, function(event) {
   
-  event.preventDefault();
-});
+//   event.preventDefault();
+// });
