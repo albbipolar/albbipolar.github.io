@@ -96,9 +96,8 @@ secondEvent = setInterval(function() {
 }, second);
 
 // THIRD DOWNCOUNTER
-const textThirdSection = document.getElementById('text-third-section');
-
 let countThirdDown = new Date('Dec 26, 2020 23:59:59').getTime(),
+
 thirdEvent = setInterval(function() {
   
   let now = new Date().getTime(),
@@ -117,9 +116,13 @@ thirdEvent = setInterval(function() {
     document.getElementById('third-section-hours').innerText = 0,
     document.getElementById('third-section-minutes').innerText = 0,
     document.getElementById('third-section-seconds').innerText = 0;
-    
-    // ОТСЛЕДИТЬ ПЕРЕМОТКУ ВРЕМЕНИ
-    textThirdSection.innerText = 'Пожалуйста, не пытайтесь опередить временные рамки';
+
+    $('.downcounter-section-third').fadeOut(1500);
+
+    setTimeout(function() {
+
+      $('.content-section-third').fadeIn(3000);
+    }, 3000);
   }
 }, second);
 
@@ -184,7 +187,7 @@ $('.section-second-button').on('click', function() {
 $('.section-reference-third').on('click', function() {
 
   $('.section-third-response').slideDown();
-  $('.section-third-text').html('<h3>Найти данное задание было просто, а вот решить его...</h3><br><p></p>');
+  $('.section-third-text').html('<h3>Найти данное задание было просто, а вот решить его...</h3><br><p>Интересный факт заключается в том, что теперь мне нужно думать о том, как мне разделить сорок семь пакетиков чая на целый год... Почему сорок семь? Два я решил оставить на память, а один уже выпил.</p>');
 });
 
 $('.section-third-button').on('click', function() {
@@ -198,7 +201,13 @@ $('.section-statistics-table-reference .section-periodic-reference').on('click',
 
   if ($('.reference-first').hasClass('intense-work') && $('.reference-third').hasClass('intense-work') && $('.reference-sixth').hasClass('intense-work') && $('.reference-seventh').hasClass('intense-work') && $('.reference-eighth').hasClass('intense-work') && $('.reference-twelve').hasClass('intense-work') && !$('.reference-null').hasClass('intense-work')) {
 
-    console.log(true);
+    $('.content-section-third').hide();
+    $('.section-third-response').fadeOut(1500);
+
+    setTimeout(function() {
+
+      $('.section-statistics-table').fadeIn(3000);
+    }, 3000);
   }
 });
 
