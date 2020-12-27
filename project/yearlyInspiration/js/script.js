@@ -1,6 +1,6 @@
 'use strict';
 
-// АУДИО
+// AUDIO
 let sound = new Audio();
 
 // PRELOADER
@@ -127,9 +127,8 @@ thirdEvent = setInterval(function() {
 }, second);
 
 // FOURTH DOWNCOUNTER
-const textFourthSection = document.getElementById('text-fourth-section');
-
 let countFourthDown = new Date('Dec 27, 2020 23:59:59').getTime(),
+
 fourthEvent = setInterval(function() {
   
   let now = new Date().getTime(),
@@ -148,9 +147,13 @@ fourthEvent = setInterval(function() {
     document.getElementById('fourth-section-hours').innerText = 0,
     document.getElementById('fourth-section-minutes').innerText = 0,
     document.getElementById('fourth-section-seconds').innerText = 0;
-    
-    // ОТСЛЕДИТЬ ПЕРЕМОТКУ ВРЕМЕНИ
-    textFourthSection.innerText = 'Пожалуйста, не пытайтесь опередить временные рамки';
+
+    $('.downcounter-section-fourth').fadeOut(1500);
+
+    setTimeout(function() {
+
+      $('.content-section-fourth').fadeIn(3000);
+    }, 3000);
   }
 }, second);
 
@@ -176,6 +179,15 @@ $('.section-reference-second').on('click', function() {
 
   $('.section-second-response').slideDown();
   $('.section-second-text').html('<h3>Соглашусь, это было непросто, но вторая загадка отгадана, мои поздраления!</h3><br><p>Образовательная минутка: если персонаж не пишет сообщение, значит он пишет статус. Если не пишет статус, значит пишет сообщение. В некоторых случаях это правило работает строго наоборот.</p>');
+});
+
+$('.section-reference-message').on('click', function() {
+
+  // MUTE SOUND
+  sound.pause();
+  // PLAY SOUND
+  sound.src = 'sound/message.mp3';
+  sound.play();
 });
 
 $('.section-second-button').on('click', function() {
@@ -387,10 +399,13 @@ $(window).keydown(function(event) {
     
     let referenceHint = prompt('Пожалуйста, введите сюда подсказку от автора:').toLowerCase();
     
-    // ПОДСКАЗКА
-    if (referenceHint === 'подсказка') {
+    if (referenceHint === '707974686f6e') {
       
       $('.section-reference-second').css({background: 'rgba(255, 255, 255, 0.02)'});
+    }
+    if (referenceHint === '4e6f204c696d697473') {
+      
+      $('.section-reference-second').css({background: 'rgba(255, 255, 255, 0.05)'});
     }
   }
 });
@@ -424,14 +439,15 @@ letterSpan.forEach(event => {
   });
 });
 
+// DISABLE CODE VIEWING
 document.onkeydown = function(event) {
 
   if (event.keyCode === 123) {return false;}
-  if (event.ctrlKey && event.shiftKey && event.keyCode == `I`.charCodeAt(0)) {return false;}
-  if (event.ctrlKey && event.shiftKey && event.keyCode == `J`.charCodeAt(0)) {return false;}
-  if (event.ctrlKey && event.keyCode == `U`.charCodeAt(0)) {return false;}
+  if (event.ctrlKey && event.shiftKey && event.keyCode === 'I'.charCodeAt(0)) {return false;}
+  if (event.ctrlKey && event.shiftKey && event.keyCode === 'J'.charCodeAt(0)) {return false;}
+  if (event.ctrlKey && event.keyCode === 'U'.charCodeAt(0)) {return false;}
 }
-$(document).on(`contextmenu`, function(event) {
+$(document).on('contextmenu', function(event) {
   
   event.preventDefault();
 });
