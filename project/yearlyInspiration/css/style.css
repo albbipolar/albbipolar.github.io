@@ -120,7 +120,7 @@ h1 {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: none;
+  background: #fff;
   position: absolute;
   z-index: 1;
 }

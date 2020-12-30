@@ -407,11 +407,13 @@ $(window).keydown(function(event) {
     
     if (referenceHint === '707974686f6e') {
       
-      $('.section-reference-second').css({background: 'rgba(255, 255, 255, 0.02)'});
+      // $('.section-reference-second').css({background: 'rgba(255, 255, 255, 0.02)'});
+      alert('Ошибка доступа. К сожалению, сессия данного промокода истекла.');
     }
     if (referenceHint === '4e6f204c696d697473') {
       
-      $('.section-reference-second').css({background: 'rgba(255, 255, 255, 0.05)'});
+      // $('.section-reference-second').css({background: 'rgba(255, 255, 255, 0.05)'});
+      alert('Ошибка доступа. К сожалению, сессия данного промокода истекла.');
     }
   }
 });
