@@ -223,6 +223,12 @@ $('.section-statistics-table-reference .section-periodic-reference').on('click',
   }
 });
 
+// REFERENCE FOURTH SECTION
+$('.section-fourth-button').on('click', function() {
+  
+  $('.section-fourth-response').slideUp();
+});
+
 // CUSTOM CURSOR
 const cursor = {
   delay: 8,
@@ -428,8 +434,9 @@ letterSpan.forEach(event => {
     if (event.textContent === 'д') {
       
       if (verificationLetter === 'вход' && verificationLetter.length === 4) {
-        
-        console.log(true);
+
+        $('.section-fourth-response').slideDown();
+        $('.section-fourth-text').html('<h3>Даже у 2020 года есть предел — 365 дней, а ещё говорят, что нет пределов...</h3><br><p>Главное — следить за временем, поскольку в такой спокойной и умиротворяющей обстановке, которая обособляется родным человеком, безусловно, можно пропустить все новогодние праздники!</p>');
         
         verificationLetter = '';
       }

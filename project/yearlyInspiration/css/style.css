@@ -124,9 +124,12 @@ h1 {
   position: absolute;
   z-index: 1;
 }
-.section .section-reference-message {
+.section .section-reference-message,
+.section .section-reference-video {
   display: block;
+  color: #fff;
   font-size: 1.2rem;
+  text-decoration: none;
 
   margin-top: 20px;
 }
@@ -154,7 +157,8 @@ h1 {
   background: #2b222e;
   z-index: 1;
 }
-.section .section-second-response {
+.section .section-second-response,
+.section .section-fourth-response {
   color: #fff;
   display: flex;
   justify-content: center;
@@ -167,7 +171,8 @@ h1 {
 }
 .section .section-first-response button,
 .section .section-second-response button,
-.section .section-third-response button {
+.section .section-third-response button,
+.section .section-fourth-response button {
   color: #fff;
   background: none;
   border: 1px solid #fff;
@@ -179,10 +184,12 @@ h1 {
 }
 .section .section-first-text,
 .section .section-second-text,
-.section .section-third-text {font-size: 1.2rem;}
+.section .section-third-text,
+.section .section-fourth-text {font-size: 1.2rem;}
 .section .section-first-text h3,
 .section .section-second-text h3,
-.section .section-third-text h3 {
+.section .section-third-text h3,
+.section .section-fourth-text h3 {
   font-size: 1.5rem;
   font-weight: normal;
   font-style: italic;
