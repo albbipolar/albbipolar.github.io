@@ -1,9 +1,24 @@
+/* DEFAULT */
+
 * {
 	box-sizing: border-box;
+	
 	padding: 0;
 	margin: 0;
 }
 body {font-family: 'Montserrat', sans-serif;}
+
+/* CUSTOM SCROLLBAR */
+
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: rgba(55, 0, 71, 0.8);
+}
+body::-webkit-scrollbar-thumb {
+	background: #fff;
+	border-radius: 10px;
+}
+body::-webkit-scrollbar-track {background: rgba(55, 0, 71, 0.8);}
 a, li {
 	text-decoration: none;
 	list-style: none;
@@ -11,6 +26,7 @@ a, li {
 img {pointer-events: none;}
 .container {
 	max-width: 1400px;
+	
 	margin: 0 auto;
 }
 
@@ -29,9 +45,7 @@ nav.sticky-navbar {
 	display: flex;
 	justify-content: center;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	top: 0; left: 0; right: 0;
 	background: rgba(55, 0, 71, 0.8);
 	transition: 1s;
 	z-index: 999;
@@ -84,10 +98,7 @@ header .header-image {
 	align-items: center;
 	flex-direction: column;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	top: 0; left: 0; right: 0; bottom: 0;
 	color: #fff;
 	font-size: 48px;
 	z-index: 999;
@@ -96,8 +107,7 @@ header .header-image {
 	display: none;
 	cursor: pointer;
 	position: fixed;
-	right: 30px;
-	top: 30px;
+	top: 30px; right: 30px;
 	width: 70px;
 	height: 70px;
 	border: none;
@@ -124,13 +134,11 @@ header .header-image {
 	transition: all 200ms;
 }
 .nav-toggle > span:before {
-	top: -11px;
-	left: 3px;
+	top: -11px; left: 3px;
 	width: 28px;
 }
 .nav-toggle > span:after {
-	top: 11px;
-	left: 6px;
+	top: 11px; left: 6px;
 	width: 22px;
 }
 .nav-toggle:focus {outline: none;}
@@ -141,8 +149,7 @@ header .header-image {
 .mobile-navigation:before {
 	display: block;
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: 0; left: 0;
 	content: '';
 	width: 100vw;
 	height: 100vh;
@@ -157,8 +164,7 @@ header .header-image {
 }
 .header-menu.active .nav-toggle > span {height: 0;}
 .header-menu.active .nav-toggle > span:after, .header-menu.active .nav-toggle > span:before {
-	top: 0px;
-	left: 0;
+	top: 0px; left: 0;
 	width: 34px;
 }
 .header-menu.active .nav-toggle > span:after {transform: rotate(-45deg);}
@@ -250,11 +256,11 @@ footer .footer-form {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 	max-width: 600px;
-	margin: 0 auto;
 	background: #fff;
 	border-radius: 50px;
+
+	margin: 0 auto;
 }
 footer .footer-form input {
 	font-family: 'Montserrat', sans-serif;
@@ -269,12 +275,13 @@ footer .footer-form input {
 footer .footer-form input::placeholder {color: #8312A5;}
 footer .footer-form input:focus {outline: none;}
 footer .footer-form .form-button {
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
+	border-radius: 50px;
+	border: none;
+	cursor: pointer;
+
 
 	padding: 20px 50px;
 	margin: 0 10px;
@@ -289,10 +296,7 @@ footer .footer-form .form-button {
 footer .footer-form .form-button::before {
   position: absolute;
   content: '';
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-image: linear-gradient(to left, #D53A9D, #743AD5);
   z-index: -1;
   transition: opacity 0.5s linear;
@@ -323,20 +327,17 @@ footer .footer-create a {
 
 /* PRELOADER */
 
-#header-preloader {
+#preloader-load {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	top: 0; left: 0; right: 0; bottom: 0;
 	background: #370047;
 	z-index: 99999;
 }
-.header-preloader {
+.preloader-load {
 	position: relative;
 	width: 100px;
 	height: 100px;
@@ -344,22 +345,19 @@ footer .footer-create a {
 	background: linear-gradient(#D53A9D, #8312A5, #743AD5);
 	animation: preloader-animation 1s linear infinite;
 }
-.header-preloader span {
+.preloader-load span {
 	position: absolute;
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
 	background: linear-gradient(#D53A9D, #8312A5, #743AD5);
 }
-.header-preloader span:nth-child(1) {filter: blur(5px);}
-.header-preloader span:nth-child(2) {filter: blur(10px);}
-.header-preloader::after {
+.preloader-load span:nth-child(1) {filter: blur(5px);}
+.preloader-load span:nth-child(2) {filter: blur(10px);}
+.preloader-load::after {
 	content: '';
 	position: absolute;
-	top: 10px;
-	left: 10px;
-	right: 10px;
-	bottom: 10px;
+	top: 10px; left: 10px; right: 10px; bottom: 10px;
 	background: #370047;
 	border-radius: 50%;
 }
@@ -479,7 +477,5 @@ footer .footer-create a {
 
 @media screen and (max-width: 576px) {
 	header .header-text h1 {font-size: 32px;}
-	footer .footer-text p {
-		padding: 0 5%;
-	}
+	footer .footer-text p {padding: 0 5%;}
 }

@@ -1,0 +1,143 @@
+/* DEFAULT */
+* {
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Playfair Display SC', serif;
+    background: #2c2c2c;
+}
+.container {
+    width: 100%;
+    max-width: 1520px;
+
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    background: url('../img/lamp-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header .header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    padding-top: 80px;
+}
+header .header-logo .title-logo {
+    font-size: 60px;
+    color: #b69b67;
+    border-top: 1px solid #b69b67;
+}
+header .header-logo .subtitle-logo {
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4b4b4;
+    font-size: 30px;
+    font-weight: 300;
+}
+header .header-menu {
+    position: relative;
+}
+header .menu-icon {
+    position: absolute;
+    right: 0;
+    border: 1px solid #454545;
+    cursor: pointer;
+    transition: all 1s;
+}
+header .menu-icon:hover {border: 1px solid #b69b67;}
+header .menu-icon:hover span {background: #b69b67;}
+header .menu-icon span {
+    width: 50px;
+    height: 3px;
+    display: block;
+    background: #b4b4b4;
+    transition: all 1s;
+
+    margin: 15px;
+}
+header .header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header-title h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: transparent;    
+	-webkit-background-clip: text;
+    background-clip: text;
+    background-image: radial-gradient(circle, rgba(182, 155, 103, 1) 0%, rgba(69, 69, 69, 1) 100%);
+
+    margin-top: 420px;
+}
+header .header-scroll {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 140px;
+}
+header .header-scroll a {
+    font-family: 'Ubuntu', sans-serif;
+    color: #454545;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+header .header-scroll a span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    border-left: 1px solid #454545;
+    border-bottom: 1px solid #454545;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: scroll-animation 3s infinite;
+    animation: scroll-animation 3s infinite;
+
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes scroll-animation {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}

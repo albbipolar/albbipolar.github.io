@@ -1,4 +1,4 @@
-body { 
+body {
     font-weight: normal;
     font-style: normal;
     font-size: 17px;
@@ -46,18 +46,15 @@ label {
     color: #626262;
 }
 *::-moz-selection {
-    background: #000;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
     text-shadow: none;
 }
 ::-moz-selection {
-    background: #000;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
     text-shadow: none;
 }
 ::selection {
-    background: #000;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
     text-shadow: none;
 }
 .mark, mark {

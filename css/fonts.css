@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'BloggerLight';
+	src: url('../fonts/Blogger/BloggerLight.eot');
+	src: url('../fonts/Blogger/BloggerLight.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Blogger/BloggerLight.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'BloggerMedium';
+	src: url('../fonts/Blogger/BloggerMedium.eot');
+	src: url('../fonts/Blogger/BloggerMedium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Blogger/BloggerMedium.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'BloggerBold';
+	src: url('../fonts/Blogger/BloggerBold.eot');
+	src: url('../fonts/Blogger/BloggerBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Blogger/BloggerBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'MontserratRegular';
+	src: url('../fonts/Montserrat/MontserratRegular.eot');
+	src: url('../fonts/Montserrat/MontserratRegular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat/MontserratRegular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'MontserratItalic';
+	src: url('../fonts/Montserrat/MontserratItalic.eot');
+	src: url('../fonts/Montserrat/MontserratItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat/MontserratItalic.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}

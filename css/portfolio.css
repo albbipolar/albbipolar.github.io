@@ -10,21 +10,28 @@
   font-style: italic;
 }
 .single-service {
-  padding: 70px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.6s ease 0s;
+
+  padding: 70px 40px;
 }
 .single-service i {
   font-size: 25px;
   margin-bottom: 20px;
 }
-.single-service > h3 {
+.single-service > p {
+  color: #464646;
   font-size: 20px;
   text-transform: uppercase;
+
+  margin: 5px 0;
 }
 .text-highlight {
   position: relative;
   font-weight: inherit;
-  background-image: url(../../img/bg-highlight.png);
+  background-image: url('../img/bg-highlight.png');
   background-size: auto 30%;
   background-repeat: repeat-x;
   background-position: bottom;
@@ -33,32 +40,16 @@
 #portfolio a {color: #181818;}
 #portfolio .portfolio-item {
   right: 0;
+  
   margin: 0 0 15px;
 }
-#portfolio .portfolio-item img {
-  width: 100%;
-}
+#portfolio .portfolio-item img {width: 100%;}
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
-  margin: 0 auto;
   max-width: 400px;
-}
-#portfolio .portfolio-item .portfolio-caption {
+
   margin: 0 auto;
-  padding: 25px;
-  max-width: 400px;
-  text-align: center;
-  background-color: #f6f6f6;
-}
-#portfolio .portfolio-item .portfolio-caption h4 {
-  margin: 0;
-  text-transform: none;
-}
-#portfolio .portfolio-item .portfolio-caption p {
-  margin: 0;
-  font-size: 16px;
-  font-style: italic;
 }
 .modal-open .modal {z-index: 999999;}
 .modal-open .modal img {pointer-events: none;}
@@ -66,7 +57,6 @@
 @media(min-width:767px) {#portfolio .portfolio-item {margin: 0 0 30px;}}
 .portfolio-modal .modal-content {
   font-family: 'MontserratRegular', sans-serif;
-  padding: 100px 0;
   min-height: 100%;
   border: 0;
   border-radius: 0;
@@ -76,59 +66,58 @@
   box-shadow: none;
   background: #fff;
   transition: .5s;
+
+  padding: 100px 0;
 }
 .portfolio-modal .modal-content h2 {
+  font-size: 48px;
+
   margin-bottom: 15px;
-  font-size: 3em;
 }
 .portfolio-modal .modal-content p {
   font-size: 16px;
+
   margin-bottom: 30px;
 }
 .portfolio-modal .modal-content p.item-intro {
   font-family: 'MontserratItalic', sans-serif;
-  margin: 20px 0 30px;
   font-size: 16px;
+
+  margin: 20px 0 30px;
 }
 .portfolio-modal .modal-content ul.list-inline {
   font-size: 14px;
+
   margin-top: 0;
   margin-bottom: 30px;
 }
 .portfolio-modal .modal-content img {margin: 0px auto 30px auto;}
 .portfolio-modal .close-modal {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 25px; right: 25px;
   width: 75px;
   height: 75px;
-  background-color: transparent;
+  background: transparent;
   cursor: pointer;
 }
 .portfolio-modal .close-modal:hover {opacity: .8;}
 .portfolio-modal .close-modal .left-line {
-  z-index: 1051;
   width: 1px;
   height: 75px;
-  margin-left: 35px;
-  background-color: #181818;
+  background: #181818;
   transform: rotate(45deg);
+  z-index: 1;
+
+  margin-left: 35px;
 }
 .portfolio-modal .close-modal .left-line .right-line {
-  z-index: 1052;
   width: 1px;
   height: 75px;
-  background-color: #181818;
+  background: #181818;
   transform: rotate(90deg);
+  z-index: 1;
 }
-.dark-mode-active {
-  display: block!important;
-  width: 75px;
-  z-index: 9999999;
-  position: fixed;
-  top: 30px;
-  left: 30px;
-}
+/* PORTFOLIO GLITCH EFFECT */
 .glitch {
   position: relative;
   transform: scale3d(1, 1, 1);
@@ -137,9 +126,7 @@
 .glitch::after {
   content: attr(data-text);
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   overflow: hidden;
   background: #fff;
   clip: rect(0, 900px, 0, 0);
@@ -156,29 +143,7 @@
   text-shadow: -1px 0 red;
   animation: glitch-animation 2s infinite linear alternate-reverse;
 }
-@keyframes glitch-animation {
-  0% {clip: rect(36px, 9999px, 8px, 0);}
-  5% {clip: rect(71px, 9999px, 8px, 0);}
-  10% {clip: rect(59px, 9999px, 52px, 0);}
-  15% {clip: rect(42px, 9999px, 66px, 0);}
-  20% {clip: rect(46px, 9999px, 87px, 0);}
-  25% {clip: rect(47px, 9999px, 100px, 0);}
-  30% {clip: rect(60px, 9999px, 32px, 0);}
-  35% {clip: rect(57px, 9999px, 70px, 0);}
-  40% {clip: rect(51px, 9999px, 17px, 0);}
-  45% {clip: rect(90px, 9999px, 48px, 0);}
-  50% {clip: rect(61px, 9999px, 16px, 0);}
-  55% {clip: rect(65px, 9999px, 39px, 0);}
-  60% {clip: rect(23px, 9999px, 88px, 0);}
-  65% {clip: rect(15px, 9999px, 99px, 0);}
-  70% {clip: rect(61px, 9999px, 93px, 0);}
-  75% {clip: rect(98px, 9999px, 16px, 0);}
-  80% {clip: rect(70px, 9999px, 100px, 0);}
-  85% {clip: rect(87px, 9999px, 6px, 0);}
-  90% {clip: rect(18px, 9999px, 91px, 0);}
-  95% {clip: rect(90px, 9999px, 16px, 0);}
-  100% {clip: rect(86px, 9999px, 51px, 0);}
-}
+/* PORTFOLIO DARK MODE */
 .modal-content.dark-mode-enabled {background: #181818;}
 .modal-content.dark-mode-enabled h2,
 .modal-content.dark-mode-enabled p,
@@ -191,11 +156,7 @@
 .modal-content.dark-mode-enabled .text-highlight {background-image: none!important;}
 .modal-content .modal-swipe {
   background: #181818;
-  position: absolute;
-  top: 95%;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute; top: 95%; left: 0; right: 0; bottom: 0;
   transition: all .5s;
   display: flex;
   justify-content: center;
@@ -230,81 +191,11 @@
   margin: 0;
 }
 .modal-content .modal-swipe .swipe-item img.item-active {filter: none;}
-.portfolio-area button.btn-show-more {
-  position: relative;
-  display: block;
-  background: #fff;
-  color: #181818;
-  border: 1px solid #181818;
-  border-radius: 0;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 1s;
-
-  margin: 40px auto 70px auto;
-  padding: 20px 40px;
-  z-index: 2;
-}
-
-@keyframes swipe-animation {
-  0% {transform: translateX(0);}
-  25% {transform: translateX(-100%);}
-  50% {transform: translateX(0);}
-  75% {transform: translateX(100%);}
-  100% {transform: translateX(0);}
-}
-
-
-div.horizontal-scroll {
-  background-color:#181818;
-  height: 100%;
-  padding: 20px;
-  overflow: auto;
-  white-space: nowrap;
-}
-div.horizontal-scroll::-webkit-scrollbar { 
-  display: none; 
-}
-div.horizontal-scroll-item {
-  list-style-type:none;
-  background-color:#222;
-  display: inline-block;
-  height: 250px;
-  width: 250px;
-
-  margin: 10px;
-}
-div.horizontal-scroll-item .text-scroll-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  height: 100%;
-}
-div.horizontal-scroll-item .text-scroll-item span {
-  font-size: 12px;
-}
-.horizontal-progress-bar {
-  height: 2px;
-  background:#181818;
-  margin: 15px 0 80px 0;
-}
-.horizontal-percent {
-  max-width: 100%;
-  height: 100%;
-  width: 70%;
-  background:red;
-}
 /* PROJECT HOVER EFFECT */
 div.portfolio-hover-gray {text-align: center;}
 div.portfolio-hover-gray i {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   border-radius: 50%;
   font-size: 34px;
   color: #000;
@@ -314,11 +205,8 @@ div.portfolio-hover-gray i {
   background: #fff;
 }
 div.portfolio-hover-gray a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
 }
 div.portfolio-hover-gray.overlay-gray {background-color: #333;}
 div.portfolio-hover-gray.overlay-gray i {color: #333;}
@@ -334,4 +222,35 @@ div.portfolio-hover-gray i {
 div.portfolio-hover-gray:hover i {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* PORTFOLIO ANIMATIONS */
+@keyframes glitch-animation {
+  0% {clip: rect(36px, 9999px, 8px, 0);}
+  5% {clip: rect(71px, 9999px, 8px, 0);}
+  10% {clip: rect(59px, 9999px, 52px, 0);}
+  15% {clip: rect(42px, 9999px, 66px, 0);}
+  20% {clip: rect(46px, 9999px, 87px, 0);}
+  25% {clip: rect(47px, 9999px, 100px, 0);}
+  30% {clip: rect(60px, 9999px, 32px, 0);}
+  35% {clip: rect(57px, 9999px, 70px, 0);}
+  40% {clip: rect(51px, 9999px, 17px, 0);}
+  45% {clip: rect(90px, 9999px, 48px, 0);}
+  50% {clip: rect(61px, 9999px, 16px, 0);}
+  55% {clip: rect(65px, 9999px, 39px, 0);}
+  60% {clip: rect(23px, 9999px, 88px, 0);}
+  65% {clip: rect(15px, 9999px, 99px, 0);}
+  70% {clip: rect(61px, 9999px, 93px, 0);}
+  75% {clip: rect(98px, 9999px, 16px, 0);}
+  80% {clip: rect(70px, 9999px, 100px, 0);}
+  85% {clip: rect(87px, 9999px, 6px, 0);}
+  90% {clip: rect(18px, 9999px, 91px, 0);}
+  95% {clip: rect(90px, 9999px, 16px, 0);}
+  100% {clip: rect(86px, 9999px, 51px, 0);}
+}
+@keyframes swipe-animation {
+  0% {transform: translateX(0);}
+  25% {transform: translateX(-100%);}
+  50% {transform: translateX(0);}
+  75% {transform: translateX(100%);}
+  100% {transform: translateX(0);}
 }

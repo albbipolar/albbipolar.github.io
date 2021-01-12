@@ -9,13 +9,19 @@
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 	<!-- css -->
+	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/meanmenu.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<link rel="stylesheet" href="css/meanmenu.css">
+	<link rel="stylesheet" href="css/hamburgers.min.css">
 	<link rel="stylesheet" href="css/owl-carousel.css">
-	<link rel="stylesheet" href="css/shortcode/fonts.css">
-	<link rel="stylesheet" href="css/shortcode/shortcodes.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/portfolio.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<!-- js -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -26,7 +32,11 @@
 	<!-- preloader -->
 	<div class="preloader">
 		<div class="preloader-load">
-			
+			<div class="spinner-box">
+				<div class="circle-border">
+					<div class="circle-core"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- / preloader -->
@@ -88,24 +98,24 @@
 			<div id="portfolio" class="bg-light-gray">
 				<div class="container">
 					<div class="row">
-					<!-- portfolio latest project -->
-						
-						<!-- portfolio item 1 -->
-						<div class="col-md-4 col-sm-6 portfolio-item">
-							<a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
-								<div class="portfolio-hover-gray overlay-gray">
-									<img src="img/portfolio/project/spaceVictory/spaceVictory.jpg" class="img-responsive">
-									<i class="fa fa-search"></i>
-								</div>
-							</a>
-						</div>
-						<!-- / portfolio item 1 -->
+					<!-- portfolio new project -->
 
+					<!-- portfolio item 1 -->
+					<div class="col-md-4 col-sm-6 portfolio-item">
+						<a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
+							<div class="portfolio-hover-gray overlay-gray">
+								<img src="img/portfolio/example.jpg" class="img-responsive">
+								<i class="fa fa-search"></i>
+							</div>
+						</a>
+					</div>
+					<!-- / portfolio item 1 -->
+						
 						<!-- portfolio item 2 -->
 						<div class="col-md-4 col-sm-6 portfolio-item">
 							<a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
 								<div class="portfolio-hover-gray overlay-gray">
-									<img src="img/portfolio/project/B&WLanding/B&WLanding.jpg" class="img-responsive">
+									<img src="img/portfolio/project/spaceVictory/spaceVictory.jpg" class="img-responsive">
 									<i class="fa fa-search"></i>
 								</div>
 							</a>
@@ -156,47 +166,46 @@
 						</div>
 						<!-- / portfolio item 6 -->
 					
-					<!-- / portfolio latest project -->
+					<!-- / portfolio new project -->
 					</div>
-
-					<!-- horizontal scroll project -->
-					<div class="horizontal-container" style="display: none;">
-						<div id="horizontal-scroll" class="horizontal-scroll">
-							<div class="horizontal-scroll-item">
-								<div class="text-scroll-item">В разработке
-									<span>Используйте скролл,<br>чтобы листать проекты.</span>
+					<!-- portfolio old project -->
+					<div class="owl-carousel owl-theme owl-loaded portfolio-carousel">
+						<!-- portfolio item 7 -->
+						<div class="portfolio-slider-item">
+							<a href="#portfolio-modal-7" class="portfolio-link" data-toggle="modal">
+								<div class="portfolio-hover-gray overlay-gray">
+									<img src="img/portfolio/example.jpg" class="img-responsive">
+									<i class="fa fa-search"></i>
 								</div>
-							</div>
-							<div class="horizontal-scroll-item">
-								<div class="text-scroll-item">В разработке
-									<span>Используйте скролл,<br>чтобы листать проекты.</span>
-								</div>
-							</div>
-							<div class="horizontal-scroll-item">
-								<div class="text-scroll-item">В разработке
-									<span>Используйте скролл,<br>чтобы листать проекты.</span>
-								</div>
-							</div>
-							<div class="horizontal-scroll-item">
-								<div class="text-scroll-item">В разработке
-									<span>Используйте скролл,<br>чтобы листать проекты.</span>
-								</div>
-							</div>
-							<div class="horizontal-scroll-item">
-								<div class="text-scroll-item">В разработке
-									<span>Используйте скролл,<br>чтобы листать проекты.</span>
-								</div>
-							</div>
+							</a>
 						</div>
-						<div class="horizontal-progress-bar">
-							<div class="horizontal-percent" style="width: 0%;"></div>
+						<!-- / portfolio item 7 -->
+						<!-- portfolio item 8 -->
+						<div class="portfolio-slider-item">
+							<a href="#portfolio-modal-8" class="portfolio-link" data-toggle="modal">
+								<div class="portfolio-hover-gray overlay-gray">
+									<img src="img/portfolio/example.jpg" class="img-responsive">
+									<i class="fa fa-search"></i>
+								</div>
+							</a>
 						</div>
+						<!-- / portfolio item 8 -->
+						<!-- portfolio item 9 -->
+						<div class="portfolio-slider-item">
+							<a href="#portfolio-modal-9" class="portfolio-link" data-toggle="modal">
+								<div class="portfolio-hover-gray overlay-gray">
+									<img src="img/portfolio/example.jpg" class="img-responsive">
+									<i class="fa fa-search"></i>
+								</div>
+							</a>
+						</div>
+						<!-- / portfolio item 9 -->
 					</div>
-					<!-- / horizontal scroll project -->
+					<!-- / portfolio old project -->
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- portfolio modal 1 -->
 		<div class="portfolio-modal modal fade" id="portfolio-modal-1" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-content">
@@ -209,20 +218,20 @@
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
-								<h2>THE SPACE VICTORY</h2>
+								<h2>SHARD OF CONFIDENCE</h2>
 								<p class="item-intro text-muted">DESIGN</p>
 								<div data-tilt data-tilt-axis="x">
-									<img class="img-responsive" src="img/portfolio/project/spaceVictory/spaceVictoryFull.jpg">
+									<img class="img-responsive" src="img/portfolio/example.jpg">
 								</div>
-								<p>Искренняя радость — радость от победы. Эти минуты — результат многолетних усилий. Человек не может быть победителем во всех отраслях, но иногда ему хватает успехов близкого для него человека, чтобы разделить с ним вкус победы. Твои победы — моя мотивация на создание космоса.</p>
+								<p>undefined</p>
 								<p>
 									Вы можете перейти к проекту,
-									<a href="project/spaceVictory/spaceVictory.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" class="text-highlight" data-dismiss="modal">назад.</a>
+									<a href="javascript:void(alert('Ошибка. В доступе отказано.'));" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" class="text-highlight" data-dismiss="modal">назад.</a>
 								</p>
 								<ul class="list-inline">
-									<li>Дата: октябрь 2020</li>
+									<li>Дата: undefined</li>
 									<span>|</span>
-									<li>Категория: design</li>
+									<li>Категория: undefined</li>
 								</ul>
 							</div>
 						</div>
@@ -250,19 +259,20 @@
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
-								<h2>B&W LANDING PAGE</h2>
-								<p class="item-intro text-muted">WEBSITE</p>
+								<h2>THE SPACE VICTORY</h2>
+								<p class="item-intro text-muted">DESIGN</p>
 								<div data-tilt data-tilt-axis="x">
-									<img class="img-responsive" src="img/portfolio/project/B&WLanding/B&WLandingFull.jpg">
+									<img class="img-responsive" src="img/portfolio/project/spaceVictory/spaceVictoryFull.jpg">
 								</div>
+								<p>Искренняя радость — радость от победы. Эти минуты — результат многолетних усилий. Человек не может быть победителем во всех отраслях, но иногда ему хватает успехов близкого для него человека, чтобы разделить с ним вкус победы. Твои победы — моя мотивация на создание космоса.</p>
 								<p>
 									Вы можете перейти к проекту,
-									<a href="project/B&WLanding/index.html" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" data-dismiss="modal" class="text-highlight">назад.</a>
+									<a href="project/spaceVictory/spaceVictory.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" class="text-highlight" data-dismiss="modal">назад.</a>
 								</p>
 								<ul class="list-inline">
-									<li>Дата: сентябрь 2020</li>
+									<li>Дата: октябрь 2020</li>
 									<span>|</span>
-									<li>Категория: website</li>
+									<li>Категория: design</li>
 								</ul>
 							</div>
 						</div>
@@ -419,7 +429,7 @@
 								</div>
 								<p>Декабрь 2019. Это был переломный момент. Это было трехдневное испытание. Я помню время, когда подул ветер перемен. Так пусть этот кусочек памяти останется здесь навсегда.</p>
 								<p>
-									<strong>Вы можете перейти к проекту, </strong>
+									Вы можете перейти к проекту,
 									<a href="project/windOfChange/windOfChange.jpg" target="_blank" class="text-highlight">нажав здесь,</a> либо вернуться <a href="#" data-dismiss="modal" class="text-highlight">назад.</a>
 								</p>
 								<ul class="list-inline">
@@ -440,60 +450,37 @@
 			</div>
 		</div>
 		<!-- / portfolio modal 6 -->
-		
-		<button class="btn btn-show-more">Показать больше</button>
 	</div>
 	<!-- /portfolio -->
 	
 	<!-- service -->
-	<div class="service-area gray-bg border-top pt-90 pb-60" id="service">
+	<div class="service-area gray-bg border-top pt-90 pb-60 mt-60" id="service">
 		<div class="container">
 			<div class="section-title text-center mb-70">
 				<h2>Мои навыки</h2>
 				<p>В этом разделе представлены <span class="text-highlight">технологии</span>, которые я изучил за время разработки</p>
 			</div>
-			<div class="owl-carousel owl-theme">
-				<div class="carousel-item">
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service white-bg text-center">
-							<h3>HTML</h3>
-						</div>
-					</div>
+			<div class="owl-carousel owl-theme owl-loaded service-carousel">
+				<div class="single-service white-bg">
+					<p>HTML</p>
 				</div>
-				<div class="carousel-item">
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service white-bg text-center">
-							<h3>CSS</h3>
-						</div>
-					</div>
+				<div class="single-service white-bg">
+					<p>CSS</p>
 				</div>
-				<div class="carousel-item">
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service white-bg text-center">
-							<h3>BOOTSTRAP</h3>
-						</div>
-					</div>
+				<div class="single-service white-bg">
+					<p>BOOTSTRAP</p>
 				</div>
-				<div class="carousel-item">
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service white-bg text-center">
-							<h3>JAVASCRIPT</h3>
-						</div>
-					</div>
+				<div class="single-service white-bg">
+					<p>JAVASCRIPT</p>
 				</div>
-				<div class="carousel-item">
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service white-bg text-center">
-							<h3>GIT</h3>
-						</div>
-					</div>
+				<div class="single-service white-bg">
+					<p>JQUERY</p>
 				</div>
-				<div class="carousel-item">
-					<div class="col-md-4 col-sm-6">
-						<div class="single-service white-bg text-center">
-							<h3>ADOBE PHOTOSHOP</h3>
-						</div>
-					</div>
+				<div class="single-service white-bg">
+					<p>GIT</p>
+				</div>
+				<div class="single-service white-bg">
+					<p>ADOBE PHOTOSHOP</p>
 				</div>
 			</div>
 		</div>
@@ -509,7 +496,7 @@
 						<a href="#">ALBBIPOLAR</a>
 					</div>
 					<div class="copyright text-center">
-						<p>© 2019-2020, albbipolar. All rights reserved</p>
+						<p>© 2019-2021, albbipolar. All rights reserved</p>
 					</div>
 				</div>
 			</div>

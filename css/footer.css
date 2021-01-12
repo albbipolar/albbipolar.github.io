@@ -4,21 +4,25 @@
 .footer-info span {
   color: #666;
   font-size: 36px;
+  
   margin-bottom: 30px;
 }
 .footer-info h5 {
   color: #666;
   letter-spacing: 2px;
-  margin: 0;
   text-transform: uppercase;
+
+  margin: 0;
 }
 .copyright p {
   font-size: 14px;
-  margin: 0;
   text-transform: uppercase;
+
+  margin: 0;
 }
 .footer-info ul li {
   line-height: normal;
+
   padding: 8px 0;
 }
 .footer-logo {margin-bottom: 10px;}
