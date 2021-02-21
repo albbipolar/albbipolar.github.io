@@ -28,14 +28,7 @@
 
   margin: 5px 0;
 }
-.text-highlight {
-  position: relative;
-  font-weight: inherit;
-  background-image: url('../img/bg-highlight.png');
-  background-size: auto 30%;
-  background-repeat: repeat-x;
-  background-position: bottom;
-}
+.text-highlight {background-image: linear-gradient(transparent calc(100% - 0.3em), #d3d3d3 0.3em);}
 #portfolio p.large {font-size: 16px;}
 #portfolio a {color: #181818;}
 #portfolio .portfolio-item {
